@@ -3,7 +3,7 @@
 import asyncHandler from 'express-async-handler';
 import crypto from 'crypto';
 import User from '../models/User.js';
-import generateToken from '../utils/generateToken.js';
+import generateToken, { cookieOptions } from '../utils/generateToken.js';
 import sendEmail from '../utils/sendEmail.js';
 
 // @POST /api/auth/register
@@ -33,7 +33,7 @@ export const register = asyncHandler(async (req, res) => {
   }
 
   const user = await User.create({ name, email, password, phone: phoneDigits });
-  generateToken(res, user._id);
+  const token = generateToken(res, user._id);
 
   res.status(201).json({
     success: true,
@@ -44,7 +44,8 @@ export const register = asyncHandler(async (req, res) => {
       phone: user.phone,
       role: user.role,
       avatar: user.avatar
-    }
+    },
+    token
   });
 });
 
@@ -63,7 +64,7 @@ export const login = asyncHandler(async (req, res) => {
     throw new Error('Invalid email or password');
   }
 
-  generateToken(res, user._id);
+  const token = generateToken(res, user._id);
 
   res.json({
     success: true,
@@ -74,14 +75,15 @@ export const login = asyncHandler(async (req, res) => {
       phone: user.phone,
       role: user.role,
       avatar: user.avatar
-    }
+    },
+    token
   });
 });
 
 // @POST /api/auth/logout
 export const logout = asyncHandler(async (req, res) => {
   res.cookie('token', '', {
-    httpOnly: true,
+    ...cookieOptions,
     expires: new Date(0)
   });
   res.json({ success: true, message: 'Logged out successfully' });
@@ -147,6 +149,6 @@ export const resetPassword = asyncHandler(async (req, res) => {
   user.resetPasswordExpire = undefined;
   await user.save();
 
-  generateToken(res, user._id);
-  res.json({ success: true, message: 'Password reset successful' });
+  const token = generateToken(res, user._id);
+  res.json({ success: true, message: 'Password reset successful', token });
 });

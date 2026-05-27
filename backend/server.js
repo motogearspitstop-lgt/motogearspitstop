@@ -24,14 +24,17 @@ connectDB();
 
 const app = express();
 
+app.set('trust proxy', 1);
 app.use(helmet());
 app.use(morgan('dev'));
 const allowedOrigins = [
   process.env.FRONTEND_URL,
+  ...(process.env.ALLOWED_ORIGINS || '').split(',').map(origin => origin.trim()),
   'http://localhost:3000',
   'http://127.0.0.1:3000',
   'http://localhost:5173',
-  'http://127.0.0.1:5173'
+  'http://127.0.0.1:5173',
+  'https://motogearspitstop.onrender.com',
 ].filter(Boolean);
 
 app.use(cors({

@@ -2,10 +2,31 @@
 
 import axios from 'axios';
 
+const getStoredToken = () => {
+  try {
+    const authStorage = JSON.parse(localStorage.getItem('auth-storage') || '{}');
+    return authStorage?.state?.token || authStorage?.token || null;
+  } catch {
+    return null;
+  }
+};
+
 const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
   withCredentials: true,
   headers: { 'Content-Type': 'application/json' }
+});
+
+api.interceptors.request.use((config) => {
+  const token = getStoredToken();
+
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  } else {
+    delete config.headers.Authorization;
+  }
+
+  return config;
 });
 
 api.interceptors.response.use(
