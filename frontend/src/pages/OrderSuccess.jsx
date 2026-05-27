@@ -1,18 +1,50 @@
-import React, { useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation, useParams, useSearchParams } from 'react-router-dom';
 import { CheckCircle, ShoppingBag } from 'lucide-react';
 import useOrderStore from '@/store/orderStore';
 
 const OrderSuccess = () => {
   const { id } = useParams();
+  const location = useLocation();
+  const [searchParams, setSearchParams] = useSearchParams();
   const { order, fetchOrderById } = useOrderStore();
+  const [showSuccess, setShowSuccess] = useState(false);
 
   useEffect(() => {
     fetchOrderById(id);
   }, [fetchOrderById, id]);
 
+  useEffect(() => {
+    if (location.state?.orderPlaced || searchParams.get('placed') === '1') {
+      setShowSuccess(true);
+    }
+  }, [location.state, searchParams]);
+
+  const closeSuccess = () => {
+    setShowSuccess(false);
+    setSearchParams({}, { replace: true });
+  };
+
   return (
     <div className="min-h-screen bg-white pt-36 px-4 pb-12">
+      {showSuccess && (
+        <div className="fixed inset-0 z-[80] flex items-center justify-center bg-black/60 px-4">
+          <div className="w-full max-w-md rounded-lg bg-white p-6 text-center shadow-2xl">
+            <CheckCircle className="mx-auto mb-4 text-green-600" size={58} />
+            <h2 className="text-2xl font-bold text-gray-900">Payment successful</h2>
+            <p className="mt-2 text-gray-600">
+              Your payment is confirmed and your order has been placed.
+            </p>
+            <button
+              onClick={closeSuccess}
+              className="mt-6 w-full rounded-lg bg-[#e63946] px-5 py-3 font-bold text-white transition-colors hover:bg-[#d62839]"
+            >
+              View Order
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="max-w-3xl mx-auto text-center">
         <CheckCircle className="mx-auto text-green-600 mb-4" size={64} />
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Your order is placed</h1>

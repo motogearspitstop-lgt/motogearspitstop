@@ -447,7 +447,7 @@ const Checkout = () => {
     city: '',
     state: '',
     pincode: '',
-    paymentMethod: 'cod'
+    paymentMethod: 'razorpay'
   });
 
   useEffect(() => {
@@ -606,6 +606,7 @@ const Checkout = () => {
 
     if (result.success) {
       toast({ title: 'Order Placed!', description: 'Check your email for the order confirmation.' });
+      await clearCart();
       if (formData.paymentMethod === 'cod') {
         const whatsappNumber = normalizeWhatsAppNumber(formData.phone);
         const message = `Hi ${formData.fullName}, your MotoGear Pitstop COD order has been placed successfully. Order ID: ${result.order._id}. Paid: INR ${Number(result.order.amountPaid || 0).toLocaleString('en-IN')}. Leftover on delivery: INR ${Number(result.order.amountDue || 0).toLocaleString('en-IN')}. Thank you for shopping with us.`;
@@ -614,8 +615,10 @@ const Checkout = () => {
           window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
         }
       }
-      navigate(`/orders/${result.order._id}`);
-      clearCart();
+      navigate(`/orders/${result.order._id}?placed=1`, {
+        replace: true,
+        state: { orderPlaced: true }
+      });
     } else {
       toast({ title: 'Order Failed', description: result.message, variant: 'destructive' });
     }
@@ -806,6 +809,12 @@ const Checkout = () => {
                     ))}
                   </div>
                 </div>
+                <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+                  <p className="font-bold">Payment confirmation can take up to 2 minutes.</p>
+                  <p className="mt-1">
+                    After completing payment, please wait on this page. Do not close, refresh, or go back until your order confirmation appears.
+                  </p>
+                </div>
                 <div className="flex gap-4">
                   <button onClick={() => setStep(2)}
                     className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-900 px-6 py-3 rounded-lg font-bold transition-colors">
@@ -814,10 +823,15 @@ const Checkout = () => {
                   <button onClick={handlePlaceOrder} disabled={loading}
                     className="flex-1 bg-[#e63946] hover:bg-[#d62839] text-white px-6 py-3 rounded-lg font-bold transition-colors disabled:opacity-50">
                     {loading
-                      ? 'Opening Payment...'
+                      ? 'Confirming payment... Please wait'
                       : (formData.paymentMethod === 'cod' ? `Pay ${formatINR(codAdvanceAmount)} & Place Order` : 'Pay & Place Order')}
                   </button>
                 </div>
+                {loading && (
+                  <p className="mt-3 text-center text-sm font-medium text-gray-600">
+                    This may take less than 2 minutes. Please do not close or reload this window.
+                  </p>
+                )}
               </motion.div>
             )}
           </div>

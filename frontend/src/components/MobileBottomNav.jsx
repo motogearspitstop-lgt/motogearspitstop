@@ -1,16 +1,20 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Home, Search, ShoppingCart, MessageCircle } from 'lucide-react';
+import { Home, Search, ShoppingCart, MessageCircle, LayoutDashboard } from 'lucide-react';
 import { useCartStore } from '@/store/cartStore';
+import useAuthStore from '@/store/authStore';
 import { motion } from 'framer-motion';
 
 const MobileBottomNav = () => {
   const location = useLocation();
-const cartCount = useCartStore(state => state.items.reduce((acc, i) => acc + i.quantity, 0));
+  const cartCount = useCartStore(state => state.items.reduce((acc, i) => acc + i.quantity, 0));
+  const user = useAuthStore(state => state.user);
+  const isAdmin = user?.role === 'admin';
 
   const navItems = [
     { icon: Home, label: 'Home', path: '/' },
     { icon: Search, label: 'Search', path: '/products' },
+    ...(isAdmin ? [{ icon: LayoutDashboard, label: 'Admin', path: '/admin' }] : []),
     { icon: ShoppingCart, label: 'Cart', path: '/cart', badge: cartCount },
     { icon: MessageCircle, label: 'WhatsApp', action: 'whatsapp' }
   ];

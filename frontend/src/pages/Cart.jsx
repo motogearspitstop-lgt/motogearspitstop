@@ -12,9 +12,7 @@ const getItemPrice = (item) => Number(item?.price ?? item?.product?.price ?? 0);
 const Cart = () => {
   const navigate = useNavigate();
   const { items, updateQuantity, removeFromCart, getCartTotal } = useCartStore();
-  const subtotal = getCartTotal();
-  const shipping = subtotal >= 1999 || subtotal === 0 ? 0 : 99;
-  const total = subtotal + shipping;
+  const total = getCartTotal();
 
   if (items.length === 0) {
     return (
@@ -114,14 +112,6 @@ const Cart = () => {
               <h2 className="text-xl font-bold text-gray-900 mb-5">Order Summary</h2>
               <div className="space-y-3 text-gray-700">
                 <div className="flex justify-between">
-                  <span>Subtotal</span>
-                  <span>Rs. {subtotal.toLocaleString()}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Shipping</span>
-                  <span>{shipping === 0 ? 'FREE' : `Rs. ${shipping}`}</span>
-                </div>
-                <div className="border-t border-gray-200 pt-3 flex justify-between text-lg font-bold text-gray-900">
                   <span>Total</span>
                   <span className="text-[#e63946]">Rs. {total.toLocaleString()}</span>
                 </div>

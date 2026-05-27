@@ -212,6 +212,9 @@ const wishlistCount = useWishlistStore(state => state.products?.length || 0);
               <Link to="/#shop-by-brand" onClick={(e) => { handleBrandScroll(e); closeMobileMenu(); }} className="text-xl font-bebas text-white hover:text-[#e63946]">Shop By Brand</Link>
               <Link to="/about" onClick={closeMobileMenu} className="text-xl font-bebas text-white hover:text-[#e63946]">About Us</Link>
               <Link to="/contact" onClick={closeMobileMenu} className="text-xl font-bebas text-white hover:text-[#e63946]">Contact Us</Link>
+              {user?.role === 'admin' && (
+                <Link to="/admin" onClick={closeMobileMenu} className="text-xl font-bebas text-[#e63946] hover:text-white">Admin Panel</Link>
+              )}
               <Link to="/wishlist" onClick={closeMobileMenu} className="text-xl font-bebas text-white hover:text-[#e63946]">My Wishlist</Link>
               <button
                 onClick={() => {
@@ -278,7 +281,6 @@ const wishlistCount = useWishlistStore(state => state.products?.length || 0);
 Header.displayName = 'Header';
 
 export default Header;
-
 
 
 

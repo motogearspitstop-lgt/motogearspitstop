@@ -207,9 +207,11 @@ export const createOrder = asyncHandler(async (req, res) => {
     await Cart.findOneAndDelete({ user: req.user._id });
   }
 
-  await sendOrderEmails(order, req.user);
-
   res.status(201).json({ success: true, order });
+
+  sendOrderEmails(order, req.user).catch((err) => {
+    console.error('Order email failed:', err?.message || err);
+  });
 });
 
 // @GET /api/orders/my
