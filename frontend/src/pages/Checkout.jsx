@@ -400,6 +400,7 @@ const getItemId = (item) => item?.product?._id || item?.product?.id || item?._id
 const getItemName = (item) => item?.product?.name || item?.name || 'Product';
 const getItemImage = (item) => item?.product?.images?.[0]?.url || item?.product?.image || item?.image || '';
 const getItemPrice = (item) => Number(item?.price ?? item?.product?.discountPrice ?? item?.product?.price ?? 0);
+const getItemsTotal = (items) => items.reduce((sum, item) => sum + getItemPrice(item) * item.quantity, 0);
 const COD_ADVANCE_PERCENTAGE = 20;
 const formatINR = (value = 0) => `Rs. ${Number(value || 0).toLocaleString('en-IN')}`;
 const normalizeWhatsAppNumber = (phone) => {
@@ -429,7 +430,7 @@ const loadRazorpayScript = () => {
 };
 
 const Checkout = () => {
-  const { items, totalPrice, clearCart, syncCartToBackend } = useCartStore();
+  const { items, clearCart, syncCartToBackend } = useCartStore();
   const { isAuthenticated, user } = useAuthStore();
   const { createOrder, createRazorpayOrder, verifyPayment } = useOrderStore();
   const navigate = useNavigate();
@@ -460,7 +461,8 @@ const Checkout = () => {
     }));
   }, [user]);
 
-  const total = totalPrice;
+  const total = getItemsTotal(items);
+  const itemCount = items.reduce((sum, item) => sum + item.quantity, 0);
   const codAdvanceAmount = Math.round(total * (COD_ADVANCE_PERCENTAGE / 100));
   const codLeftoverAmount = Math.max(total - codAdvanceAmount, 0);
   const paymentAmount = formData.paymentMethod === 'cod' ? codAdvanceAmount : total;
@@ -800,11 +802,23 @@ const Checkout = () => {
                     )}
                   </div>
                   <div>
-                    <h3 className="text-gray-900 font-medium mb-2">Items ({items.length})</h3>
-                    {items.map((item, i) => (
-                      <div key={i} className="flex justify-between text-sm text-gray-600 py-1 border-b border-gray-100">
-                        <span>{item.product?.name || item.name} × {item.quantity}</span>
-                        <span>₹{(item.price * item.quantity).toLocaleString()}</span>
+                    <h3 className="text-gray-900 font-medium mb-2">Items ({itemCount})</h3>
+                    {items.map((item) => (
+                      <div key={getItemId(item)} className="flex gap-3 py-3 text-sm text-gray-600 border-b border-gray-100">
+                        {getItemImage(item) && (
+                          <img
+                            src={getItemImage(item)}
+                            alt={getItemName(item)}
+                            className="h-14 w-14 flex-shrink-0 rounded-lg border border-gray-100 object-cover"
+                          />
+                        )}
+                        <div className="min-w-0 flex-1">
+                          <p className="font-medium text-gray-900">{getItemName(item)}</p>
+                          <p className="mt-1">{formatINR(getItemPrice(item))} x {item.quantity}</p>
+                        </div>
+                        <span className="flex-shrink-0 font-bold text-gray-900">
+                          {formatINR(getItemPrice(item) * item.quantity)}
+                        </span>
                       </div>
                     ))}
                   </div>
@@ -815,7 +829,7 @@ const Checkout = () => {
                     After completing payment, please wait on this page. Do not close, refresh, or go back until your order confirmation appears.
                   </p>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex flex-col gap-3 sm:flex-row sm:gap-4">
                   <button onClick={() => setStep(2)}
                     className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-900 px-6 py-3 rounded-lg font-bold transition-colors">
                     Back
@@ -840,26 +854,46 @@ const Checkout = () => {
           <div className="lg:col-span-1">
             <div className="bg-white rounded-lg p-6 border border-gray-200 sticky top-24 shadow-sm">
               <h2 className="text-xl font-bold text-gray-900 mb-4">Order Summary</h2>
-              <div className="space-y-3 mb-4">
-                <div className="flex justify-between text-gray-700">
-                  <span>Items ({items.length})</span>
-                  <span>₹{totalPrice.toLocaleString()}</span>
+              <div className="space-y-4 mb-4">
+                <div className="space-y-3 border-b border-gray-100 pb-4">
+                  {items.map((item) => (
+                    <div key={getItemId(item)} className="flex gap-3 text-sm">
+                      {getItemImage(item) && (
+                        <img
+                          src={getItemImage(item)}
+                          alt={getItemName(item)}
+                          className="h-14 w-14 flex-shrink-0 rounded-lg border border-gray-100 object-cover"
+                        />
+                      )}
+                      <div className="min-w-0 flex-1">
+                        <p className="line-clamp-2 font-medium text-gray-900">{getItemName(item)}</p>
+                        <p className="mt-1 text-gray-500">{formatINR(getItemPrice(item))} x {item.quantity}</p>
+                      </div>
+                      <span className="flex-shrink-0 font-bold text-gray-900">
+                        {formatINR(getItemPrice(item) * item.quantity)}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex justify-between gap-4 text-gray-700">
+                  <span>Items ({itemCount})</span>
+                  <span>{formatINR(total)}</span>
                 </div>
                 {formData.paymentMethod === 'cod' && (
                   <div className="rounded-lg bg-gray-50 p-3 text-sm">
-                    <div className="flex justify-between text-green-700">
+                    <div className="flex justify-between gap-4 text-green-700">
                       <span>Advance now ({COD_ADVANCE_PERCENTAGE}%)</span>
                       <span className="font-bold">{formatINR(codAdvanceAmount)}</span>
                     </div>
-                    <div className="mt-1 flex justify-between text-orange-700">
+                    <div className="mt-1 flex justify-between gap-4 text-orange-700">
                       <span>Leftover on delivery</span>
                       <span className="font-bold">{formatINR(codLeftoverAmount)}</span>
                     </div>
                   </div>
                 )}
-                <div className="border-t border-gray-200 pt-3 flex justify-between text-gray-900 font-bold text-lg">
+                <div className="border-t border-gray-200 pt-3 flex justify-between gap-4 text-gray-900 font-bold text-lg">
                   <span>Total</span>
-                  <span className="text-[#e63946]">₹{total.toLocaleString()}</span>
+                  <span className="text-[#e63946]">{formatINR(total)}</span>
                 </div>
               </div>
             </div>

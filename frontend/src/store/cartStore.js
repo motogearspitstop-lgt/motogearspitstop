@@ -4,7 +4,7 @@ import { persist } from 'zustand/middleware';
 import api from '../api/axiosInstance';
 
 const getItemId = (item) => item?.product?._id || item?.product?.id || item?._id || item?.id;
-const getItemPrice = (item) => Number(item?.price ?? item?.product?.price ?? 0);
+const getItemPrice = (item) => Number(item?.price ?? item?.product?.discountPrice ?? item?.product?.price ?? 0);
 const recalcTotal = (items) => items.reduce((acc, item) => acc + getItemPrice(item) * item.quantity, 0);
 
 export const useCartStore = create(

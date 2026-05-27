@@ -6,13 +6,15 @@ import useCartStore from '@/store/cartStore';
 
 const getItemId = (item) => item?.product?._id || item?.product?.id || item?._id || item?.id;
 const getItemName = (item) => item?.product?.name || item?.name || 'Product';
-const getItemImage = (item) => item?.product?.image || item?.image;
-const getItemPrice = (item) => Number(item?.price ?? item?.product?.price ?? 0);
+const getItemImage = (item) => item?.product?.images?.[0]?.url || item?.product?.image || item?.image;
+const getItemPrice = (item) => Number(item?.price ?? item?.product?.discountPrice ?? item?.product?.price ?? 0);
+const formatINR = (value = 0) => `Rs. ${Number(value || 0).toLocaleString('en-IN')}`;
 
 const Cart = () => {
   const navigate = useNavigate();
   const { items, updateQuantity, removeFromCart, getCartTotal } = useCartStore();
   const total = getCartTotal();
+  const itemCount = items.reduce((acc, item) => acc + item.quantity, 0);
 
   if (items.length === 0) {
     return (
@@ -48,9 +50,9 @@ const Cart = () => {
               return (
                 <div
                   key={itemId}
-                  className="flex gap-4 rounded-lg border border-gray-200 bg-white p-4 shadow-sm"
+                  className="flex flex-col gap-4 rounded-lg border border-gray-200 bg-white p-4 shadow-sm sm:flex-row"
                 >
-                  <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-lg bg-gray-100">
+                  <div className="h-36 w-full flex-shrink-0 overflow-hidden rounded-lg bg-gray-100 sm:h-24 sm:w-24">
                     {getItemImage(item) ? (
                       <img
                         src={getItemImage(item)}
@@ -68,7 +70,8 @@ const Cart = () => {
                     <div className="flex items-start justify-between gap-3">
                       <div>
                         <h2 className="line-clamp-2 font-bold text-gray-900">{getItemName(item)}</h2>
-                        <p className="mt-1 font-bold text-[#e63946]">Rs. {price.toLocaleString()}</p>
+                        <p className="mt-1 font-bold text-[#e63946]">{formatINR(price)}</p>
+                        <p className="mt-1 text-sm text-gray-500">Qty: {item.quantity}</p>
                       </div>
                       <button
                         onClick={() => removeFromCart(itemId)}
@@ -79,7 +82,7 @@ const Cart = () => {
                       </button>
                     </div>
 
-                    <div className="mt-4 flex items-center justify-between">
+                    <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                       <div className="flex items-center gap-3">
                         <button
                           onClick={() => updateQuantity(itemId, item.quantity - 1)}
@@ -97,8 +100,8 @@ const Cart = () => {
                           <Plus size={16} />
                         </button>
                       </div>
-                      <p className="font-bold text-gray-900">
-                        Rs. {(price * item.quantity).toLocaleString()}
+                      <p className="text-left font-bold text-gray-900 sm:text-right">
+                        {formatINR(price * item.quantity)}
                       </p>
                     </div>
                   </div>
@@ -111,9 +114,13 @@ const Cart = () => {
             <div className="sticky top-28 rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
               <h2 className="text-xl font-bold text-gray-900 mb-5">Order Summary</h2>
               <div className="space-y-3 text-gray-700">
-                <div className="flex justify-between">
+                <div className="flex justify-between gap-4">
+                  <span>Items</span>
+                  <span>{itemCount}</span>
+                </div>
+                <div className="flex justify-between gap-4">
                   <span>Total</span>
-                  <span className="text-[#e63946]">Rs. {total.toLocaleString()}</span>
+                  <span className="text-[#e63946]">{formatINR(total)}</span>
                 </div>
               </div>
 
