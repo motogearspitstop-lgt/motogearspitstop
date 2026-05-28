@@ -729,7 +729,7 @@ const Checkout = () => {
                 <h2 className="text-xl font-bold text-gray-900 mb-4">Payment Method</h2>
                 <div className="space-y-3">
                   {[
-                    { value: 'cod', label: 'Cash on Delivery (20% advance required)', icon: Banknote },
+                    { value: 'cod', label: 'Cash on Delivery', icon: Banknote },
                     { value: 'razorpay', label: 'Pay Online (UPI / Card / NetBanking)', icon: CreditCard },
                   ].map(({ value, label, icon: Icon }) => (
                     <label key={value}
