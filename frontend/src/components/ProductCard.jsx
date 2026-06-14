@@ -7,6 +7,8 @@ import { motion } from 'framer-motion';
 import { useCartStore } from '@/store/cartStore';
 import { useWishlistStore } from '@/store/wishlistStore';
 import { useToast } from '@/components/ui/use-toast';
+import { productUrl } from '@/utils/urlUtils';
+import { getProductImage, handleProductImageError } from '@/utils/imageUtils';
 
 const ProductCard = ({ product }) => {
   const addToCart = useCartStore(state => state.addToCart);
@@ -40,9 +42,7 @@ const ProductCard = ({ product }) => {
     }
   };
 
-  const handleImageError = (e) => {
-    e.target.src = 'https://placehold.co/600x600/e2e8f0/64748b?text=MotoGearsPitstop';
-  };
+  const productImage = getProductImage(product);
 
   const renderStars = (rating) => {
     return (
@@ -59,14 +59,14 @@ const ProductCard = ({ product }) => {
       whileHover={{ y: -5 }}
       className="group relative bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-[#e63946] hover:shadow-lg transition-all"
     >
-      <Link to={`/product/${product.id}`}>
+      <Link to={productUrl(product)}>
         {/* Image */}
         <div className="relative aspect-square overflow-hidden bg-gray-50">
           <img
-            src={product.image}
+            src={productImage}
             alt={product.name}
             loading="lazy"
-            onError={handleImageError}
+            onError={(event) => handleProductImageError(event, product)}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
           {product.discount > 0 && (

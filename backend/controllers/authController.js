@@ -6,6 +6,25 @@ import User from '../models/User.js';
 import generateToken, { cookieOptions } from '../utils/generateToken.js';
 import sendEmail from '../utils/sendEmail.js';
 
+const PRODUCTION_FRONTEND_URL = 'https://motogearspitstop.com';
+
+const normalizeUrl = url => url?.trim().replace(/\/$/, '');
+
+const getFrontendUrl = (req) => {
+  const requestOrigin = normalizeUrl(req.get('origin'));
+  const configuredUrl = normalizeUrl(process.env.FRONTEND_URL);
+
+  if (requestOrigin && !requestOrigin.includes('motogearspitstop.onrender.com')) {
+    return requestOrigin;
+  }
+
+  if (configuredUrl && !configuredUrl.includes('motogearspitstop.onrender.com')) {
+    return configuredUrl;
+  }
+
+  return PRODUCTION_FRONTEND_URL;
+};
+
 // @POST /api/auth/register
 export const register = asyncHandler(async (req, res) => {
   const { name, email, password, phone } = req.body;
@@ -108,7 +127,7 @@ export const forgotPassword = asyncHandler(async (req, res) => {
   user.resetPasswordExpire = Date.now() + 15 * 60 * 1000; // 15 mins
   await user.save();
 
-  const resetUrl = `${process.env.FRONTEND_URL}/reset-password/${resetToken}`;
+  const resetUrl = `${getFrontendUrl(req)}/reset-password/${resetToken}`;
 
   await sendEmail({
     to: user.email,

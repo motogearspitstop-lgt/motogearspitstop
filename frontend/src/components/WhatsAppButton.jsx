@@ -1,11 +1,11 @@
 import React from 'react';
 import { MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { getWhatsAppUrl } from '@/config/contact';
 
 const WhatsAppButton = () => {
   const handleClick = () => {
-    const message = encodeURIComponent("Hi Moto Gears! I'm interested in your products. Can you help me find the right accessories for my bike?");
-    window.open(`https://wa.me/917795469957?text=${message}`, '_blank');
+    window.open(getWhatsAppUrl("Hi Moto Gears! I'm interested in your products. Can you help me find the right accessories for my bike?"), '_blank');
   };
 
   return (

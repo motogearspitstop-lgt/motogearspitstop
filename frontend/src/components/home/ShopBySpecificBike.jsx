@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { productsUrl } from '@/utils/urlUtils';
 
 const ShopBySpecificBike = () => {
   const navigate = useNavigate();
@@ -33,7 +34,7 @@ const ShopBySpecificBike = () => {
   ];
 
   const handleBikeClick = (bikeName) => {
-    navigate(`/products?bike=${bikeName}`);
+    navigate(productsUrl({ bike: bikeName }));
   };
 
   const handleImageError = (e) => {

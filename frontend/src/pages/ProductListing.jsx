@@ -7,7 +7,7 @@ import ProductCard from '@/components/ProductCard';
 import FilterPanel from '@/components/FilterPanel';
 import SearchResultsHeader from '@/components/SearchResultsHeader';
 import { products } from '@/data/products';
-import { combineFilters, sortProducts } from '@/utils/searchUtils';
+import { combineFilters, productMatchesBike, sortProducts } from '@/utils/searchUtils';
 
 const ProductListing = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -83,33 +83,22 @@ const ProductListing = () => {
 
     // Apply subcategory filter from URL navigation (case-insensitive matching)
     if (subcategoryParam) {
-      const subcategoryLower = subcategoryParam.toLowerCase();
+      const subcategoryLower = subcategoryParam.toLowerCase().trim();
       result = result.filter(product => 
-        product.subcategory?.toLowerCase() === subcategoryLower
+        product.subcategory?.toLowerCase().trim() === subcategoryLower
       );
     }
 
     // Apply bike filter from URL navigation (case-insensitive matching)
     if (bikeParam) {
-      const bikeLower = bikeParam.toLowerCase();
-      result = result.filter(product => {
-        // Check if product.bikes array includes the bike name (case-insensitive)
-        if (Array.isArray(product.bikes)) {
-          return product.bikes.some(bike => bike.toLowerCase() === bikeLower);
-        }
-        // Also check product.model field if it exists
-        if (product.model) {
-          return product.model.toLowerCase() === bikeLower;
-        }
-        return false;
-      });
+      result = result.filter(product => productMatchesBike(product, bikeParam));
     }
 
     // Apply brand filter from URL navigation (case-insensitive matching)
     if (brandParam) {
-      const brandLower = brandParam.toLowerCase();
+      const brandLower = brandParam.toLowerCase().trim();
       result = result.filter(product => 
-        product.brand?.toLowerCase() === brandLower
+        product.brand?.toLowerCase().trim() === brandLower
       );
     }
 
@@ -179,6 +168,9 @@ const ProductListing = () => {
     : bikeName 
       ? `Products for ${bikeName}` 
       : subcategoryName 
+
+
+      
         ? subcategoryName 
         : null;
 

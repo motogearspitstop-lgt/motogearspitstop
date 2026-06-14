@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { Search, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import SearchSuggestions from './SearchSuggestions';
-import { searchProducts } from '@/utils/searchUtils';
+import { getBikeSearchTarget, searchProducts } from '@/utils/searchUtils';
+import { productUrl, productsUrl } from '@/utils/urlUtils';
+import { getProductImage, handleProductImageError } from '@/utils/imageUtils';
 
 const SearchBar = ({ onSearchTriggered }) => {
   const [query, setQuery] = useState('');
@@ -49,8 +51,15 @@ const SearchBar = ({ onSearchTriggered }) => {
   const handleSearch = (searchTerm) => {
     const term = typeof searchTerm === 'string' ? searchTerm : query;
     if (term.trim()) {
-      saveRecentSearch(term.trim());
-      navigate(`/products?search=${encodeURIComponent(term.trim())}`);
+      const trimmedTerm = term.trim();
+      const bikeSearchTarget = getBikeSearchTarget(trimmedTerm);
+
+      saveRecentSearch(trimmedTerm);
+      navigate(
+        bikeSearchTarget
+          ? productsUrl({ bike: bikeSearchTarget })
+          : productsUrl({ search: trimmedTerm })
+      );
       setIsFocused(false);
       setQuery('');
       if (onSearchTriggered) onSearchTriggered();
@@ -133,7 +142,7 @@ const SearchBar = ({ onSearchTriggered }) => {
                   <button 
                     key={`${product.id}-${product.name}-${index}`} 
                     onClick={() => {
-                      navigate(`/product/${product.id}`);
+                      navigate(productUrl(product));
                       setIsFocused(false);
                       setQuery('');
                       if (onSearchTriggered) onSearchTriggered();
@@ -141,7 +150,12 @@ const SearchBar = ({ onSearchTriggered }) => {
                     className="w-full flex items-center gap-4 p-3 hover:bg-gray-50 transition-colors border-b border-gray-100 last:border-0 text-left"
                   >
                     <div className="w-12 h-12 bg-gray-100 p-1 flex-shrink-0">
-                      <img src={product.image} alt={product.name} className="w-full h-full object-cover rounded-sm" />
+                      <img
+                        src={getProductImage(product)}
+                        alt={product.name}
+                        onError={(event) => handleProductImageError(event, product)}
+                        className="w-full h-full object-cover rounded-sm"
+                      />
                     </div>
                     <div className="flex-1 overflow-hidden">
                       <div className="text-gray-900 text-sm font-medium line-clamp-1">

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useFilterStore } from '@/store/filterStore';
+import { productsUrl } from '@/utils/urlUtils';
 
 const ShopByBrands = () => {
   const navigate = useNavigate();
@@ -68,7 +69,7 @@ const ShopByBrands = () => {
   const handleBrandClick = (brandName) => {
     clearFilters();
     const formattedBrand = brandMap[brandName.toUpperCase()] || brandName;
-    navigate(`/products?brand=${encodeURIComponent(formattedBrand)}`);
+    navigate(productsUrl({ brand: formattedBrand }));
   };
 
   const scroll = (direction) => {
@@ -81,9 +82,8 @@ const ShopByBrands = () => {
   };
 
   const textBrands = [
-    'Rynox', 'Raida', 'Studds', 'Axor', 'Zana', 'Barkbusters', 
-    'Cardo', 'Maddog', 'Moto Torque', 'Moto Care', 'Liqui Moly', 
-    'LGP', 'Pro Taper', 'Reise', 'Acerbis', 'Jawa', 'Suzuki'
+    'Studds', 'Axor', 'Barkbusters', 'Cardo', 'Maddog',
+    'Moto Torque', 'Moto Care', 'LGP', 'Pro Taper', 'Jawa', 'Suzuki'
   ];
 
   return (

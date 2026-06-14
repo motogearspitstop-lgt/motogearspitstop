@@ -1,9 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, Clock, MessageCircle } from 'lucide-react';
+import { MapPin, Mail, Clock, MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useToast } from '@/components/ui/use-toast';
+import { SUPPORT_PHONE_DISPLAY, getWhatsAppUrl } from '@/config/contact';
 
 const Contact = () => {
   const { toast } = useToast();
@@ -120,8 +121,8 @@ const Contact = () => {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Phone & WhatsApp</h3>
                   <p className="text-gray-600 leading-relaxed mb-2">For support and orders:</p>
-                  <a href="https://wa.me/917795469957" target="_blank" rel="noopener noreferrer" className="text-gray-900 font-medium hover:text-[#25D366] transition-colors">
-                    +91 77954 69957
+                  <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="text-gray-900 font-medium hover:text-[#25D366] transition-colors">
+                    {SUPPORT_PHONE_DISPLAY}
                   </a>
                 </div>
               </div>

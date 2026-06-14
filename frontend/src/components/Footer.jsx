@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Youtube, Twitter, Mail, Phone, ArrowRight, MapPin, MessageCircle } from 'lucide-react';
+import { Facebook, Instagram, Youtube, Twitter, Mail, ArrowRight, MapPin, MessageCircle } from 'lucide-react';
+import { SUPPORT_PHONE_DISPLAY, getWhatsAppUrl } from '@/config/contact';
 
 const Footer = () => {
   return (
@@ -56,9 +57,9 @@ const Footer = () => {
                   Karnataka 560066
                 </p>
               </div>
-              <a href="https://wa.me/917795469957" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-[#25D366] transition-colors group">
+              <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-[#25D366] transition-colors group">
                 <MessageCircle size={18} className="text-[#25D366]" />
-                <span>+91 77954 69957</span>
+                <span>{SUPPORT_PHONE_DISPLAY}</span>
               </a>
               <a href="mailto:support@motogears.com" className="flex items-center gap-3 hover:text-[#e63946] transition-colors">
                 <Mail size={18} className="text-[#e63946]" />

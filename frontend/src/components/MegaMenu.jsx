@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { productsUrl } from '@/utils/urlUtils';
 
 const MegaMenu = ({ onClose }) => {
   const categories = [
@@ -44,7 +45,7 @@ const MegaMenu = ({ onClose }) => {
         {categories.map((category, idx) => (
           <div key={idx}>
             <Link 
-              to={category.isBrand ? `/products` : `/products?category=${encodeURIComponent(category.name)}`}
+              to={category.isBrand ? '/products' : productsUrl({ category: category.name })}
               onClick={onClose}
               className="text-[#e63946] hover:text-gray-900 transition-colors font-bold mb-4 text-sm uppercase tracking-wide flex items-center gap-2 group"
             >
@@ -56,8 +57,8 @@ const MegaMenu = ({ onClose }) => {
             <ul className="space-y-2.5">
               {category.items.map((item, itemIdx) => {
                 const path = category.isBrand 
-                  ? `/products?brand=${encodeURIComponent(item)}` 
-                  : `/products?category=${encodeURIComponent(category.name)}&subcategory=${encodeURIComponent(item)}`;
+                  ? productsUrl({ brand: item }) 
+                  : productsUrl({ category: category.name, subcategory: item });
                   
                 return (
                   <li key={itemIdx}>

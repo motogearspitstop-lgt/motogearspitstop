@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import ProductCard from '@/components/ProductCard';
 import { products } from '@/data/products';
+import { productsUrl } from '@/utils/urlUtils';
 
 const ModernTechSection = () => {
   // Filter by brand "MODERN TECH" or if the name includes it (based on current data structure)
@@ -22,7 +23,7 @@ const ModernTechSection = () => {
           <p className="text-gray-600 text-sm mt-1">Premium protection and utility for your ride</p>
         </div>
         <Link 
-          to="/products?search=Modern%20Tech" 
+          to={productsUrl({ search: 'Modern Tech' })} 
           className="hidden md:flex items-center gap-2 text-[#e63946] font-bold text-sm hover:text-gray-900 transition-colors"
         >
           VIEW ALL <ArrowRight size={16} />
@@ -47,7 +48,7 @@ const ModernTechSection = () => {
       <div className="mt-6 flex flex-col items-center md:hidden">
          <p className="text-gray-500 text-xs mb-4">Swipe to see more →</p>
          <Link 
-          to="/products?search=Modern%20Tech" 
+          to={productsUrl({ search: 'Modern Tech' })} 
           className="flex items-center justify-center gap-2 bg-white border-2 border-gray-300 text-gray-900 w-full py-3 rounded-lg font-bold text-sm hover:bg-gray-50 hover:border-[#e63946] hover:text-[#e63946] transition-colors"
         >
           VIEW ALL MODERN TECH <ArrowRight size={16} />

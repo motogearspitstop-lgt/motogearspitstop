@@ -1,38 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { productsUrl } from '@/utils/urlUtils';
 
 const ShopByCategory = () => {
   const categories = [
     {
       name: 'Bike Accessories',
       image: 'https://images.unsplash.com/photo-1565218750521-9754714f8bf3',
-      path: '/products?category=Bike Accessories'
+      path: productsUrl({ category: 'Bike Accessories' })
     },
     {
       name: 'Riding Gear',
       image: 'https://images.unsplash.com/photo-1696118626045-5601b4eef4c7',
-      path: '/products?category=Riding Gear'
+      path: productsUrl({ category: 'Riding Gear' })
     },
     {
       name: 'Performance Parts',
       image: 'https://images.unsplash.com/photo-1652336946248-a41f37c49582',
-      path: '/products?category=Performance Parts'
+      path: productsUrl({ category: 'Performance Parts' })
     },
     {
       name: 'Touring Essentials',
       image: 'https://images.unsplash.com/photo-1633114437467-bf18e9007200',
-      path: '/products?category=Touring'
+      path: productsUrl({ category: 'Touring' })
     },
     {
       name: 'Lighting & Electricals',
       image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64',
-      path: '/products?category=Lighting'
+      path: productsUrl({ category: 'Lighting' })
     },
     {
       name: 'Crash Protection',
       image: 'https://images.unsplash.com/photo-1449426468159-d96dbf08f19f',
-      path: '/products?category=Crash Protection'
+      path: productsUrl({ category: 'Crash Protection' })
     }
   ];
 

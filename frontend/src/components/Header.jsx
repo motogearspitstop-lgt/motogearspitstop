@@ -10,6 +10,8 @@ import useAuthStore from '@/store/authStore';
 import AuthModal from '@/components/AuthModal';
 import MegaMenu from '@/components/MegaMenu';
 import SearchBar from '@/components/SearchBar';
+import { productsUrl } from '@/utils/urlUtils';
+import { getWhatsAppUrl } from '@/config/contact';
 
 const Header = forwardRef((props, ref) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -104,7 +106,7 @@ const wishlistCount = useWishlistStore(state => state.products?.length || 0);
 
           <div className="flex items-center gap-6">
             <a 
-              href="https://wa.me/917795469957" 
+              href={getWhatsAppUrl()} 
               target="_blank" 
               rel="noopener noreferrer"
               className="hidden lg:flex items-center text-white hover:text-[#25D366] transition-colors relative group gap-1"
@@ -207,7 +209,7 @@ const wishlistCount = useWishlistStore(state => state.products?.length || 0);
             <nav className="flex flex-col p-6 gap-6 text-center pb-32">
               <Link to="/" onClick={closeMobileMenu} className="text-xl font-bebas text-white hover:text-[#e63946]">Home</Link>
               <Link to="/products" onClick={closeMobileMenu} className="text-xl font-bebas text-white hover:text-[#e63946]">All Products</Link>
-              <Link to="/products?filter=deals" onClick={closeMobileMenu} className="text-xl font-bebas text-[#f4a261]">Best Deals</Link>
+              <Link to={productsUrl({ filter: 'deals' })} onClick={closeMobileMenu} className="text-xl font-bebas text-[#f4a261]">Best Deals</Link>
               <Link to="/shop-by-bike/all" onClick={closeMobileMenu} className="text-xl font-bebas text-white hover:text-[#e63946]">Shop By Bike</Link>
               <Link to="/#shop-by-brand" onClick={(e) => { handleBrandScroll(e); closeMobileMenu(); }} className="text-xl font-bebas text-white hover:text-[#e63946]">Shop By Brand</Link>
               <Link to="/about" onClick={closeMobileMenu} className="text-xl font-bebas text-white hover:text-[#e63946]">About Us</Link>
@@ -262,7 +264,7 @@ const wishlistCount = useWishlistStore(state => state.products?.length || 0);
                   </button>
                 </>
               )}
-              <a href="https://wa.me/917795469957" target="_blank" rel="noopener noreferrer" className="text-xl font-bebas text-[#25D366] hover:text-white flex items-center justify-center gap-2">
+              <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="text-xl font-bebas text-[#25D366] hover:text-white flex items-center justify-center gap-2">
                 <MessageCircle size={20} /> WhatsApp Support
               </a>
             </nav>
@@ -281,9 +283,6 @@ const wishlistCount = useWishlistStore(state => state.products?.length || 0);
 Header.displayName = 'Header';
 
 export default Header;
-
-
-
 
 
 

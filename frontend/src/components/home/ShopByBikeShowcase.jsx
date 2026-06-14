@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { productsUrl } from '@/utils/urlUtils';
 
 const ShopByBikeShowcase = () => {
   const categories = [
-    { name: 'Adventure', img: 'https://images.unsplash.com/photo-1758550713888-c1a76af44cc8?q=80&w=1375&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', link: '/products?category=Touring' },
-    { name: 'Street', img: 'https://images.unsplash.com/photo-1617109887854-f661d37fca2d?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', link: '/products?category=Riding Gear' },
-    { name: 'Cruiser', img: 'https://images.unsplash.com/photo-1658137636368-ef1e4f277897?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', link: '/products?category=Bike Accessories' },
-    { name: 'Sport', img: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87', link: '/products?category=Performance Parts' },
-    { name: 'Classic', img: 'https://images.unsplash.com/photo-1558980664-769d59546b3d', link: '/products?category=Riding Gear' },
-    { name: 'Scooter', img: 'https://media.zigcdn.com/media/content/2018/May/125cc_scooter_comparo_img_0038.jpg?tr=w-930', link: '/products?category=Bike Accessories' },
+    { name: 'Adventure', img: 'https://images.unsplash.com/photo-1758550713888-c1a76af44cc8?q=80&w=1375&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', link: productsUrl({ category: 'Touring' }) },
+    { name: 'Street', img: 'https://images.unsplash.com/photo-1617109887854-f661d37fca2d?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', link: productsUrl({ category: 'Riding Gear' }) },
+    { name: 'Cruiser', img: 'https://images.unsplash.com/photo-1658137636368-ef1e4f277897?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', link: productsUrl({ category: 'Bike Accessories' }) },
+    { name: 'Sport', img: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87', link: productsUrl({ category: 'Performance Parts' }) },
+    { name: 'Classic', img: 'https://images.unsplash.com/photo-1558980664-769d59546b3d', link: productsUrl({ category: 'Riding Gear' }) },
+    { name: 'Scooter', img: 'https://media.zigcdn.com/media/content/2018/May/125cc_scooter_comparo_img_0038.jpg?tr=w-930', link: productsUrl({ category: 'Bike Accessories' }) },
   ];
 
   return (

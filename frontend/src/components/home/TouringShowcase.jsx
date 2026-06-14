@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { productsUrl } from '@/utils/urlUtils';
 
 const TouringShowcase = () => {
   return (
@@ -45,10 +46,10 @@ const TouringShowcase = () => {
                   transition={{ delay: 0.3 }}
                   className="flex flex-wrap gap-4"
                >
-                  <Link to="/products?category=Touring" className="bg-[#e63946] hover:bg-[#d62839] text-white px-8 py-4 font-bold uppercase rounded-sm flex items-center gap-2 transition-all shadow-md">
+                  <Link to={productsUrl({ category: 'Touring' })} className="bg-[#e63946] hover:bg-[#d62839] text-white px-8 py-4 font-bold uppercase rounded-sm flex items-center gap-2 transition-all shadow-md">
                      Shop Touring Gear <ArrowRight />
                   </Link>
-                  <Link to="/products?category=Touring&subcategory=Luggage" className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 font-bold uppercase rounded-sm transition-all shadow-md">
+                  <Link to={productsUrl({ category: 'Touring', subcategory: 'Luggage' })} className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 font-bold uppercase rounded-sm transition-all shadow-md">
                      View Luggage Systems
                   </Link>
                </motion.div>
@@ -63,7 +64,7 @@ const TouringShowcase = () => {
                {name: 'Top Boxes', img: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772687572/Top_Boxes.webp'},
                {name: 'Mounts', img: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772687570/Mounts.webp'}
             ].map((item, idx) => (
-               <Link key={idx} to={`/products?category=Touring&subcategory=${item.name}`} className="group relative h-40 rounded-xl overflow-hidden shadow-md border border-gray-200 hover:shadow-lg">
+               <Link key={idx} to={productsUrl({ category: 'Touring', subcategory: item.name })} className="group relative h-40 rounded-xl overflow-hidden shadow-md border border-gray-200 hover:shadow-lg">
                   <img src={item.img} alt={item.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors flex items-center justify-center">
                      <h3 className="text-xl font-bebas text-white tracking-wider">{item.name}</h3>

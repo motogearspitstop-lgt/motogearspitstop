@@ -1,31 +1,5 @@
 export const products = [
   {
-    id: 1,
-    name: 'RYNOX AIR GT 4 JACKET- CE CERTIFIED CLASS A',
-    price: 8499,
-    discount: 15,
-    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772392340/Air_GT_4_CE_Certified_Apparels_CE_AA_LABEL_TAG-11_1300x_mqacab.webp',
-    galleryImages: [
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772687895/Composition_AirGT4_allcolour__Rynox_Air_GT_4_Jacket_BlackWhite_02_1_1200x.webp',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772687896/Rynox_Air_GT_4_Jacket_BlackWhite_03_1400x.png',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772687895/Air_GT_NEW_Black__05_1200x.webp'
-    ],
-    category: 'Riding Gear',
-    subcategory: 'Jackets',
-    brand: 'Rynox',
-    rating: 5,
-    reviews: 234,
-    isNew: true,
-    bikes: ['KTM', 'Royal Enfield', 'Yamaha', 'All'],
-    description: 'Not just the protectors, the entire jacket is Class A certified as per CE Standard EN 17092-4:2020',
-    specifications: {
-      'Material': 'Cordura 500D',
-      'Protection': 'CE Level 2 armor',
-      'Waterproof': 'Yes',
-      'Ventilation': '4-way air vents'
-    }
-  },
-  {
     id: 2,
     name: 'STUDDS Thunder Black',
     price: 3299,
@@ -54,7 +28,7 @@ export const products = [
   {
     id: 3,
     name: 'Royal Enfield SUM GUARD FOR HIMALAYAN 450',
-    price: 1,
+    price: 2500,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772392941/1735557737_677282694bda4_kzby2f.jpg',
     galleryImages: [
@@ -130,58 +104,6 @@ export const products = [
     }
   },
   {
-    id: 6,
-    name: 'Raida AirWave Motorcycle Gloves | Red',
-    price: 4000,
-    discount: 15,
-    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772424749/1_182997e8-04a5-4a3f-a5b2-a160b44426b0_ufxpbb.webp',
-    galleryImages: [
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772688687/6A-780x780.webp',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772688686/6-1-1-780x780.webp',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772688685/5-1-1-780x780.webp'
-    ],
-    category: 'Riding Gear',
-    subcategory: 'Gloves',
-    brand: 'Raida',
-    rating: 4,
-    reviews: 289,
-    isNew: false,
-    bikes: ['All'],
-    description: 'Full finger riding gloves with knuckle protection',
-    specifications: {
-      'Material': 'Leather + Mesh',
-      'Protection': 'Hard knuckle armor',
-      'Touch Screen': 'Yes',
-      'Sizes': 'S, M, L, XL, XXL'
-    }
-  },
-  {
-    id: 7,
-    name: 'Zana Universal Led Fog Light (ZFL R-25) - ZI-FL-013',
-    price: 7000,
-    discount: 30,
-    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772425198/zana_light_whzloe.jpg',
-    galleryImages: [
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772688928/Screenshot_2026-03-05_at_11.04.36_AM.png',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772688924/Screenshot_2026-03-05_at_11.04.32_AM.png',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772688923/Screenshot_2026-03-05_at_11.04.41_AM.png'
-    ],
-    category: 'Lighting',
-    subcategory: 'Fog Lamps',
-    brand: 'Zana',
-    rating: 5,
-    reviews: 678,
-    isNew: true,
-    bikes: ['All'],
-    description: 'High intensity LED auxiliary lamps with mounting brackets',
-    specifications: {
-      'Power': '20W per lamp',
-      'Lumens': '2400 LM',
-      'Beam': 'Spot + Flood combo',
-      'Warranty': '1 year'
-    }
-  },
-  {
     id: 8,
     name: 'Mototrendz Traction Pads for KTM Duke 250 / 390 Gen 2',
     price: 999,
@@ -205,59 +127,6 @@ export const products = [
       'Compatibility': 'Duke 125/200/250/390',
       'Features': 'Anti-slip, scratch protection',
       'Installation': 'Peel and stick'
-    }
-  },
-  {
-    id: 9,
-    name: 'Raida Explorer Boots | Black',
-    price: 8000,
-    discount: 20,
-    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772426062/Raida_Boots_q7dpke.webp',
-    galleryImages: [
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772689222/2-66_f82e7313-b0bb-43c2-b02a-ed99ec2ad70e.webp',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772689225/3-62_c6bd424c-4ba2-4f15-9ea3-dff6e03486f4.webp',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772689223/5-41_029a6d32-6b3c-4b0d-a4e1-cfac00bce350.webp'
-    ],
-    category: 'Riding Gear',
-    subcategory: 'Boots',
-    brand: 'Raida',
-    rating: 5,
-    reviews: 145,
-    isNew: true,
-    bikes: ['All'],
-    description: 'All-day comfort riding boots with ankle protection',
-    specifications: {
-      'Material': 'Leather + Mesh',
-      'Protection': 'Ankle guards, toe box',
-      'Waterproof': 'Water resistant',
-      'Warranty': 'Six months warranty against manufacturing defect',
-      'Sole': 'Anti-slip rubber sole'
-    }
-  },
-  {
-    id: 10,
-    name: 'Liqui Moly 10W40 Street Race Fully Synthetic Engine Oil (1 Litre) (LM053, Compatible with ATV)',
-    price: 1499,
-    discount: 10,
-    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772426316/Liqui_Moli_hy0vpk.jpg',
-    galleryImages: [
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772426316/Liqui_Moli_hy0vpk.jpg',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772426316/Liqui_Moli_hy0vpk.jpg',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772426316/Liqui_Moli_hy0vpk.jpg'
-    ],
-    category: 'Performance Parts',
-    subcategory: 'Engine Oil',
-    brand: 'Liqui Moly',
-    rating: 5,
-    reviews: 892,
-    isNew: false,
-    bikes: ['All'],
-    description: 'Fully synthetic 4-stroke motorcycle engine oil',
-    specifications: {
-      'Viscosity': '10W-40',
-      'Type': 'Fully Synthetic',
-      'Volume': '1 Liter',
-      'API Rating': 'SN/MA2'
     }
   },
   {
@@ -339,58 +208,6 @@ export const products = [
     }
   },
   {
-    id: 14,
-    name: 'Zana TOPRACK T-1 WITH ALUMINIUM PLATE COMPATIBLE WITH PILLION BACKREST HIMALAYAN BS6 (2021)',
-    price: 4400,
-    discount: 17,
-    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772427666/ZANA_TAIL_kdeg09.webp',
-    galleryImages: [
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772689742/Screenshot_2026-03-05_at_11.18.31_AM.png',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772689744/Screenshot_2026-03-05_at_11.18.35_AM.png',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772689740/Screenshot_2026-03-05_at_11.18.43_AM.png'
-    ],
-    category: 'Touring',
-    subcategory: 'Racks',
-    brand: 'Zana',
-    rating: 5,
-    reviews: 345,
-    isNew: true,
-    bikes: ['Royal Enfield', 'Jawa'],
-    description: 'Heavy duty luggage carrier with 15kg capacity',
-    specifications: {
-      'Capacity': '15 kg',
-      'Material': 'Stainless steel',
-      'Finish': 'Powder coated',
-      'Mounting': 'Bolt-on fitment'
-    }
-  },
-  {
-    id: 15,
-    name: 'Raida Knee Guard',
-    price: 4000,
-    discount: 8,
-    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772427803/4-Large_1024x1024_rkfquf.webp',
-    galleryImages: [
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772427760/Raida_Knee_Guard_szqkbf.webp',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772689903/51bDKlCFraL._SL1024_.jpg',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772689905/51X48QX0EsL._SL1024_.jpg'
-    ],
-    category: 'Riding Gear',
-    subcategory: 'Knee Guards',
-    brand: 'Raida',
-    rating: 4,
-    reviews: 456,
-    isNew: false,
-    bikes: ['All'],
-    description: 'CE approved knee and shin guards',
-    specifications: {
-      'Certification': 'CE Level 1',
-      'Material': 'Hard shell plastic',
-      'Adjustable': 'Yes',
-      'Size': 'Universal fit'
-    }
-  },
-  {
     id: 16,
     name: 'BMW R1300 GS Top Box & Pannier Set',
     price: 120000,
@@ -469,32 +286,6 @@ export const products = [
     }
   },
   {
-    id: 19,
-    name: 'Rynox H2GO PRO RAIN PANTS',
-    price: 1500,
-    discount: 10,
-    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772428911/Rynox_Pants_fbhxhs.webp',
-    galleryImages: [
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772690396/510h9t-d-OL._SL1500_.jpg',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772690398/61o1_y-GVnL._SL1500_.jpg',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772690401/61Kc-KcVt_L._SL1500_.jpg'
-    ],
-    category: 'Riding Gear',
-    subcategory: 'Pants',
-    brand: 'Rynox',
-    rating: 5,
-    reviews: 234,
-    isNew: true,
-    bikes: ['All'],
-    description: 'Waterproof riding pants with CE armor',
-    specifications: {
-      'Material': 'Cordura 600D',
-      'Protection': 'CE knee & hip armor',
-      'Waterproof': 'Yes',
-      'Sizes': '28-40'
-    }
-  },
-  {
     id: 20,
     name: 'Barkbusters Jet Guards',
     price: 3299,
@@ -544,32 +335,6 @@ export const products = [
       'Mounting': 'Strong magnets',
       'Features': 'Phone holder, rain cover',
       'Compatibility': 'FZ series'
-    }
-  },
-  {
-    id: 22,
-    name: 'Zana Universal Mobile Holder with USB Charger',
-    price: 3000,
-    discount: 12,
-    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772692285/Zana_USB_ChargeR.webp',
-    galleryImages: [
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772692279/d74adeb1-b341-4a89-a5b7-25a1b1cdef43-416x412.webp',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772692277/15fba314-914a-4c76-a4f2-ee0071977395.webp',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772692282/f51ac09c-fb12-4562-b078-3022bb4e1780.webp'
-    ],
-    category: 'Lighting',
-    subcategory: 'Electricals',
-    brand: 'Zana',
-    rating: 4,
-    reviews: 89,
-    isNew: false,
-    bikes: ['All'],
-    description: 'Dual port USB charger with voltage display',
-    specifications: {
-      'Output': '5V 3A per port',
-      'Ports': '2 x USB',
-      'Features': 'Voltage display, waterproof',
-      'Installation': 'Handlebar mount'
     }
   },
   {
@@ -625,32 +390,6 @@ export const products = [
     }
   },
   {
-    id: 25,
-    name: 'Rynox Unisex Adult H2Go Pro 3 Rain Standard Length Jacket',
-    price: 1350,
-    discount: 10,
-    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772693587/51m2sVkmVeL._SL1080_.jpg',
-    galleryImages: [
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772693590/51EJVhGy6iL._SL1080_.jpg',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772693600/514qVhYqLkL._SL1080_.jpg',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772693593/61eYJkCxL-L._SL1080_.jpg'
-    ],
-    category: 'Riding Gear',
-    subcategory: 'Rain Gear',
-    brand: 'Rynox',
-    rating: 4,
-    reviews: 567,
-    isNew: true,
-    bikes: ['All'],
-    description: 'Two-piece waterproof rain suit',
-    specifications: {
-      'Material': 'PVC coated nylon',
-      'Waterproof': '100%',
-      'Reflective': 'Yes',
-      'Sizes': 'M, L, XL, XXL'
-    }
-  },
-  {
     id: 26,
     name: 'KTM Duke Exhaust Slip-On Vagary Akrapovic Exhaust Universal',
     price: 5590,
@@ -700,58 +439,6 @@ export const products = [
       'Fitment': '22mm & 28mm bars',
       'Colors': 'Black, White',
       'Weight': '650g per pair'
-    }
-  },
-  {
-    id: 28,
-    name: 'Rynox Air GT Gloves',
-    price: 2999,
-    discount: 20,
-    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772709523/RynoxAIRGT2HiVizGreen01.webp',
-    galleryImages: [
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772709527/RynoxAirGT2GreyHiVizGreen06.webp',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772709518/RynoxAirGT2GreyHiVizGreen02.webp',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772709520/RynoxAirGT2GreyHiVizGreen03.webp'
-    ],
-    category: 'Riding Gear',
-    subcategory: 'Gloves',
-    brand: 'Rynox',
-    rating: 5,
-    reviews: 456,
-    isNew: true,
-    bikes: ['All'],
-    description: 'Ventilated summer riding gloves',
-    specifications: {
-      'Material': 'Mesh + TPU',
-      'Protection': 'Knuckle & palm armor',
-      'Touch Screen': 'Yes',
-      'Sizes': 'S to XXL'
-    }
-  },
-  {
-    id: 29,
-    name: 'Universal Led Fog Light (ZFL-70)',
-    price: 5999,
-    discount: 25,
-    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772709904/Screenshot_2026-03-05_at_4.53.40_PM.png',
-    galleryImages: [
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772709911/Screenshot_2026-03-05_at_4.53.59_PM.png',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772709907/Screenshot_2026-03-05_at_4.53.45_PM.png',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772709901/Screenshot_2026-03-05_at_4.53.54_PM.png'
-    ],
-    category: 'Lighting',
-    subcategory: 'Indicators',
-    brand: 'Zana',
-    rating: 4,
-    reviews: 678,
-    isNew: false,
-    bikes: ['All'],
-    description: 'Universal LED turn signal lights',
-    specifications: {
-      'Power': '1W per light',
-      'Color': 'Amber',
-      'Mounting': 'Universal M10',
-      'Quantity': 'Set of 4'
     }
   },
   {
@@ -859,32 +546,6 @@ export const products = [
     }
   },
   {
-    id: 34,
-    name: 'Raida Tourer Riding Jacket (Grey)',
-    price: 4999,
-    discount: 20,
-    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772780010/Raida-Tourer-Riding-Jacket-Grey-Online-Buy-India_01.jpg',
-    galleryImages: [
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772780013/Raida-Tourer-Riding-Jacket-Grey-Online-Buy-India_02.jpg',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772780017/Raida-Tourer-Riding-Jacket-Grey-Online-Buy-India_03.jpg',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772780025/Raida-Tourer-Riding-Jacket-Grey-Online-Buy-India_04.jpg'
-    ],
-    category: 'Riding Gear',
-    subcategory: 'Jackets',
-    brand: 'Raida',
-    rating: 5,
-    reviews: 345,
-    isNew: true,
-    bikes: ['All'],
-    description: 'When youre out on the road, safety is your top priority, and the Raida Tourer Riding Jacket (Grey) has you covered. Crafted with high-density abrasion-resistant fabric, this jacket offers superior protection against falls and scrapes, giving you the confidence to tackle any journey. Its integrated CE-approved armor on the elbows, shoulders, and back ensures that you’re protected in critical impact zones, reducing the risk of serious injury. Whether you’re commuting through the city or hitting the highway for long rides, this jacket provides the essential protection every rider needs.',
-    specifications: {
-      'Material': 'Mesh + Cordura',
-      'Protection': 'CE Level 1 armor',
-      'Ventilation': 'Full mesh body',
-      'Sizes': 'S to XXL'
-    }
-  },
-  {
     id: 35,
     name: 'MOTO TORQUE KTM ADVENTURE 390 - Fog Light Mount',
     price: 4999,
@@ -908,58 +569,6 @@ export const products = [
       'Lumens': '2000 LM',
       'Mounting': 'Dedicated brackets',
       'Compatibility': 'Adventure 250/390'
-    }
-  },
-  {
-    id: 36,
-    name: 'Rynox ADVENTO PRO PANTS',
-    price: 7950,
-    discount: 25,
-    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772781517/Rynox_Adventopant_Black001_1200x.webp',
-    galleryImages: [
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772781504/Rynox_Advento_pant_Black002_1200x.webp',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772781508/Rynox_Advento_pant_Black003_1_1200x.webp',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772781512/Rynox_Advento_pant_Black004_1200x.jpg'
-    ],
-    category: 'Riding Gear',
-    subcategory: 'Rain Gear',
-    brand: 'Rynox',
-    rating: 4,
-    reviews: 456,
-    isNew: true,
-    bikes: ['All'],
-    description: 'Waterproof rain over-pants',
-    specifications: {
-      'Material': 'Nylon + PU coating',
-      'Waterproof': '100%',
-      'Features': 'Adjustable waist, reflective',
-      'Sizes': '28-40'
-    }
-  },
-  {
-    id: 37,
-    name: 'Universal Bike Horn, 12V Loud Sound',
-    price: 599,
-    discount: 20,
-    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772781987/61SdELXZFmL._SL1500_.jpg',
-    galleryImages: [
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772781978/61KFTwO-UqL._SL1024_.jpg',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772782035/619DQHDk7RL._SL1024_.jpg',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772781982/61rlDZCHoSL._SL1024_.jpg'
-    ],
-    category: 'Lighting',
-    subcategory: 'Electricals',
-    brand: 'Zana',
-    rating: 4,
-    reviews: 789,
-    isNew: false,
-    bikes: ['All'],
-    description: 'Dual tone loud horn',
-    specifications: {
-      'Voltage': '12V',
-      'Sound': '110-120 dB',
-      'Type': 'Dual tone',
-      'Mounting': 'Universal'
     }
   },
   {
@@ -1015,32 +624,6 @@ export const products = [
     }
   },
   {
-    id: 40,
-    name: 'Raida Tourer Motorcycle Boots | Grey',
-    price: 3999,
-    discount: 25,
-    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772783383/Raida-Tourer-Motorcycle-Boots-Grey-Online-Buy-India_1.jpg',
-    galleryImages: [
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772783378/Raida-Tourer-Motorcycle-Boots-Grey-Online-Buy-India_2.jpg',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772783388/Raida-Tourer-Motorcycle-Boots-Grey-Online-Buy-India_3.jpg',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772783393/Raida-Tourer-Motorcycle-Boots-Grey-Online-Buy-India_4.jpg'
-    ],
-    category: 'Riding Gear',
-    subcategory: 'Boots',
-    brand: 'Raida',
-    rating: 4,
-    reviews: 234,
-    isNew: true,
-    bikes: ['All'],
-    description: 'Casual riding boots with protection',
-    specifications: {
-      'Material': 'Leather',
-      'Protection': 'Ankle guard, toe box',
-      'Sole': 'Oil resistant',
-      'Sizes': '6-12 UK'
-    }
-  },
-  {
     id: 41,
     name: 'Barkbusters Carbon Fiber Guards',
     price: 16999,
@@ -1090,58 +673,6 @@ export const products = [
       'Adjustable': '360 degree',
       'Compatibility': 'Duke series',
       'Finish': 'Anodized'
-    }
-  },
-  {
-    id: 43,
-    name: 'Rynox Stealth Evo Pants Grey',
-    price: 8999,
-    discount: 20,
-    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772784169/Rynox-Stealth-Evo-Pants-Grey-Online-Buy-India_1.jpg',
-    galleryImages: [
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772784164/Rynox-Stealth-Evo-Pants-Grey-Online-Buy-India_2.jpg',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772784159/Rynox-Stealth-Evo-Pants-Grey-Online-Buy-India_4.jpg',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772784153/Rynox-Stealth-Evo-Pants-Grey-Online-Buy-India_3.jpg'
-    ],
-    category: 'Riding Gear',
-    subcategory: 'Pants',
-    brand: 'Rynox',
-    rating: 5,
-    reviews: 234,
-    isNew: true,
-    bikes: ['All'],
-    description: 'Kevlar reinforced riding jeans',
-    specifications: {
-      'Material': 'Denim + Kevlar',
-      'Protection': 'CE knee & hip armor',
-      'Style': 'Casual jeans look',
-      'Sizes': '28-40'
-    }
-  },
-  {
-    id: 44,
-    name: 'TAIL TIDY BLACK FOR TRIUMPH SPEED 400 X',
-    price: 1499,
-    discount: 30,
-    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772784330/Screenshot_2026-03-06_at_1.34.17_PM.png',
-    galleryImages: [
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772784337/Screenshot_2026-03-06_at_1.34.23_PM.png',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772784346/Screenshot_2026-03-06_at_1.34.26_PM.png',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772784367/Screenshot_2026-03-06_at_1.34.35_PM.png'
-    ],
-    category: 'Bike Accessories',
-    subcategory: 'Tail Tidy',
-    brand: 'Zana',
-    rating: 4,
-    reviews: 567,
-    isNew: false,
-    bikes: ['All'],
-    description: 'Universal fender eliminator kit',
-    specifications: {
-      'Material': 'Aluminum',
-      'Features': 'LED license plate light',
-      'Mounting': 'Universal fitment',
-      'Finish': 'Black anodized'
     }
   },
   {
@@ -1197,56 +728,6 @@ export const products = [
     }
   },
   {
-    id: 47,
-    name: 'Raida Drift Evo Motorcycle Gloves',
-    price: 5999,
-    discount: 20,
-    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772785168/61dTIQkC0yL._SL1024_.jpg',
-    galleryImages: [
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772785224/512vlaADXZL._SL1024_.jpg',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772785240/61TysAKE6jL._SL1024_.jpg',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772785230/613jnU8QpXL._SL1024_.jpg'
-    ],
-    category: 'Riding Gear',
-    subcategory: 'Gloves',
-    brand: 'Raida',
-    rating: 5,
-    reviews: 345,
-    isNew: true,
-    bikes: ['All'],
-    description: 'Winter riding gloves waterproof',
-    specifications: {
-      'Material': 'Leather + fleece lining',
-      'Waterproof': 'Yes',
-      'Touch Screen': 'Yes',
-      'Sizes': 'S to XXL'
-    }
-  },
-  {
-    id: 48,
-    name: 'Reise Motorrad Riding Socks',
-    price: 4999,
-    discount: 0,
-    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772785555/Acerbis_SOCKSNO-WETWATERPROOF_Black_Grey_Color_7131703111_1.webp',
-    galleryImages: [
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772785561/Acerbis_SOCKS_NO-_WET_WATERPROOF_Black_Grey_Color_7131703111_1.webp'
-    ],
-    category: 'Riding Gear',
-    subcategory: 'Accessories',
-    brand: 'BMW',
-    rating: 4,
-    reviews: 234,
-    isNew: false,
-    bikes: ['All'],
-    description: 'Technical riding socks',
-    specifications: {
-      'Material': 'Merino wool blend',
-      'Features': 'Moisture wicking',
-      'Sizes': 'S, M, L, XL',
-      'Colors': 'Black, Grey'
-    }
-  },
-  {
     id: 49,
     name: 'MOTO CARE KTM DUKE CRASH GUARD WITH DUAL SLIDERS FOR 250/390 BS6',
     price: 4699,
@@ -1270,32 +751,6 @@ export const products = [
       'Compatibility': 'Duke 125/200/250/390',
       'Mounting': 'No fairing cutting',
       'Color': 'Black'
-    }
-  },
-  {
-    id: 50,
-    name: 'Rynox Navigator Backpack 30L',
-    price: 3599,
-    discount: 25,
-    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772786525/61cUScxqdlL._SL1080_.jpg',
-    galleryImages: [
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772786531/51XBVFKBpSL._SL1080_.jpg',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772786519/51hmmO7z4ML._SL1080_.jpg',
-      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772786514/51bgsTIQnZL._SL1080_.jpg'
-    ],
-    category: 'Touring',
-    subcategory: 'Backpacks',
-    brand: 'Rynox',
-    rating: 5,
-    reviews: 234,
-    isNew: true,
-    bikes: ['All'],
-    description: 'Waterproof riding backpack with laptop sleeve',
-    specifications: {
-      'Capacity': '30 Liters',
-      'Material': 'Ripstop nylon',
-      'Waterproof': 'Yes + rain cover',
-      'Features': 'Laptop sleeve, helmet carry'
     }
   },
   {
@@ -8390,7 +7845,7 @@ export const products = [
   },
   {
     id: 323,
-    name: 'Veshra Royal Enfield Super Meteor 650 Vesrah Brake pads (Ceramic)',
+    name: 'vesrah Royal Enfield Super Meteor 650 Vesrah Brake pads (Ceramic)',
     price: 3395,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776145919/meteor650_1_mz6cks.webp',
@@ -8415,7 +7870,7 @@ export const products = [
   },
   {
     id: 324,
-    name: 'Veshra Royal Enfield Thunderbird/ Thunderbird X 500 Vesrah Brake pads (Ceramic)',
+    name: 'vesrah Royal Enfield Thunderbird/ Thunderbird X 500 Vesrah Brake pads (Ceramic)',
     price: 3395,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776146146/royal-enfield-thunderbird-500-front-brake-pad-ceramic-350857_mi0mz3.jpg',
@@ -8440,7 +7895,7 @@ export const products = [
   },
   {
     id: 325,
-    name: 'Veshra Royal Enfield Hunter 350 - Vesrah Brake pads (Ceramic)',
+    name: 'vesrah Royal Enfield Hunter 350 - Vesrah Brake pads (Ceramic)',
     price: 3395,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776146222/Hunter350_tjcyte.webp',
@@ -8465,7 +7920,7 @@ export const products = [
   },
   {
     id: 326,
-    name: 'Veshra Royal Enfield Electra 350 Vesrah Brake pads (Ceramic)',
+    name: 'vesrah Royal Enfield Electra 350 Vesrah Brake pads (Ceramic)',
     price: 3395,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776146288/royal-enfield-electra-350-front-brake-pad-ceramic-672912_wbki6w.jpg',
@@ -8490,7 +7945,7 @@ export const products = [
   },
   {
     id: 327,
-    name: 'Veshra Royal Enfield Himalayan / Himalayan Scram Vesrah Brake pads (Ceramic)',
+    name: 'vesrah Royal Enfield Himalayan / Himalayan Scram Vesrah Brake pads (Ceramic)',
     price: 3395,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776146380/royal-enfield-himalayan-rear-brake-pad-ceramic-425956_sj8tmr.jpg',
@@ -8515,7 +7970,7 @@ export const products = [
   },
   {
     id: 328,
-    name: 'Veshra Royal Enfield shotgun 650 brake pads (Ceramic)',
+    name: 'vesrah Royal Enfield shotgun 650 brake pads (Ceramic)',
     price: 3395,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776146569/Screenshot2025-03-11144559_ifgt1x.webp',
@@ -8540,7 +7995,7 @@ export const products = [
   },
   {
     id: 329,
-    name: 'Veshra Royal Enfield Himalayan 450 Vesrah Brake pads (Ceramic)',
+    name: 'vesrah Royal Enfield Himalayan 450 Vesrah Brake pads (Ceramic)',
     price: 3395,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776146488/Himalayan450_ep2qfn.webp',
@@ -8565,7 +8020,7 @@ export const products = [
   },
   {
     id: 330,
-    name: 'Veshra Royal Enfield Guerrilla 450 Vesrah Brake pads (Ceramic)',
+    name: 'vesrah Royal Enfield Guerrilla 450 Vesrah Brake pads (Ceramic)',
     price: 3395,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776146729/Screenshot2025-11-20125834_8cc6e406-30b9-42cd-9b91-7198eb6b4fd1_jrvijc.webp',
@@ -8590,7 +8045,7 @@ export const products = [
   },
   {
     id: 331,
-    name: 'Veshra KTM Duke 390 Vesrah brake pads (Ceramic)',
+    name: 'vesrah KTM Duke 390 Vesrah brake pads (Ceramic)',
     price: 3395,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776147234/ktm-390-front-brake-pad-ceramic-557539_bgal3q.webp',
@@ -8615,7 +8070,7 @@ export const products = [
   },
   {
     id: 332,
-    name: 'Veshra KTM RC 390 Vesrah brake pad (Ceramic)',
+    name: 'vesrah KTM RC 390 Vesrah brake pad (Ceramic)',
     price: 3395,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776147320/ktm-390-front-brake-pad-ceramic-194368_branwk.webp',
@@ -8640,7 +8095,7 @@ export const products = [
   },
   {
     id: 333,
-    name: 'Veshra KTM Duke125/duke 250 Brake Pads (Ceramic)',
+    name: 'vesrah KTM Duke125/duke 250 Brake Pads (Ceramic)',
     price: 3395,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776147393/ktm-duke125-brake-pads-ceramic-579820_yu1e8q.webp',
@@ -8665,7 +8120,7 @@ export const products = [
   },
   {
     id: 334,
-    name: 'Veshra KTM Adventure 390 /250 Rear Brake Pads (Ceramic) for 2025 GEN 3 Models',
+    name: 'vesrah KTM Adventure 390 /250 Rear Brake Pads (Ceramic) for 2025 GEN 3 Models',
     price: 1698,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776147513/ktm-adventure-390-rear-brake-pads-ceramic-529606_wriz8r.jpg',
@@ -8690,7 +8145,7 @@ export const products = [
   },
   {
     id: 335,
-    name: 'Veshra KTM Adventure 250/390 - Vesrah Brake pads (Ceramic) till 2024',
+    name: 'vesrah KTM Adventure 250/390 - Vesrah Brake pads (Ceramic) till 2024',
     price: 3395,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776147564/KTMAdventure390_ydd6sj.webp',
@@ -8715,7 +8170,7 @@ export const products = [
   },
   {
     id: 336,
-    name: 'Veshra Bajaj Dominar 400 Vesrah Ceramic brake pad front and rear (UG 19) 2019 onwards',
+    name: 'vesrah Bajaj Dominar 400 Vesrah Ceramic brake pad front and rear (UG 19) 2019 onwards',
     price: 1698,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776148025/bajaj-dominar-400-ceramic-brake-pad-front-ug-19-100418_1_lvzxr2.webp',
@@ -8740,7 +8195,7 @@ export const products = [
   },
   {
     id: 337,
-    name: 'Veshra Bajaj NS200 Till 2023 Vesrah Brake pads (Ceramic)',
+    name: 'vesrah Bajaj NS200 Till 2023 Vesrah Brake pads (Ceramic)',
     price: 1698,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776148147/bajaj-dominar-400-ceramic-brake-pad-front-ug-19-100418_cfgpqo.webp',
@@ -8765,7 +8220,7 @@ export const products = [
   },
   {
     id: 338,
-    name: 'Veshra Bajaj Pulsar 220 Vesrah brake pad (Ceramic)',
+    name: 'vesrah Bajaj Pulsar 220 Vesrah brake pad (Ceramic)',
     price: 1698,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776148300/pulsar-220-front-brake-pad-ceramic-289771_xln6xq.jpg',
@@ -8790,7 +8245,7 @@ export const products = [
   },
   {
     id: 339,
-    name: 'Veshra HERO XPULSE 200/ 4V- XPULSE RALLY VESRAH BRAKE PADS',
+    name: 'vesrah HERO XPULSE 200/ 4V- XPULSE RALLY VESRAH BRAKE PADS',
     price: 3935,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776148477/hero-xpulse-200-vesrah-brake-pads-532415_rdldzj.webp',
@@ -8815,7 +8270,7 @@ export const products = [
   },
   {
     id: 341,
-    name: 'Veshra Aprilla SR 125 Vesrah Brake Pad Front and Rear',
+    name: 'vesrah aprilia SR 125 Vesrah Brake Pad Front and Rear',
     price: 3935,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776148730/APRILIASR125_lqous3.webp',
@@ -8826,11 +8281,11 @@ export const products = [
     ],
     category: 'Performance Parts',
     subcategory: 'Brake Pads',
-    brand: 'Aprilla',
+    brand: 'aprilia',
     rating: 5,
     reviews: 892,
     isNew: false,
-    bikes: ['Aprilla'],
+    bikes: ['aprilia'],
     description: 'Vesrah has been manufacturing performance braking systems since 1950',
     specifications: {
       'Viscosity': 'High Speed Brakes',
@@ -8840,7 +8295,7 @@ export const products = [
   },
   {
     id: 342,
-    name: 'Veshra Yamaha R15 v4 vesrah brake pad (Ceramic)',
+    name: 'vesrah Yamaha R15 v4 vesrah brake pad (Ceramic)',
     price: 3935,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776148862/yamaha-r15-v4-brake-pad-ceramic-810767_blpbny.webp',
@@ -8865,7 +8320,7 @@ export const products = [
   },
   {
     id: 343,
-    name: 'Veshra Yamaha Aerox 155 Vesrah brake pad front (Ceramic)',
+    name: 'vesrah Yamaha Aerox 155 Vesrah brake pad front (Ceramic)',
     price: 3935,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776148942/yamaha-aerox-155-vesrah-brake-pad-front-ceramic-613324_hh3pek.webp',
@@ -8890,7 +8345,7 @@ export const products = [
   },
   {
     id: 344,
-    name: 'Veshra Honda highness CB350/ CB 350 RS Vesrah BRAKE PADS (Ceramic)',
+    name: 'vesrah Honda highness CB350/ CB 350 RS Vesrah BRAKE PADS (Ceramic)',
     price: 3935,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776149025/honda-hness-cb350-brake-pads-ceramic-356676_uefa7o.webp',
@@ -8915,7 +8370,7 @@ export const products = [
   },
   {
     id: 345,
-    name: 'Veshra Honda CB 200 X Brake Pads (Ceramic)',
+    name: 'vesrah Honda CB 200 X Brake Pads (Ceramic)',
     price: 3935,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776149111/HondaCB200X_a5lfhk.webp',
@@ -8940,7 +8395,7 @@ export const products = [
   },
   {
     id: 346,
-    name: 'Veshra BMW 310 GS Vesrah Brake pad Front & rear',
+    name: 'vesrah BMW 310 GS Vesrah Brake pad Front & rear',
     price: 3935,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776149206/BMW310GS_gkqzet.webp',
@@ -8965,7 +8420,7 @@ export const products = [
   },
   {
     id: 347,
-    name: 'Veshra Ducati Panigale 959 Brake pads (Ceramic)',
+    name: 'vesrah Ducati Panigale 959 Brake pads (Ceramic)',
     price: 3935,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776149317/ducati-panigale-959-brake-pads-ceramic-807064_xhlzvc.jpg',
@@ -8990,7 +8445,7 @@ export const products = [
   },
   {
     id: 348,
-    name: 'Veshra Triumph Scrambler 400 Vesrah Brake pads (Ceramic)',
+    name: 'vesrah Triumph Scrambler 400 Vesrah Brake pads (Ceramic)',
     price: 3935,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776149451/Triumphscrambler400_n9hd2n.webp',
@@ -9015,7 +8470,7 @@ export const products = [
   },
   {
     id: 349,
-    name: 'Veshra Triumph Speed 400 Vesrah Brake pads (Ceramic)',
+    name: 'vesrah Triumph Speed 400 Vesrah Brake pads (Ceramic)',
     price: 3935,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776149544/Triumphspeed400_1_bngs4a.webp',
@@ -9040,7 +8495,7 @@ export const products = [
   },
   {
     id: 350,
-    name: 'Veshra Kawasaki Z900 Front brake pad (Ceramic)',
+    name: 'vesrah Kawasaki Z900 Front brake pad (Ceramic)',
     price: 3935,
     discount: 10,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776149648/kawasaki-z900-front-brake-pad-ceramic-172652_rjldpb.jpg',
@@ -9635,7 +9090,7 @@ export const products = [
   },
   {
     id: 373,
-    name: 'Ejeas V6 Pro Bluetooth Motorcycle Helmet Intercom Headset',
+    name: 'EJEAS Intercom V6 Pro Bluetooth Motorcycle Helmet Intercom Headset',
     price: 3999,
     discount: 0,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776156206/shopping_n7ht9m.webp',
@@ -9646,12 +9101,12 @@ export const products = [
     ],
     category: 'Riding Gear',
     subcategory: 'Bluetooth & Intercom',
-    brand: 'Ejeas',
+    brand: 'EJEAS Intercom',
     rating: 5,
     reviews: 234,
     isNew: true,
     bikes: ['All'],
-    description: "Ejeas communication devices help you stay connected and in control for Motorcycling, Cycling, Outdoor, Marine and beyond. Whoever you are, there a Ejeas for you.",
+    description: "EJEAS Intercom communication devices help you stay connected and in control for Motorcycling, Cycling, Outdoor, Marine and beyond. Whoever you are, there a EJEAS Intercom for you.",
     specifications: {
       'Range': 'Up to 1.6km',
       'Battery': '13 hours talk time',
@@ -9661,7 +9116,7 @@ export const products = [
   },
   {
     id: 374,
-    name: 'Ejeas Q8 Helmet Bluetooth Headset',
+    name: 'EJEAS Intercom Q8 Helmet Bluetooth Headset',
     price: 4999,
     discount: 0,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776156554/shopping_4_fexphs.webp',
@@ -9672,12 +9127,12 @@ export const products = [
     ],
     category: 'Riding Gear',
     subcategory: 'Bluetooth & Intercom',
-    brand: 'Ejeas',
+    brand: 'EJEAS Intercom',
     rating: 5,
     reviews: 234,
     isNew: true,
     bikes: ['All'],
-    description: "Ejeas communication devices help you stay connected and in control for Motorcycling, Cycling, Outdoor, Marine and beyond. Whoever you are, there a Ejeas for you.",
+    description: "EJEAS Intercom communication devices help you stay connected and in control for Motorcycling, Cycling, Outdoor, Marine and beyond. Whoever you are, there a EJEAS Intercom for you.",
     specifications: {
       'Range': 'Up to 1.6km',
       'Battery': '13 hours talk time',
@@ -9687,7 +9142,7 @@ export const products = [
   },
   {
     id: 375,
-    name: 'Ejeas Vnetphone K1PRO Motorcycle Mesh Intercom with 2K Camera',
+    name: 'EJEAS Intercom Vnetphone K1PRO Motorcycle Mesh Intercom with 2K Camera',
     price: 3999,
     discount: 0,
     image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1776156752/shopping_8_a5dl1d.webp',
@@ -9698,12 +9153,12 @@ export const products = [
     ],
     category: 'Riding Gear',
     subcategory: 'Bluetooth & Intercom',
-    brand: 'Ejeas',
+    brand: 'EJEAS Intercom',
     rating: 5,
     reviews: 234,
     isNew: true,
     bikes: ['All'],
-    description: "Ejeas communication devices help you stay connected and in control for Motorcycling, Cycling, Outdoor, Marine and beyond. Whoever you are, there a Ejeas for you.",
+    description: "EJEAS Intercom communication devices help you stay connected and in control for Motorcycling, Cycling, Outdoor, Marine and beyond. Whoever you are, there a EJEAS Intercom for you.",
     specifications: {
       'Range': 'Up to 1.6km',
       'Battery': '13 hours talk time',
@@ -10086,13 +9541,3964 @@ export const products = [
       'Speakers': 'accessable'
     }
   },
+  {
+    id: 391,
+    name: 'EJEAS Intercom X10 Mesh Bluetooth Motorcycle Helmet Intercom Headset',
+    price: 3999,
+    discount: 0,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781277663/X10_mian_1-2_qpk1dd.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781277677/Screenshot_2026-06-12_at_8.41.52_PM_euyafm.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781277676/Screenshot_2026-06-12_at_8.41.46_PM_z2y5k4.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781277677/Screenshot_2026-06-12_at_8.41.59_PM_ycrsbr.png'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Bluetooth & Intercom',
+    brand: 'EJEAS Intercom',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['All'],
+    description: "EJEAS Intercom communication devices help you stay connected and in control for Motorcycling, Cycling, Outdoor, Marine and beyond. Whoever you are, there a EJEAS Intercom for you.",
+    specifications: {
+      'Range': 'Up to 1.6km',
+      'Battery': '13 hours talk time',
+      'Features': 'Music, GPS, Phone calls',
+      'Speakers': 'JBL 45mm'
+    }
+  },
+  {
+    id: 392,
+    name: 'Red Rooster Galactic Adventure 390',
+    price: 14000,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781287142/Untitled-design-24_vqemvm.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781287142/Galactic-Top-scaled_6ec1cb2a-184d-4998-874b-2677a1528957_esc4lq.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781287143/IMG0181-scaled_71b9a84a-3875-4b07-b923-1a300a34a77d_gaojzw.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781287142/IMG0201-scaled_387dc344-4a03-44ab-8b62-d9b9e2c76c5e_pylccf.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'KTM',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['KTM'],
+    description: 'Performance slip-on exhaust for Duke series',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Duke 125/200/250/390',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 393,
+    name: 'Red Rooster Galactic Adventure 390 (Gen 3)',
+    price: 14000,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781287142/Untitled-design-24_vqemvm.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781287142/Galactic-Top-scaled_6ec1cb2a-184d-4998-874b-2677a1528957_esc4lq.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781287143/IMG0181-scaled_71b9a84a-3875-4b07-b923-1a300a34a77d_gaojzw.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781287142/IMG0201-scaled_387dc344-4a03-44ab-8b62-d9b9e2c76c5e_pylccf.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'KTM',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['KTM'],
+    description: 'Performance slip-on exhaust for Duke series',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Duke 125/200/250/390',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 394,
+    name: 'Red Rooster Galactic Duke 390 (Gen 2)',
+    price: 14000,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781287396/Galactic_for_Duke_250__page-0003_ofjc4g.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781287142/Galactic-Top-scaled_6ec1cb2a-184d-4998-874b-2677a1528957_esc4lq.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781287143/IMG0181-scaled_71b9a84a-3875-4b07-b923-1a300a34a77d_gaojzw.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781287142/IMG0201-scaled_387dc344-4a03-44ab-8b62-d9b9e2c76c5e_pylccf.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'KTM',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['KTM'],
+    description: 'Performance slip-on exhaust for Duke series',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Duke 125/200/250/390',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 395,
+    name: 'Red Rooster Galactic Duke 390 (Gen 1)',
+    price: 14000,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781287396/Galactic_for_Duke_250__page-0003_ofjc4g.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781287142/Galactic-Top-scaled_6ec1cb2a-184d-4998-874b-2677a1528957_esc4lq.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781287143/IMG0181-scaled_71b9a84a-3875-4b07-b923-1a300a34a77d_gaojzw.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781287142/IMG0201-scaled_387dc344-4a03-44ab-8b62-d9b9e2c76c5e_pylccf.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'KTM',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['KTM'],
+    description: 'Performance slip-on exhaust for Duke series',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Duke 125/200/250/390',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 396,
+    name: 'Red Rooster Rumbler Polish for Thunderbird 350',
+    price: 10500,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781287798/Thunderbird_350_-_RUmbler_Polish_jpg_lft5y7.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781287800/RUMBLER-POLISH-SIDE-VIEW-scaled_1_ivk4l9.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781287799/Rumbler-p_1_ibboid.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781287799/Rumbler-p_1_ibboid.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Performance exhaust by Red Rooster',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 397,
+    name: 'Red Rooster Stellar Header Pipe - Matte',
+    price: 16500,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781287925/Stellar-Header-Pipe_5c7e6ed5-3d0e-494b-8378-316d6c1bb776_acncqw.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781287924/HeaderPipe-BlackforGtandinterceptor_woijhb.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781287925/Stellar-Header-Pipe_5c7e6ed5-3d0e-494b-8378-316d6c1bb776_acncqw.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781287924/HeaderPipe-BlackforGtandinterceptor_woijhb.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Performance exhaust by Red Rooster',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 398,
+    name: 'Red Rooster Vertex Polish for Himalayan',
+    price: 99000,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781288024/Vetex_Polish_for_Himalayan_page-0010_idxzt4.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781288022/Untitled-design-24_ql58el.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781288023/vertex-polish_whrgx7.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781288024/Vetex_Polish_for_Himalayan_page-0010_idxzt4.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Performance exhaust by Red Rooster',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 399,
+    name: 'Red Rooster Stellar Matte for Continental GT 650',
+    price: 20750,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781288129/Stellar_Matte_for_GT_650__page-0002_xss7d8.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781288130/stellar-m_k3nm4o.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781288131/STELLAR-MATTE-SIDE-1-scaled_pwm2kp.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781288130/stellar-m_k3nm4o.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Performance exhaust by Red Rooster',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 400,
+    name: 'Red Rooster Rumbler Ace - Polish for Meteor 350',
+    price: 10000,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781288376/Rumbler_Ace_-_Polish_for_Meteor_350__compressed_page-0007_1_q40t0t.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781288375/Rumbler-Ace-p_hmoivy.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781288374/RRP-Rumbler-Ace-Polish-Side-View-1-scaled_bfj2jm.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781288376/Rumbler_Ace_-_Polish_for_Meteor_350__compressed_page-0007_1_q40t0t.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Performance exhaust by Red Rooster',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 401,
+    name: 'Red Rooster Rumbler Classic 350 - Matte',
+    price: 10500,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781288529/Rumbler_Matte_for_Classic_350__page-0006_uhk24g.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781288528/RUMBLER-MATTE-SIDE-VIEW-1-scaled_rpttrm.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781288527/Rumbler-m_kbgopo.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781288529/Rumbler_Matte_for_Classic_350__page-0006_uhk24g.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Performance exhaust by Red Rooster',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 402,
+    name: 'Red Rooster Polestar Pro Polish for Classic Reborn 350',
+    price: 10750,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781288631/Reborn_350_-_Polestar_Pro_Polish_olbyzf.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781288630/polester-p_roig6m.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781288631/Reborn_350_-_Polestar_Pro_Polish_olbyzf.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781288630/polester-p_roig6m.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Performance exhaust by Red Rooster',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 403,
+    name: 'Red Rooster Rumbler Ace - Polish for Meteor 350',
+    price: 10000,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781288376/Rumbler_Ace_-_Polish_for_Meteor_350__compressed_page-0007_1_q40t0t.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781288375/Rumbler-Ace-p_hmoivy.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781288374/RRP-Rumbler-Ace-Polish-Side-View-1-scaled_bfj2jm.webpp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781288376/Rumbler_Ace_-_Polish_for_Meteor_350__compressed_page-0007_1_q40t0t.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Performance exhaust by Red Rooster',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 404,
+    name: 'Red Rooster Astral Pro - Polish',
+    price: 22150,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781288799/Astral_Pro_Polish_for_Super_Meteor_650__page-0006_biuia2.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781288800/Astral-Pro-1_jrskn1.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781288799/Astral_Pro_Polish_for_Super_Meteor_650__page-0006_biuia2.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781288801/Astral-Pro_njiukp.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Performance exhaust by Red Rooster',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 405,
+    name: 'Red Rooster Rumbler Max - Polish for Royal Enfield Hunter 350',
+    price: 8990,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781288899/Rumbler_Max_Polish_for_Hunter_350__page-0003_rckxgy.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781288896/Rumbler-Max-Polish-1_bqw4qx.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781288898/Rumbler-Max-Polish_lbxl23.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781288899/Rumbler_Max_Polish_for_Hunter_350__page-0003_rckxgy.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Performance exhaust by Red Rooster',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 406,
+    name: 'Red Rooster Stellar X - Polish',
+    price: 13600,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781289464/Stellar_X_Polish_jpg_bxm0fd.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781289463/Stellar_X_Polish_mz7gf6.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781289464/Stellar_X_Polish_jpg_bxm0fd.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781289463/Stellar_X_Polish_mz7gf6.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Performance exhaust by Red Rooster',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 407,
+    name: 'Red Rooster Stellar X - Black',
+    price: 13600,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781289558/Stellar_X_Black_jpg_ot2f9f.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781289556/Stellar_X_Black_hmgtia.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781289558/Stellar_X_Black_jpg_ot2f9f.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781289556/Stellar_X_Black_hmgtia.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Performance exhaust by Red Rooster',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 408,
+    name: 'Red Rooster Rumbler Ace - Black for Meteor 350',
+    price: 10000,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781289676/Meteor_350_-_RUmbler_Ace_Black_hgkw2c.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781289675/RRP-Rumbler-Ace-Black-Matte-Side-View-scaled_bstfc2.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781289673/Rumbler-Ace_mbfx6y.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781289676/Meteor_350_-_RUmbler_Ace_Black_hgkw2c.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Performance exhaust by Red Rooster',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 409,
+    name: 'Red Rooster Stellar for Shotgun 650 - Black',
+    price: 20750,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781289763/1_17903114-8b9a-46f0-9d21-983d95a7908e_zbxbrn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781289766/3_8d7d4017-88c0-4cde-b3ed-ba3546e8fed3_fvhckt.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781289765/2_5988a1e2-9499-4410-987d-0a5bd20efa3c_i171qg.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781289763/1_17903114-8b9a-46f0-9d21-983d95a7908e_zbxbrn.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Performance exhaust by Red Rooster',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 410,
+    name: 'Red Rooster Astral - Black',
+    price: 21250,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781289856/Astral_-_Black_for_Super_Meteor_650_compressed_page-0009_s2v4m6.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781289852/ASTRAL_BLACK_MATTE-SIDE_VIEW_f9cgdd.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781289854/ASTRALBLACKMATTE-TOP_mmd71w.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781289856/Astral_-_Black_for_Super_Meteor_650_compressed_page-0009_s2v4m6.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Performance exhaust by Red Rooster',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 411,
+    name: 'Red Rooster Stellar Black for Continental GT 650',
+    price: 20750,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781290108/Stellar_Black_for_GT_650__compressed_page-0007_elosjg.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781290110/STELLAR-BLACK-SIDE-VIEW-scaled_mvldjq.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781289854/ASTRALBLACKMATTE-TOP_mmd71w.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781289854/ASTRALBLACKMATTE-TOP_mmd71w.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Performance exhaust by Red Rooster',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 412,
+    name: 'Red Rooster Vertex Matte for Himalayan',
+    price: 9900,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781290262/Vertex_Matte_for_Himalayan_page-0004_f9553342-aa80-4a5c-a2cb-9b52d4965db9_tlt6qr.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781290264/vertex-1_tligh4.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781290266/Vetex-side-1-scaled_iabzu7.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781290264/vertex-1_tligh4.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Performance exhaust by Red Rooster',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 413,
+    name: 'Red Rooster Vertex Black for Himalayan',
+    price: 9900,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781290368/Vertex_Black_for_Himalayan_page-0003_cbr81w.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781290370/Vertex_ldomua.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781290372/IMG0163-scaled_llzgmv.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781290370/Vertex_ldomua.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Performance exhaust by Red Rooster',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 414,
+    name: 'Red Rooster Celesta Pro - Black',
+    price: 17200,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781290832/CELESTA-PRO-BLACK-TOP-scaled_eroyyd.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781290833/Untitled-design-21_jgbzos.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781290832/CELESTA-PRO-BLACK-TOP-scaled_eroyyd.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781290833/Untitled-design-21_jgbzos.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'Jawa',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Jawa'],
+    description: 'Performance exhaust by Red Rooster',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Jawa',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 415,
+    name: 'Red Rooster Polaris for Xpulse 210 Black',
+    price: 13500,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781291264/PolarisforXpulse200Black_btrzkp.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781291266/PolarisforXpulse200Black_1_pufnxl.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781291264/PolarisforXpulse200Black_btrzkp.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781291266/PolarisforXpulse200Black_1_pufnxl.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'Hero',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Hero'],
+    description: 'Performance exhaust by Red Rooster',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Hero',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 416,
+    name: 'Red Rooster Polaris for Xpulse 210 Polish',
+    price: 13500,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781291106/CELESTA-PRO-SIDE-VIEW-1-scaled_u7eugs.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781291103/celesta-pro-p_btdcka.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781291106/CELESTA-PRO-SIDE-VIEW-1-scaled_u7eugs.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781291103/celesta-pro-p_btdcka.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'Hero',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Hero'],
+    description: 'Performance exhaust by Red Rooster',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Hero',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 417,
+    name: 'Red Rooster Pegasus RS Black',
+    price: 10500,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781291725/Pegasus_RS_Black_for_Honda_CB_350_RS_page-0005_zdwq66.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781291726/Pegasus-RS_eonidz.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781291725/Pegasus_RS_Black_for_Honda_CB_350_RS_page-0005_zdwq66.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781291726/Pegasus-RS_eonidz.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'Honda',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Honda'],
+    description: 'Performance exhaust by Red Rooster',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Honda',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 417,
+    name: 'Red Rooster Pegasus RS Polish',
+    price: 10500,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781292006/Pegasus_RS_for_Honda_CB_350_RS_page-0001_kymjj3.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781291726/Pegasus-RS_eonidz.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781292003/Pegasus-RS-p_i3qsni.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781291726/Pegasus-RS_eonidz.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'Honda',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Honda'],
+    description: 'Performance exhaust by Red Rooster',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Honda',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 418,
+    name: 'Red Rooster Altair Black',
+    price: 13500,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781292141/Untitleddesign_4_vvwkph.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781292138/Untitled_design_7_qm4uor.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781292141/Untitleddesign_4_vvwkph.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781292138/Untitled_design_7_qm4uor.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: 'Exhaust',
+    brand: 'Bajaj',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Bajaj'],
+    description: 'Performance exhaust by Red Rooster',
+    specifications: {
+      'Material': 'Stainless steel',
+      'Sound': 'Deep bass note',
+      'Compatibility': 'Bajaj',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 419,
+    name: 'BlueArmor C20 - Helmet Bluetooth Communication Device, Intercom ',
+    price: 9999,
+    discount: 0,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781292566/C20_Box_Website_70804025-7a38-4942-9cae-a8a387176c7d_cpypyn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781292572/WhatsApp_Image_2025-06-11_at_18.27.49_4_46cdb100-9234-4385-8474-2489d2949468_nnfwmf.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781292570/WhatsApp_Image_2025-06-11_at_18.27.49_3_bc9dd1b9-0fce-4374-a748-94317492d779_r0katz.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781292567/WhatsApp_Image_2025-06-11_at_18.27.49_2_1eeb6115-3175-4585-b080-18c04ff9696c_epofzz.webp'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Bluetooth & Intercom',
+    brand: 'BlueArmor',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['All'],
+    description: "BlueArmor communication devices help you stay connected and in control for Motorcycling, Cycling, Outdoor, Marine and beyond. Whoever you are, there a Sena for you.",
+    specifications: {
+      'Range': 'Up to 1.6km',
+      'Battery': '13 hours talk time',
+      'Features': 'Music, GPS, Phone calls',
+      'Speakers': 'JBL 45mm'
+    }
+  },
+  {
+    id: 420,
+    name: 'BlueArmor HS1 Helmet Bluetooth Device, Intercom ',
+    price: 2999,
+    discount: 0,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781292823/06HS1fullview02_gj4tx5.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781292820/02HS1Fullview_1024x1024_bbc85968-3b94-495a-bf5a-8b94627dc8bc_w5o7tr.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781292818/03HS1USb_1024x1024_5d6eab71-fc3f-4757-b593-9008c7b2530d_cqoezf.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781292815/05HS1MicView_1024x1024_4d155a4d-1a50-4dd8-bea7-70d9831b7788_ogbasz.webp'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Bluetooth & Intercom',
+    brand: 'BlueArmor',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['All'],
+    description: "BlueArmor communication devices help you stay connected and in control for Motorcycling, Cycling, Outdoor, Marine and beyond. Whoever you are, there a Sena for you.",
+    specifications: {
+      'Range': 'Up to 1.6km',
+      'Battery': '13 hours talk time',
+      'Features': 'Music, GPS, Phone calls',
+      'Speakers': 'JBL 45mm'
+    }
+  },
+  {
+    id: 421,
+    name: 'BlueArmor C50 - Helmet Bluetooth Communication Device, Intercom ',
+    price: 15199,
+    discount: 0,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781292964/C50-Box_ifqobw.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781292961/C50-3_Button_Module_Docking_1024x1024_1_zfhqr1.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781292966/Empty-Dock_1024x1024_1_zx1kby.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781292973/C50-ClickDock_Left_Quarter_view_1024x1024_8145802c-6754-4a24-81d6-7fb54959c450_qa6kag.webp'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Bluetooth & Intercom',
+    brand: 'BlueArmor',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['All'],
+    description: "BlueArmor communication devices help you stay connected and in control for Motorcycling, Cycling, Outdoor, Marine and beyond. Whoever you are, there a Sena for you.",
+    specifications: {
+      'Range': 'Up to 1.6km',
+      'Battery': '13 hours talk time',
+      'Features': 'Music, GPS, Phone calls',
+      'Speakers': 'JBL 45mm'
+    }
+  },
+  {
+    id: 422,
+    name: 'BlueArmor C30 Helmet Bluetooth Communication Device, Intercom ',
+    price: 10999,
+    discount: 0,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293107/Front_View_evw5dv.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293104/3PSide1_pcfisr.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293103/3P_Bottom_kfe4yj.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293109/OnHelmet_h2hkwl.webp'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Bluetooth & Intercom',
+    brand: 'BlueArmor',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['All'],
+    description: "BlueArmor communication devices help you stay connected and in control for Motorcycling, Cycling, Outdoor, Marine and beyond. Whoever you are, there a Sena for you.",
+    specifications: {
+      'Range': 'Up to 1.6km',
+      'Battery': '13 hours talk time',
+      'Features': 'Music, GPS, Phone calls',
+      'Speakers': 'JBL 45mm'
+    }
+  },
+  {
+    id: 423,
+    name: 'BlueArmor C50Pro - Helmet Bluetooth Communication Device, Intercom ',
+    price: 23799,
+    discount: 0,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293222/C50-Pro_Box_1024x902_f89bc591-86b4-48c4-98e3-08f80b8721a2_yhuqfj.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293218/c50-dock_magnetic2_trailblazer2_b_1024x1024_98af9922-36df-4699-b785-522e6fb4a5b9_eqvdyz.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293216/C50-ClickDock_Left_Quarter_view_1024x1024_8145802c-6754-4a24-81d6-7fb54959c450_maopai.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293210/c50-b_1024x1024_d90d58ee-fdb8-424d-a9b9-9c6f8466c2b6_zqpsc5.webp'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Bluetooth & Intercom',
+    brand: 'BlueArmor',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['All'],
+    description: "BlueArmor communication devices help you stay connected and in control for Motorcycling, Cycling, Outdoor, Marine and beyond. Whoever you are, there a Sena for you.",
+    specifications: {
+      'Range': 'Up to 1.6km',
+      'Battery': '13 hours talk time',
+      'Features': 'Music, GPS, Phone calls',
+      'Speakers': 'JBL 45mm'
+    }
+  },
+  {
+    id: 424,
+    name: 'FuelX Pro+ KTM Duke 125 (2024)',
+    price: 13990,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'KTM',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['KTM'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plasticl',
+      'Sound': 'increase',
+      'Compatibility': 'Duke 125/200/250/390',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 425,
+    name: 'FuelX Pro+ KTM Duke 250 (2024)',
+    price: 13990,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'KTM',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['KTM'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Duke 125/200/250/390',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 426,
+    name: 'FuelX Pro+ KTM RC 200 (2012-2024)',
+    price: 13990,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'KTM',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['KTM'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Duke 125/200/250/390',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 427,
+    name: 'FuelX Pro+ KTM RC 390 (2012-2024)',
+    price: 13990,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'KTM',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['KTM'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Duke 125/200/250/390',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 428,
+    name: 'FuelX Pro+ KTM RC 125 (2012-2024)',
+    price: 13990,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'KTM',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['KTM'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Duke 125/200/250/390',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 429,
+    name: 'FuelX Pro+ KTM Adventure 250 (2025)',
+    price: 13990,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'KTM',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['KTM'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Duke 125/200/250/390',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 430,
+    name: 'FuelX Pro+ KTM Duke 250 (2012-2023)',
+    price: 13990,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'KTM',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['KTM'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Duke 125/200/250/390',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 431,
+    name: 'FuelX Pro+ KTM Duke 200 (2012-2024)',
+    price: 13990,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'KTM',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['KTM'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Duke 125/200/250/390',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 432,
+    name: 'FuelX Pro+ KTM Duke 125 (2012-2023)',
+    price: 13990,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'KTM',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['KTM'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Duke 125/200/250/390',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 433,
+    name: 'FuelX Pro+ KTM Duke 390 (2012-2023)',
+    price: 13990,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'KTM',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['KTM'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Duke 125/200/250/390',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 434,
+    name: 'FuelX Lite KTM RC 390 (2012-2024)',
+    price: 13990,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'KTM',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['KTM'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Duke 125/200/250/390',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 435,
+    name: 'FuelX Pro+ KTM Adventure 250 (2021-2023)',
+    price: 13990,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'KTM',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['KTM'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Duke 125/200/250/390',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 436,
+    name: 'FuelX Pro+ Royal Enfield Guerrilla 450 (2024)',
+    price: 13450,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 437,
+    name: 'FuelX Pro+ Royal Enfield Scram 411 (2022-2024)',
+    price: 13450,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 438,
+    name: 'FuelX Pro+ Royal Enfield Himalayan (2017-2024)',
+    price: 13450,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 439,
+    name: 'FuelX Pro+ Royal Enfield Bullet 350 (2023-2024)',
+    price: 13450,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 440,
+    name: 'FuelX Pro+ Royal Enfield HUNTER 350 (2022-2024)',
+    price: 13450,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 441,
+    name: 'FuelX Pro+ Royal Enfield Classic 500 (2017-2019)',
+    price: 13450,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 442,
+    name: 'FuelX Pro+ Royal Enfield Bullet 350 Euro 5+ (2025)',
+    price: 13450,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 443,
+    name: 'FuelX Pro+ Royal Enfield Meteor 350 Euro 5+ (2025)',
+    price: 13450,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 444,
+    name: 'FuelX Pro+ Royal Enfield Hunter 350 Euro 5+ (2025)',
+    price: 13450,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 445,
+    name: 'FuelX Pro+ Royal Enfield Classic 350 Euro 5+ (2025)',
+    price: 13450,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 446,
+    name: 'FuelX Pro+ Royal Enfield Guerrilla 450 Euro 5+ (2025)',
+    price: 13990,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 447,
+    name: 'FuelX Pro+ Royal Enfield Super Meteor 650 (2023-2024)',
+    price: 13450,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 448,
+    name: 'FuelX Pro+ Royal Enfield Shotgun 650 Euro 5 (2024-2025)',
+    price: 13450,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 449,
+    name: 'FuelX Pro+ Royal Enfield Continental GT 535 (2017-2019)',
+    price: 13450,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 450,
+    name: 'FuelX Pro+ Royal Enfield Classic/Meteor 350 (2021-2024)',
+    price: 13450,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Royal Enfield',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Royal Enfield'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Royal Enfield',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 451,
+    name: 'FuelX Pro+ Bajaj NS 200 (2023)',
+    price: 13490,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Bajaj',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Bajaj'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Bajaj',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 452,
+    name: 'FuelX Pro+ Bajaj RS 200 (2021)',
+    price: 13490,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Bajaj',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Bajaj'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Bajaj',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 453,
+    name: 'FuelX Pro+ Bajaj RS 200 (2022)',
+    price: 13490,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Bajaj',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Bajaj'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Bajaj',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 454,
+    name: 'FuelX Pro+ Bajaj NS 400Z (2026)',
+    price: 13490,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Bajaj',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Bajaj'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Bajaj',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 455,
+    name: 'FuelX Pro+ Bajaj NS 200 (2021-2022)',
+    price: 13490,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Bajaj',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Bajaj'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Bajaj',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 456,
+    name: 'FuelX Pro+ BMW G 310 R/GS 310 (2018)',
+    price: 13490,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'BMW',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['BMW'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'BMW',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 457,
+    name: 'FuelX Pro+ Yamaha YZF R3 (2015)',
+    price: 14490,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Yamaha',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Yamaha'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Yamaha',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 458,
+    name: 'FuelX Pro+ Yamaha YZF R3 (2018)',
+    price: 14490,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Yamaha',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Yamaha'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Yamaha',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 459,
+    name: 'FuelX Pro+ Yamaha YZF R3 (2023)',
+    price: 14490,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Yamaha',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Yamaha'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Yamaha',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 460,
+    name: 'FuelX Pro+ Yamaha R15 V4/M (2022)',
+    price: 13490,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Yamaha',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Yamaha'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Yamaha',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 461,
+    name: 'FuelX Pro+ Yamaha R15 V4/M (2023)',
+    price: 14490,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Yamaha',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Yamaha'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Yamaha',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 462,
+    name: 'FuelX Pro+ Yamaha MT07 (2020-2024)',
+    price: 14490,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Yamaha',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Yamaha'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Yamaha',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 463,
+    name: 'FuelX Pro+ Aprilia RS 457 INDIA SPEC ONLY (2024)',
+    price: 14490,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Aprilia',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Aprilia'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Aprilia',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 464,
+    name: 'FuelX Pro+ Hero Xpulse 210 (2025)',
+    price: 14490,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Hero',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Hero'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Hero',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 465,
+    name: 'FuelX Pro+ Hero Xpulse 200 4V (2022-2024)',
+    price: 14490,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Hero',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Hero'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Hero',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 466,
+    name: 'FuelX Pro+ Hero Xpulse 200 4V Dual O2 (2024)',
+    price: 13990,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Hero',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Hero'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Hero',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 467,
+    name: 'FuelX Pro+ Hero Xpulse Rally Pro 4v (2022-2024)',
+    price: 14490,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Hero',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Hero'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Hero',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 468,
+    name: 'FuelX Pro+ Harley Davidson 440X (2026)',
+    price: 13990,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Harley-Davidson',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Harley-Davidson'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Harley-Davidson',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 469,
+    name: 'FuelX Pro+ Harley Davidson 440X (2023)',
+    price: 13990,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Harley-Davidson',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Harley-Davidson'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Harley-Davidson',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 470,
+    name: 'FuelX Pro+ Harley Davidson Forty Eight (2012)',
+    price: 34990,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Harley-Davidson',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Harley-Davidson'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Hard Plastic',
+      'Sound': 'okay',
+      'Compatibility': 'Harley-Davidson',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 471,
+    name: 'FuelX Pro+ Honda CB 300F (2022)',
+    price: 13990,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Honda',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Honda'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Honda',
+      'Sound': 'okay',
+      'Compatibility': 'Honda',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 472,
+    name: 'FuelX Pro+ Honda CB 350RS (2021)',
+    price: 13990,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Honda',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Honda'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Honda',
+      'Sound': 'okay',
+      'Compatibility': 'Honda',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 473,
+    name: 'FuelX Pro+ Honda H NESS (2020-2023)',
+    price: 13990,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293849/Fuelx-pro-3_doce7z.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293854/FXPP1_cnvphn.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781293851/FUELX-PRO-1_hw9d3i.webp'
+    ],
+    category: 'Performance Parts',
+    subcategory: '',
+    brand: 'Honda',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['Honda'],
+    description: 'Improve Performance with FuelX Pro+',
+    specifications: {
+      'Material': 'Honda',
+      'Sound': 'okay',
+      'Compatibility': 'Honda',
+      'Warranty': '1 year'
+    }
+  },
+  {
+    id: 474,
+    name: 'MODERN TECH APRILIA RS 457 MIDDLE RISER',
+    price: 3700,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781296926/Untitled_design_14_b8h8rp.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1775796928/7_514eb668-d71e-485c-a350-79d9ac748fac_1_b3lukz.webp',
+      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1775796927/2_9a68476c-8634-49ac-a936-3f72db35553c_1_ifxbok.webp',
+      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1775796926/1_27cf1ba4-f5a9-4108-8622-deec90d88bf2_1_dq5lz7.webp'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'APRILIA',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['APRILIA'],
+    description: 'Enhance your riding experience with the MODERN TECH Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'APRILIA',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 475,
+    name: 'MODERN TECH APRILIA RS 457 OEM FITMENT MOUNT WITH MOBILE HOLDER CNC',
+    price: 5500,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781297141/Untitleddesign_7_u9671b.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781297141/Untitleddesign_7_u9671b.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781297141/Untitleddesign_7_u9671b.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781297141/Untitleddesign_7_u9671b.webp'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'APRILIA',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['APRILIA'],
+    description: 'Enhance your riding experience with the MODERN TECH Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'APRILIA',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 476,
+    name: 'MOTO CARE TYRE HUGGER FOR APRILLA RS 457',
+    price: 1599,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781297579/1750576802_6857aea24270d_hhu4vv.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781297582/1750576811_6857aeabe5c5c_zrtguu.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781297584/1750576828_6857aebc17338_m4d6gj.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781297588/1750576820_6857aeb4b6aae_mflzbw.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'APRILIA',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['APRILIA'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'APRILIA',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 477,
+    name: 'MOTO CARE CNC CARRIER WITH BACKREST FOR APRILLA RS 457',
+    price: 3600,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781297690/1739427795_67ad8fd327dc9_fnufxi.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781297693/1739427806_67ad8fde58992_rpnf0a.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781297695/1739427820_67ad8fec723b7_e0olnc.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781297698/1739427835_67ad8ffb6e387_bxjral.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'APRILIA',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['APRILIA'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'APRILIA',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 478,
+    name: 'MOTO CARE SADDLE STAY WITH PLATE FOR APRILLA RS 457',
+    price: 2400,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781297811/1739427383_67ad8e3766d3b_nvuiv5.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781297808/1739427393_67ad8e4190ce6_gjxup0.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781297805/1739427402_67ad8e4aa1cf8_xpqmk8.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781297802/1739427374_67ad8e2ecabdf_e5zsp8.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'APRILIA',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['APRILIA'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'APRILIA',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 479,
+    name: 'MOTO CARE FORK SLIDERS FOR APRILLA RS 457',
+    price: 2240,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781297901/1739427182_67ad8d6ed51ab_gqne5a.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781297904/1739427196_67ad8d7c09cd3_xmpvli.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781297901/1739427182_67ad8d6ed51ab_gqne5a.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781297904/1739427196_67ad8d7c09cd3_xmpvli.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'APRILIA',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['APRILIA'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'APRILIA',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 480,
+    name: 'MOTO CARE FRAME SLIDERS FOR APRILLA RS 457',
+    price: 1600,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781297980/1739426896_67ad8c50754f0_vberip.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781297982/1739426904_67ad8c58a6417_dipwyq.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781297985/1739426916_67ad8c64daa0a_oit3hc.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781297982/1739426904_67ad8c58a6417_dipwyq.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'APRILIA',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['APRILIA'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'APRILIA',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 481,
+    name: 'MOTO CARE UPPER LOWER CRASH GUARD (RED) FOR APACHE RTX 300',
+    price: 5600,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781298343/1775916847_69da572f06687_bmibhz.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781298341/1775916838_69da572607b40_d6qxeh.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781298343/1775916847_69da572f06687_bmibhz.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781298341/1775916838_69da572607b40_d6qxeh.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'TVS',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['TVS'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'TVS',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 482,
+    name: 'MOTO CARE UPPER LOWER CRASH GUARD (WHITE) FOR APACHE RTX 300',
+    price: 5600,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781298429/1775916734_69da56bef3b79_yt2mhf.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781298432/1775916726_69da56b628996_ghjwkr.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781298429/1775916734_69da56bef3b79_yt2mhf.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781298432/1775916726_69da56b628996_ghjwkr.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'TVS',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['TVS'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'TVS',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 483,
+    name: 'MOTO CARE SUM GUARD FOR APACHE RTX 300',
+    price: 1600,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781298558/1775916438_69da5596e0b5d_w8k75f.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781298562/1775916446_69da559eabfc9_jp7pjj.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781298565/1775916452_69da55a46fd0b_jphqwz.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781298558/1775916438_69da5596e0b5d_w8k75f.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'TVS',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['TVS'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'TVS',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 484,
+    name: 'MOTO CARE PIPE CARRIER FOR APACHE RTX 300',
+    price: 3040,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781298665/1774354937_69c281f94a79c_bfpglc.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781298668/1774354945_69c2820189fc1_ubejr7.jpg',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781298672/1774354954_69c2820a17392_ykogtc.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781298665/1774354937_69c281f94a79c_bfpglc.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'TVS',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['TVS'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'TVS',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 485,
+    name: 'MOTO CARE PIPE CARRIER WITH BACKREST FOR APACHE RTX 300',
+    price: 4080,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781298750/1774354806_69c28176d6e6a_sxcjrv.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781298753/1774354815_69c2817fa2f76_hgg7jl.jpg',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781298757/1774354824_69c281888e715_igsjxx.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781298760/1774354831_69c2818f8ccf4_j2dc76.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'TVS',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['TVS'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'TVS',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 486,
+    name: 'MOTO CARE GPS MOUNT FOR APACHE RTX 300',
+    price: 1360,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781298924/1772786734_69aa942e83a5b_nppuqn.jpg',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781298928/1772786747_69aa943b7529d_fb7bpm.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781298932/1772786753_69aa9441d5d94_jwhy3d.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781298935/1772786624_69aa93c0c7b1f_e7okwv.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'TVS',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['TVS'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'TVS',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 487,
+    name: 'MOTO CARE UPPER LOWER CRASH GUARD FOR APACHE RTX 300',
+    price: 5600,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781299024/1771414401_6995a3810bea9_vgdxms.jpg',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299017/1771414341_6995a345ae545_elv1zw.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299021/1771414422_6995a3964f659_i7iik7.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299017/1771414341_6995a345ae545_elv1zw.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'TVS',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['TVS'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'TVS',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 488,
+    name: 'MOTO CARE SADDLE STAY WITH PLATE FOR APACHE RTX 300',
+    price: 3200,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781299105/1771413673_6995a0a9bb421_lnawcl.jpg',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299109/1771413436_69959fbcc31cb_nakmak.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299113/1771413686_6995a0b6e8a68_zbdncl.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299103/1771413695_6995a0bfa3bcf_btnqok.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'TVS',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['TVS'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'TVS',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 489,
+    name: 'MOTO CARE CNC CARRIER WITH BACKREST FOR APACHE RTX 300',
+    price: 2480,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781299206/1771413291_69959f2b50f4f_etlmsd.jpg',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299210/1771413237_69959ef5677eb_ztgziv.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299202/1771413301_69959f35150a4_t3cyzb.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299199/1771413308_69959f3cc1e2e_jlv1sz.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'TVS',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['TVS'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'TVS',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 490,
+    name: 'MOTO CARE TYRE HUGGER FOR APACHE RTX 300',
+    price: 1600,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781299307/1770980512_698f04a0b6661_an3a1g.jpg',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299302/1770980396_698f042c370ce_rhbfxh.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299310/1770980522_698f04aa5c680_cj50up.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299313/1770980528_698f04b0a71b7_ny7jat.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'TVS',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['TVS'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'TVS',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 491,
+    name: 'MODERN TECH TVS APACHE 300 RTX GPS MOUNT',
+    price: 1400,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781299493/WhatsAppImage2026-02-24at3.53.10PM_xpdqqr.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299493/WhatsAppImage2026-02-24at3.53.10PM_xpdqqr.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299493/WhatsAppImage2026-02-24at3.53.10PM_xpdqqr.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299493/WhatsAppImage2026-02-24at3.53.10PM_xpdqqr.webp'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'TVS',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['TVS'],
+    description: 'Enhance your riding experience with the MODERN TECH Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'TVS',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 492,
+    name: 'MODERN TECH TVS APACHE 300 RTX FOOT REST',
+    price: 1500,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781299554/WhatsAppImage2026-02-24at3.53.06PM_917e4d10-0a13-49cc-8d40-918082431691_uhma0o.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299554/WhatsAppImage2026-02-24at3.53.06PM_917e4d10-0a13-49cc-8d40-918082431691_uhma0o.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299554/WhatsAppImage2026-02-24at3.53.06PM_917e4d10-0a13-49cc-8d40-918082431691_uhma0o.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299554/WhatsAppImage2026-02-24at3.53.06PM_917e4d10-0a13-49cc-8d40-918082431691_uhma0o.webp'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'TVS',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['TVS'],
+    description: 'Enhance your riding experience with the MODERN TECH Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'TVS',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 493,
+    name: 'MODERN TECH TVS APACHE 300 RTX RADIATOR GRILL',
+    price: 1600,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781299637/WhatsAppImage2026-03-21at11.50.12AM_2_rlfnhc.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299637/WhatsAppImage2026-03-21at11.50.12AM_2_rlfnhc.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299637/WhatsAppImage2026-03-21at11.50.12AM_2_rlfnhc.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299637/WhatsAppImage2026-03-21at11.50.12AM_2_rlfnhc.webp'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'TVS',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['TVS'],
+    description: 'Enhance your riding experience with the MODERN TECH Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'TVS',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 494,
+    name: 'MODERN TECH TVS APACHE RTX 300 X CRASH GUARD',
+    price: 6800,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781299726/WhatsAppImage2026-03-18at12.02.27PM_bstklp.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299722/WhatsApp_Image_2026-03-18_at_12.06.06_PM_fqgfzk.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299718/WhatsApp_Image_2026-03-21_at_11.43.10_AM_w7pxwu.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299726/WhatsAppImage2026-03-18at12.02.27PM_bstklp.webp'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'TVS',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['TVS'],
+    description: 'Enhance your riding experience with the MODERN TECH Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'TVS',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 495,
+    name: 'MODERN TECH TVS APACHE 300 RTX SIDE STAND BASE',
+    price: 800,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781299805/WhatsAppImage2026-03-21at11.50.12AM_1_bgziph.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299805/WhatsAppImage2026-03-21at11.50.12AM_1_bgziph.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299805/WhatsAppImage2026-03-21at11.50.12AM_1_bgziph.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299805/WhatsAppImage2026-03-21at11.50.12AM_1_bgziph.webp'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'TVS',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['TVS'],
+    description: 'Enhance your riding experience with the MODERN TECH Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'TVS',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 496,
+    name: 'MODERN TECH TVS APACHE 300 RTX REAR BRAKE FLUID CAP',
+    price: 360,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781299985/WhatsAppImage2026-02-24at3.53.09_woihoz.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299985/WhatsAppImage2026-02-24at3.53.09_woihoz.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299985/WhatsAppImage2026-02-24at3.53.09_woihoz.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299985/WhatsAppImage2026-02-24at3.53.09_woihoz.webp'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'TVS',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['TVS'],
+    description: 'Enhance your riding experience with the MODERN TECH Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'TVS',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 497,
+    name: 'MODERN TECH TVS APACHE 300 RTX TOP RACK WITH BACK REST',
+    price: 4200,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781299805/WhatsAppImage2026-03-21at11.50.12AM_1_bgziph.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299805/WhatsAppImage2026-03-21at11.50.12AM_1_bgziph.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299805/WhatsAppImage2026-03-21at11.50.12AM_1_bgziph.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781299805/WhatsAppImage2026-03-21at11.50.12AM_1_bgziph.webp'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'TVS',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['TVS'],
+    description: 'Enhance your riding experience with the MODERN TECH Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'TVS',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 498,
+    name: 'RK TECH Swing Arm Spools For KAWASAKI Z900',
+    price: 4200,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781300500/WhatsAppImage2024-12-06at31845AM-1733440314490_d58f2w.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781300500/WhatsAppImage2024-12-06at31845AM-1733440314490_d58f2w.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781300500/WhatsAppImage2024-12-06at31845AM-1733440314490_d58f2w.webpp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781300500/WhatsAppImage2024-12-06at31845AM-1733440314490_d58f2w.webp'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'KAWASAKI',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['KAWASAKI'],
+    description: 'Enhance your riding experience with the RKTECH Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'KAWASAKI',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 499,
+    name: 'RK TECH Radiator Guard For KAWASAKI Z900 (Type-2)',
+    price: 4200,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781300618/WhatsAppImage2024-12-06at35616AM-1733437654084_fxodhx.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781300618/WhatsAppImage2024-12-06at35616AM-1733437654084_fxodhx.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781300618/WhatsAppImage2024-12-06at35616AM-1733437654084_fxodhx.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781300618/WhatsAppImage2024-12-06at35616AM-1733437654084_fxodhx.webp'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'KAWASAKI',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['KAWASAKI'],
+    description: 'Enhance your riding experience with the RKTECH Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'KAWASAKI',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 500,
+    name: 'RK TECH Frame Sliders For KAWASAKI Z900',
+    price: 6999,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781300688/framesliders2-1775369498441_rv12zz.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781300692/frameslidersz9-1775369499236_iyff9j.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781300688/framesliders2-1775369498441_rv12zz.webpp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781300692/frameslidersz9-1775369499236_iyff9j.webp'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'KAWASAKI',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['KAWASAKI'],
+    description: 'Enhance your riding experience with the RKTECH Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'KAWASAKI',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 501,
+    name: 'Rk tech Kawasaki Z900 Crash Protection Kit Box',
+    price: 17499,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781301125/kawasakiz900COMBO2026-2028FINAL-1775369457310_auajsm.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781301129/Z9002026-1775369457796_s9kest.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781301125/kawasakiz900COMBO2026-2028FINAL-1775369457310_auajsm.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781301129/Z9002026-1775369457796_s9kest.webp'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'KAWASAKI',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['KAWASAKI'],
+    description: 'Enhance your riding experience with the RKTECH Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'KAWASAKI',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 502,
+    name: 'RK TECH Radiator Guard For KAWASAKI Z900 (Type-3)',
+    price: 4999,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781301213/WhatsAppImage2024-12-06at32336AM-1733437356383_b8pb0s.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781301213/WhatsAppImage2024-12-06at32336AM-1733437356383_b8pb0s.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781301213/WhatsAppImage2024-12-06at32336AM-1733437356383_b8pb0s.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781301213/WhatsAppImage2024-12-06at32336AM-1733437356383_b8pb0s.webp'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'KAWASAKI',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['KAWASAKI'],
+    description: 'Enhance your riding experience with the RKTECH Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'KAWASAKI',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 503,
+    name: 'MODERN TECH YAMAHA XSR 155 GRAB GRILL',
+    price: 1600,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781301394/WhatsAppImage2026-02-24at3.53.09PM_uivwgv.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781301394/WhatsAppImage2026-02-24at3.53.09PM_uivwgv.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781301394/WhatsAppImage2026-02-24at3.53.09PM_uivwgv.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781301394/WhatsAppImage2026-02-24at3.53.09PM_uivwgv.webp'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'Yamaha',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['Yamaha'],
+    description: 'Enhance your riding experience with the MODERN TECH Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'Yamaha',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 504,
+    name: 'MODERN TECH YAMAHA XSR 155 GPS MOUNT',
+    price: 1200,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781301466/WhatsAppImage2026-02-24at4.11.37PM_nxk1xu.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781301466/WhatsAppImage2026-02-24at4.11.37PM_nxk1xu.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781301466/WhatsAppImage2026-02-24at4.11.37PM_nxk1xu.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781301466/WhatsAppImage2026-02-24at4.11.37PM_nxk1xu.webp'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'Yamaha',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['Yamaha'],
+    description: 'Enhance your riding experience with the MODERN TECH Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'Yamaha',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 505,
+    name: 'MODERN TECH YAMAHA XSR 155 LADIES FOOT REST',
+    price: 1200,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781301546/WhatsAppImage2026-02-24at3.53.06PM_xeymqx.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781301546/WhatsAppImage2026-02-24at3.53.06PM_xeymqx.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781301546/WhatsAppImage2026-02-24at3.53.06PM_xeymqx.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781301546/WhatsAppImage2026-02-24at3.53.06PM_xeymqx.webp'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'Yamaha',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['Yamaha'],
+    description: 'Enhance your riding experience with the MODERN TECH Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'Yamaha',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 506,
+    name: 'MODERN TECH YAMAHA XSR 155 CRASH GUARD',
+    price: 4500,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781301739/xsrcrashguard_avwtdq.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781301739/xsrcrashguard_avwtdq.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781301739/xsrcrashguard_avwtdq.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781301739/xsrcrashguard_avwtdq.webp'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'Yamaha',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['Yamaha'],
+    description: 'Enhance your riding experience with the MODERN TECH Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'Yamaha',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 507,
+    name: 'MODERN TECH YAMAHA XSR 155 RADIATOR GRILL',
+    price: 1200,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781301825/XSR155RADITORGRILL_qbpyhi.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781301825/XSR155RADITORGRILL_qbpyhi.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781301825/XSR155RADITORGRILL_qbpyhi.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781301825/XSR155RADITORGRILL_qbpyhi.webp'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'Yamaha',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['Yamaha'],
+    description: 'Enhance your riding experience with the MODERN TECH Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'Yamaha',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 508,
+    name: 'MODERN TECH YAMAHA XSR 155 TOP RACK WITH BACKREST',
+    price: 3500,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781301922/xsrtoprackwithbackrest_jomrf9.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781301922/xsrtoprackwithbackrest_jomrf9.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781301922/xsrtoprackwithbackrest_jomrf9.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781301922/xsrtoprackwithbackrest_jomrf9.webp'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'Yamaha',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['Yamaha'],
+    description: 'Enhance your riding experience with the MODERN TECH Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'Yamaha',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 509,
+    name: 'MODERN TECH YAMAHA XSR 155 HEAD LIGHT GRILL',
+    price: 950,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781302123/xsrheadlightgrill_vivf0i.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781302123/xsrheadlightgrill_vivf0i.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781302123/xsrheadlightgrill_vivf0i.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781302123/xsrheadlightgrill_vivf0i.webp'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'Yamaha',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['Yamaha'],
+    description: 'Enhance your riding experience with the MODERN TECH Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'Yamaha',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 510,
+    name: 'MODERN TECH YAMAHA XSR 155 HANDLE BAR RISER 50 X 70 MM -SILVER -BLACK',
+    price: 3000,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781302299/moderntech_-_962_u0t5v5.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781302299/moderntech_-_962_u0t5v5.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781302299/moderntech_-_962_u0t5v5.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781302299/moderntech_-_962_u0t5v5.webp'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'Yamaha',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['Yamaha'],
+    description: 'Enhance your riding experience with the MODERN TECH Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'Yamaha',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 511,
+    name: 'MOTO CARE RADIATOR GUARD FOR YAMAHA XSR 155',
+    price: 720,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781302470/1767875391_695fa33fbe1e9_uquo92.jpg',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781302474/1767875382_695fa336a5f76_lm6l3o.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781302478/1767875403_695fa34b99cf0_jzybf6.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781302474/1767875382_695fa336a5f76_lm6l3o.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'Yamaha',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['Yamaha'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'Yamaha',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 512,
+    name: 'MOTO CARE SADDLE STAY WITH PLATE FOR YAMAHA XSR 155',
+    price: 2720,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781302577/1767875574_695fa3f6700f1_ovymdo.jpg',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781302573/1767875563_695fa3ebe3701_tlyobi.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781302568/1767875607_695fa417bea5e_syxgei.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781302568/1767875607_695fa417bea5e_syxgei.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'Yamaha',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['Yamaha'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'Yamaha',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 513,
+    name: 'MOTO CARE YAMAHA XSR 155 HANDLE BAR RISER 50 X 70 MM -SILVER -BLACK',
+    price: 2560,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781302685/1767702246_695cfee60d6b9_q11mlt.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781302690/1767702261_695cfef57d533_csfxeh.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781302680/1767702267_695cfefb90a55_mu76tt.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781302694/1767702251_695cfeebf3515_ynjqux.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'Yamaha',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['Yamaha'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'Yamaha',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 514,
+    name: 'MOTO CARE TYPE 1 TYRE HUGGER FOR YAMAHA XSR 155',
+    price: 1600,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781302789/1767696085_695ce6d51c0f7_a1fspq.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781302794/1767696097_695ce6e1e2bc0_qsqnzd.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781302798/1767696106_695ce6ea490c0_pvl7xv.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781302794/1767696097_695ce6e1e2bc0_qsqnzd.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'Yamaha',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['Yamaha'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'Yamaha',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 515,
+    name: 'MOTO CARE PIPE CARRIER WITH BACKREST FOR YAMAHA XSR 155',
+    price: 3920,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781302887/1767452567_69592f975df61_xivbbk.jpg',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781302893/1767452551_69592f8777651_dc7zps.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781302897/1767452575_69592f9fb4d00_o8oskf.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781302906/1767452582_69592fa60c2a7_buzke9.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'Yamaha',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['Yamaha'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'Yamaha',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 516,
+    name: 'MOTO CARE FORK SLIDERS FOR YEZDI ADVENTURE',
+    price: 800,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781303146/1739432745_67ada3297f827_nnk81m.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303155/1739432756_67ada3342892f_tnysnd.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303146/1739432745_67ada3297f827_nnk81m.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303155/1739432756_67ada3342892f_tnysnd.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'YEZDI',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['YEZDI'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'YEZDI',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 517,
+    name: 'MOTO CARE NEW RADIATOR GUARD FOR YEZDI ADVENTURE 2024 MODEL',
+    price: 1040,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781303241/1739425936_67ad889088cbe_fkjn8s.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303245/1739425956_67ad88a48cf4d_fl8ccw.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303235/1739425946_67ad889ac3eac_xlno7z.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303245/1739425956_67ad88a48cf4d_fl8ccw.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'YEZDI',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['YEZDI'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'YEZDI',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 518,
+    name: 'MOTO CARE LEFT FOOT REST FOR YEZDI ADVENTURE',
+    price: 880,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781303397/1732702644_6746f1b4693fe_lacuql.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303401/1732702619_6746f19bca4fc_rwsvur.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303397/1732702644_6746f1b4693fe_lacuql.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303401/1732702619_6746f19bca4fc_rwsvur.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'YEZDI',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['YEZDI'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'YEZDI',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 519,
+    name: 'MOTO CARE CRASH GUARD FOR YEZDI ADVENTURE 2024 MODEL',
+    price: 4160,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781303482/1737191623_678b70c750c1c_fbezcs.jpg',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303487/1737191646_678b70ded074f_cjzlpf.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303477/1737191597_678b70ad2c724_ljy7zo.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303487/1737191646_678b70ded074f_cjzlpf.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'YEZDI',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['YEZDI'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'YEZDI',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 520,
+    name: 'MOTO CARE CNC CARRIER PLATE AND BACKREST FOR YEZDI ADVENTURE',
+    price: 2320,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781303575/1714137185_662ba86179f3b_creqiw.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303580/1714137215_662ba87fac401_qb5st6.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303575/1714137185_662ba86179f3b_creqiw.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303580/1714137215_662ba87fac401_qb5st6.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'YEZDI',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['YEZDI'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'YEZDI',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 521,
+    name: 'MOTO CARE HEADLIGHT GRILL FOR YEZDI ADVENTURE',
+    price: 1200,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781303657/1711552310_66043736c95bd_x1g43e.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303662/1711552320_66043740a659d_tyabwz.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303667/1711552329_66043749bfe41_udb7ua.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303657/1711552310_66043736c95bd_x1g43e.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'YEZDI',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['YEZDI'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'YEZDI',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 522,
+    name: 'MOTO CARE RADIATOR GUARD FOR YEZDI ADVENTURE',
+    price: 1200,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781303744/1714136091_662ba41bf1a64_ta4gl5.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303749/1714136145_662ba4515d8a8_exke1w.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303754/1714136168_662ba46824407_dga3b4.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303744/1714136091_662ba41bf1a64_ta4gl5.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'YEZDI',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['YEZDI'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'YEZDI',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 523,
+    name: 'MOTO CARE CNC CARRIER PLATE FOR YEZDI ADVENTURE',
+    price: 1280,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781303823/1709379828_65e310f4927cf_dzofcd.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303818/1709379821_65e310ed0448a_iv60vr.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303823/1709379828_65e310f4927cf_dzofcd.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303818/1709379821_65e310ed0448a_iv60vr.png'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'YEZDI',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['YEZDI'],
+    description: 'Enhance your riding experience with the MOTO CARE Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'YEZDI',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 524,
+    name: 'MODERN TECH YEZDI ADVENTURE CRASH GUARD',
+    price: 5000,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781303952/CG_eaadqq.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303952/CG_eaadqq.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303952/CG_eaadqq.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781303952/CG_eaadqq.webp'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'YEZDI',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['YEZDI'],
+    description: 'Enhance your riding experience with the MODERN TECH Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'YEZDI',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 525,
+    name: 'MODERN TECH YEZDI ADVENTURE HEAD LIGHT GRILL',
+    price: 1200,
+    discount: 10,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781304041/HL_zdjjus.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781304041/HL_zdjjus.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781304041/HL_zdjjus.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781304041/HL_zdjjus.webp'
+    ],
+    category: 'Bike Accessories',
+    subcategory: '',
+    brand: 'YEZDI',
+    rating: 5,
+    reviews: 189,
+    isNew: true,
+    bikes: ['YEZDI'],
+    description: 'Enhance your riding experience with the MODERN TECH Accessories.',
+    specifications: {
+      'Material': 'Metal',
+      'Compatibility': 'YEZDI',
+      'Weight': '1 kg',
+      'Mounting': 'Bolt-on installation'
+    }
+  },
+  {
+    id: 526,
+    name: 'AXOR APEX SOLID BLACK',
+    price: 4995,
+    discount: 2,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781429721/AXORAPEXSOLIDBLKS1_1_vmbunz.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781429715/AXORAPEXSOLIDBLKS_1_ydjnyv.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781429726/AXORAPEXSOLIDBLKS2_1_rghx9h.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781429721/AXORAPEXSOLIDBLKS1_1_vmbunz.webp'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Helmets',
+    brand: 'Axor',
+    rating: 4,
+    reviews: 89,
+    isNew: true,
+    bikes: ['All'],
+    description: 'Dual visor full face helmet with quick release',
+    specifications: {
+      'Certification': 'DOT + ISI',
+      'Weight': '1350g',
+      'Visor': 'Dual visor system',
+      'Interior': 'Removable washable'
+    }
+  },
+  {
+    id: 527,
+    name: 'Axor Apex Hunter Black Red',
+    price: 4995,
+    discount: 2,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781429951/AXORAPEXHUNTERBLKREDM3_1_gomqjn.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781429945/AXORAPEXHUNTERBLKREDM_1_ulyk7u.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781429940/AXORAPEXHUNTERBLKREDM1_1_hfbrum.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781429935/AXORAPEXHUNTERBLKREDM2_1_n91jcg.webpp'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Helmets',
+    brand: 'Axor',
+    rating: 4,
+    reviews: 9,
+    isNew: true,
+    bikes: ['All'],
+    description: 'Dual visor full face helmet with quick release',
+    specifications: {
+      'Certification': 'DOT + ISI',
+      'Weight': '1350g',
+      'Visor': 'Dual visor system',
+      'Interior': 'Removable washable'
+    }
+  },
+  {
+    id: 528,
+    name: 'Axor Retro Jet Euro Globe Dull Black',
+    price: 2681,
+    discount: 2,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781430070/1_51659ac9-c107-4343-b02c-836d5c851867_jwdomm.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781430076/2_ae79e767-5ef0-4bf0-ae95-621c0861145f_ti3fyu.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781430082/3_da9faea8-c0be-4174-a796-0f1bdebcd883_otviy8.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781430087/4_17b50dab-a888-432f-a908-ea5b0b3374e2_vjl4re.webp'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Helmets',
+    brand: 'Axor',
+    rating: 4,
+    reviews: 78,
+    isNew: true,
+    bikes: ['All'],
+    description: 'Dual visor full face helmet with quick release',
+    specifications: {
+      'Certification': 'DOT + ISI',
+      'Weight': '1350g',
+      'Visor': 'Dual visor system',
+      'Interior': 'Removable washable'
+    }
+  },
+  {
+    id: 529,
+    name: 'Axor Retro Jet Leather Dull Slate Helmet',
+    price: 2681,
+    discount: 2,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781430199/hel5957-5_qthvga.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781430208/hel5957-1_e5r8vc.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781430193/hel5957-4_fxdgwe.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781430193/hel5957-4_fxdgwe.webp'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Helmets',
+    brand: 'Axor',
+    rating: 4,
+    reviews: 79,
+    isNew: true,
+    bikes: ['All'],
+    description: 'Dual visor full face helmet with quick release',
+    specifications: {
+      'Certification': 'DOT + ISI',
+      'Weight': '1350g',
+      'Visor': 'Dual visor system',
+      'Interior': 'Removable washable'
+    }
+  },
+  {
+    id: 530,
+    name: 'AXOR X -CROSS D/V SPEEDOMETER WHITE RED',
+    price: 7405,
+    discount: 2,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781430299/HEL21520_2_flvren.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781430295/HEL215201_myt19s.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781430299/HEL21520_2_flvren.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781430295/HEL215201_myt19s.webp'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Helmets',
+    brand: 'Axor',
+    rating: 4,
+    reviews: 78,
+    isNew: true,
+    bikes: ['All'],
+    description: 'Dual visor full face helmet with quick release',
+    specifications: {
+      'Certification': 'DOT + ISI',
+      'Weight': '1350g',
+      'Visor': 'Dual visor system',
+      'Interior': 'Removable washable'
+    }
+  },
+  {
+    id: 531,
+    name: 'AXOR X-cross Single Color Helmet',
+    price: 5985,
+    discount: 2,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781430660/XCROSSNICKELRED_2_900x_sjbsq7.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781430679/XCROSSNICKELRED_1_900x_1_yxbqet.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781430665/XCROSSNICKELRED_3_900x_gwerw5.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781430672/XCROSSNICKELRED_4_900x_m2ww8y.webp'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Helmets',
+    brand: 'Axor',
+    rating: 4,
+    reviews: 78,
+    isNew: true,
+    bikes: ['All'],
+    description: 'Dual visor full face helmet with quick release',
+    specifications: {
+      'Certification': 'DOT + ISI',
+      'Weight': '1350g',
+      'Visor': 'Dual visor system',
+      'Interior': 'Removable washable'
+    }
+  },
+  {
+    id: 532,
+    name: 'AXOR X-cross Single Color Helmet',
+    price: 5985,
+    discount: 2,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781430828/BlackOrange_2_900x_wlf6pg.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781430822/BlackOrange_1_900x_bv3ghs.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781430840/BlackOrange_3_900x_ii5zi7.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781430840/BlackOrange_3_900x_ii5zi7.webp'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Helmets',
+    brand: 'Axor',
+    rating: 4,
+    reviews: 78,
+    isNew: true,
+    bikes: ['All'],
+    description: 'Dual visor full face helmet with quick release',
+    specifications: {
+      'Certification': 'DOT + ISI',
+      'Weight': '1350g',
+      'Visor': 'Dual visor system',
+      'Interior': 'Removable washable'
+    }
+  },
+  {
+    id: 533,
+    name: 'Axor Street DC Batman Anthracite Black',
+    price: 6500,
+    discount: 2,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781431294/AXORAPEXSOLIDBLKS_1_kjvgae.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781431299/AXORAPEXSOLIDBLKS1_1_kecndo.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781431305/AXORAPEXSOLIDBLKS2_1_ztgjth.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781431311/AXORSTREETDCBATMANANTHRACITEBLACKXL2_p2syvk.webp'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Helmets',
+    brand: 'Axor',
+    rating: 4,
+    reviews: 78,
+    isNew: true,
+    bikes: ['All'],
+    description: 'Dual visor full face helmet with quick release',
+    specifications: {
+      'Certification': 'DOT + ISI',
+      'Weight': '1350g',
+      'Visor': 'Dual visor system',
+      'Interior': 'Removable washable'
+    }
+  },
+  {
+    id: 534,
+    name: 'Axor Jacket Cruise 2 Black Neon Yellow',
+    price: 5919,
+    discount: 15,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781431556/1_62f261f3-29a6-4531-968d-8f1135fe9b7a_fpwgey.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781431573/2_7bd9f2a7-7cab-4131-a789-92906d33508a_rqzp26.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781431562/3_89d69c8d-1925-42cb-9fa2-43cfe9eb1ab5_igpicv.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781431567/4_3a3f2c59-f6f8-4fa6-bbb3-469d3a27df80_rxdnwi.webp'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Jackets',
+    brand: 'Axor',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['KTM', 'Royal Enfield', 'Yamaha', 'All'],
+    description: 'Not just the protectors, the entire jacket is Class A certified as per CE Standard EN 17092-4:2020',
+    specifications: {
+      'Material': 'Cordura 500D',
+      'Protection': 'CE Level 2 armor',
+      'Waterproof': 'Yes',
+      'Ventilation': '4-way air vents'
+    }
+  },
+  {
+    id: 535,
+    name: 'AXOR Nimbuz Jacket Black',
+    price: 6812,
+    discount: 15,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781431792/1_51c09356-ce35-417d-b9d1-87fb1fbb5734_cam4bi.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781431810/2_a2a416b3-cba6-4ae9-b4c7-b74acee27bfb_qzr6bf.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781431804/4_db9b2676-0289-458f-813d-942d615340d4_rdkiaq.webp',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781431799/3_922da4f3-cf47-46b3-b737-c47e799af383_jgrnxo.webp'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Jackets',
+    brand: 'Axor',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['KTM', 'Royal Enfield', 'Yamaha', 'All'],
+    description: 'Not just the protectors, the entire jacket is Class A certified as per CE Standard EN 17092-4:2020',
+    specifications: {
+      'Material': 'Cordura 500D',
+      'Protection': 'CE Level 2 armor',
+      'Waterproof': 'Yes',
+      'Ventilation': '4-way air vents'
+    }
+  },
+  {
+    id: 536,
+    name: 'Steelbird SBH-57 ISS BT FIGHTER BASS X MATT BLACK Helmet',
+    price: 5990,
+    discount: 2,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781432674/695759ff66f4d2_2_d6iosz.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781432666/695759ff665ef3_1_1_duhheu.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781432661/695759ff66d2e1_1_kd0mmc.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781432674/695759ff66f4d2_2_d6iosz.png'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Helmets',
+    brand: 'Steelbird',
+    rating: 4,
+    reviews: 78,
+    isNew: true,
+    bikes: ['All'],
+    description: 'Dual visor full face helmet with quick release',
+    specifications: {
+      'Certification': 'DOT + ISI',
+      'Weight': '1350g',
+      'Visor': 'Dual visor system',
+      'Interior': 'Removable washable'
+    }
+  },
+  {
+    id: 537,
+    name: 'Steelbird SBH-57 ISS BT FIGHTER BASS X MATT BLACK Helmet',
+    price: 3599,
+    discount: 2,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781432824/692fcc86634df4_mhrcea.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781432836/692fcc86642166_kzeatk.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781432824/692fcc86634df4_mhrcea.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781432818/692fcc8664bf62_kkaucb.png'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Helmets',
+    brand: 'Steelbird',
+    rating: 4,
+    reviews: 78,
+    isNew: true,
+    bikes: ['All'],
+    description: 'Dual visor full face helmet with quick release',
+    specifications: {
+      'Certification': 'DOT + ISI',
+      'Weight': '1350g',
+      'Visor': 'Dual visor system',
+      'Interior': 'Removable washable'
+    }
+  },
+  {
+    id: 538,
+    name: 'Steelbird SBH-57 ISS FIGHTER F5 GLOSSY BLACK Helmet',
+    price: 2990,
+    discount: 2,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781432931/67470c86941e70T4A1996_dui55y.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781432938/67483b0ee3feb0T4A2017_f00fhs.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781432943/67483b0ee4b500T4A2016_u85i0g.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781432949/67483b0ee4e950T4A2025_ixjrrv.png'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Helmets',
+    brand: 'Steelbird',
+    rating: 4,
+    reviews: 78,
+    isNew: true,
+    bikes: ['All'],
+    description: 'Dual visor full face helmet with quick release',
+    specifications: {
+      'Certification': 'DOT + ISI',
+      'Weight': '1350g',
+      'Visor': 'Dual visor system',
+      'Interior': 'Removable washable'
+    }
+  },
+  {
+    id: 539,
+    name: 'Steelbird SBH-61 ISS SXE ST1 WITH TPE EDITION GLOSSY BLACK WITH CYAN GREEN Helmet',
+    price: 3590,
+    discount: 2,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781433225/690d99c9f38922_hp5wgd.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781433219/690d99c9f35071_nmus5j.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781433212/690d99c9f22bf3_rtcv1l.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781433231/690d99c9f3b1c5_tdmux0.png'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Helmets',
+    brand: 'Steelbird',
+    rating: 4,
+    reviews: 78,
+    isNew: true,
+    bikes: ['All'],
+    description: 'Dual visor full face helmet with quick release',
+    specifications: {
+      'Certification': 'DOT + ISI',
+      'Weight': '1350g',
+      'Visor': 'Dual visor system',
+      'Interior': 'Removable washable'
+    }
+  },
+  {
+    id: 540,
+    name: 'Steelbird SBH-61 ISS SXE ST1 WITH TPE EDITION GLOSSY BLACK WITH RED Helmet',
+    price: 3590,
+    discount: 2,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781433444/690d9a2a36fd42_wlk5xb.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781433432/690d9a2a36db31_ved2zd.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781433438/690d9a2a366e43_hduw5w.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781433426/690d9a2a372065_fbgfpa.png'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Helmets',
+    brand: 'Steelbird',
+    rating: 4,
+    reviews: 78,
+    isNew: true,
+    bikes: ['All'],
+    description: 'Dual visor full face helmet with quick release',
+    specifications: {
+      'Certification': 'DOT + ISI',
+      'Weight': '1350g',
+      'Visor': 'Dual visor system',
+      'Interior': 'Removable washable'
+    }
+  },
+  {
+    id: 541,
+    name: 'Steelbird SBH-13 ISS RACER GLOSSY WHITE WITH RED Helmet',
+    price: 2990,
+    discount: 2,
+    image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781433757/66711652e846f0T4A3446_srzy9r.png',
+    galleryImages: [
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781433751/66711652e7b880T4A3444_hjolza.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781433745/666d944f4c8440T4A3450_dvaefs.png',
+      'https://res.cloudinary.com/dauynokmb/image/upload/v1781433764/66711652e86e00T4A3453_wveklh.png'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Helmets',
+    brand: 'Steelbird',
+    rating: 4,
+    reviews: 78,
+    isNew: true,
+    bikes: ['All'],
+    description: 'Dual visor full face helmet with quick release',
+    specifications: {
+      'Certification': 'DOT + ISI',
+      'Weight': '1350g',
+      'Visor': 'Dual visor system',
+      'Interior': 'Removable washable'
+    }
+  },
 
 ];
 
 export const brands = [
-  'Rynox', 'Raida', 'Maddog', 'Zana', 'Barkbusters', 
-  'Liqui Moly', 'Rolon', 'Studds', 'KTM', 'Royal Enfield',
-  'BMW', 'Yamaha', 'Cardo', 'Metzeler'
+  'Maddog', 'Barkbusters', 'Rolon', 'Studds', 'KTM',
+  'Royal Enfield', 'BMW', 'Yamaha', 'Cardo', 'Metzeler'
 ];
 
 export const categories = [

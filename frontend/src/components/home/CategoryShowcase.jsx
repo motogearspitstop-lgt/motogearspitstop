@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useFilterStore } from '@/store/filterStore';
+import { productsUrl } from '@/utils/urlUtils';
 
 const CategoryShowcase = () => {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ const CategoryShowcase = () => {
 
   const handleCategoryClick = (categoryName) => {
     clearFilters();
-    navigate(`/products?subcategory=${categoryName}`);
+    navigate(productsUrl({ subcategory: categoryName }));
   };
 
   const handleViewAllClick = () => {

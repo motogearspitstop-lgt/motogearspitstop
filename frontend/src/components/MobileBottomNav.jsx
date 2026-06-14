@@ -4,6 +4,7 @@ import { Home, Search, ShoppingCart, MessageCircle, LayoutDashboard } from 'luci
 import { useCartStore } from '@/store/cartStore';
 import useAuthStore from '@/store/authStore';
 import { motion } from 'framer-motion';
+import { getWhatsAppUrl } from '@/config/contact';
 
 const MobileBottomNav = () => {
   const location = useLocation();
@@ -20,8 +21,7 @@ const MobileBottomNav = () => {
   ];
 
   const handleWhatsApp = () => {
-    const message = encodeURIComponent("Hi Moto Gears! I'm interested in your products. Can you help me find the right accessories for my bike?");
-    window.open(`https://wa.me/917795469957?text=${message}`, '_blank');
+    window.open(getWhatsAppUrl("Hi Moto Gears! I'm interested in your products. Can you help me find the right accessories for my bike?"), '_blank');
   };
 
   return (

@@ -3,10 +3,12 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Minus, Plus, ShoppingBag, Trash2 } from 'lucide-react';
 import useCartStore from '@/store/cartStore';
+import { getProductImage, handleProductImageError } from '@/utils/imageUtils';
 
 const getItemId = (item) => item?.product?._id || item?.product?.id || item?._id || item?.id;
 const getItemName = (item) => item?.product?.name || item?.name || 'Product';
-const getItemImage = (item) => item?.product?.images?.[0]?.url || item?.product?.image || item?.image;
+const getItemProduct = (item) => item?.product || item;
+const getItemImage = (item) => getProductImage(getItemProduct(item));
 const getItemPrice = (item) => Number(item?.price ?? item?.product?.discountPrice ?? item?.product?.price ?? 0);
 const formatINR = (value = 0) => `Rs. ${Number(value || 0).toLocaleString('en-IN')}`;
 
@@ -57,6 +59,7 @@ const Cart = () => {
                       <img
                         src={getItemImage(item)}
                         alt={getItemName(item)}
+                        onError={(event) => handleProductImageError(event, getItemProduct(item))}
                         className="h-full w-full object-cover"
                       />
                     ) : (

@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { productsUrl } from '@/utils/urlUtils';
 
 const TouringCollection = () => {
   const touringCategories = [
@@ -48,7 +49,7 @@ const TouringCollection = () => {
               transition={{ delay: idx * 0.1 }}
             >
               <Link
-                to={`/products?category=${category.name}`}
+                to={productsUrl({ search: category.name })}
                 className="group relative block h-80 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-gray-200"
               >
                 <img

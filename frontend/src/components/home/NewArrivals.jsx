@@ -5,6 +5,8 @@ import { ArrowRight, ShoppingCart, Eye } from 'lucide-react';
 import { products } from '@/data/products';
 import { useCartStore } from '@/store/cartStore';
 import { useToast } from '@/components/ui/use-toast';
+import { productUrl, productsUrl } from '@/utils/urlUtils';
+import { getProductImage, handleProductImageError } from '@/utils/imageUtils';
 
 const NewArrivals = () => {
   const newProducts = products.filter(p => p.isNew).slice(0, 8);
@@ -25,7 +27,7 @@ const NewArrivals = () => {
             <span className="text-[#e63946] font-mono-bold text-sm tracking-widest uppercase mb-2 block">Just Dropped</span>
             <h2 className="text-5xl md:text-7xl font-bebas text-gray-900">NEW <span className="text-[#e63946]">ARRIVALS</span></h2>
           </div>
-          <Link to="/products?filter=new" className="hidden md:flex items-center gap-2 text-gray-900 hover:text-[#e63946] font-bold uppercase tracking-wider transition-colors">
+          <Link to={productsUrl({ filter: 'new' })} className="hidden md:flex items-center gap-2 text-gray-900 hover:text-[#e63946] font-bold uppercase tracking-wider transition-colors">
             View All <ArrowRight size={18} />
           </Link>
         </div>
@@ -42,8 +44,9 @@ const NewArrivals = () => {
             >
               <div className="relative aspect-square overflow-hidden rounded-xl bg-white mb-4 shadow-sm border border-gray-200 hover:shadow-lg transition-shadow">
                  <img
-                    src={product.image}
+                    src={getProductImage(product)}
                     alt={product.name}
+                    onError={(event) => handleProductImageError(event, product)}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                  />
                  <div className="absolute top-3 left-3 flex flex-col gap-2">
@@ -61,7 +64,7 @@ const NewArrivals = () => {
                        <ShoppingCart size={20} />
                     </button>
                     <Link 
-                       to={`/product/${product.id}`}
+                       to={productUrl(product)}
                        className="w-12 h-12 bg-white text-gray-900 rounded-full flex items-center justify-center hover:bg-[#e63946] hover:text-white transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300 delay-75 shadow-lg"
                     >
                        <Eye size={20} />
@@ -70,7 +73,7 @@ const NewArrivals = () => {
               </div>
 
               <div>
-                 <Link to={`/product/${product.id}`}>
+                 <Link to={productUrl(product)}>
                     <h3 className="text-gray-900 font-bold text-lg leading-tight mb-2 group-hover:text-[#e63946] transition-colors line-clamp-2">
                        {product.name}
                     </h3>
@@ -87,7 +90,7 @@ const NewArrivals = () => {
         </div>
         
         <div className="mt-12 text-center md:hidden">
-            <Link to="/products?filter=new" className="inline-block border-2 border-gray-900 text-gray-900 px-8 py-3 rounded uppercase font-bold text-sm hover:bg-gray-900 hover:text-white transition-colors">
+            <Link to={productsUrl({ filter: 'new' })} className="inline-block border-2 border-gray-900 text-gray-900 px-8 py-3 rounded uppercase font-bold text-sm hover:bg-gray-900 hover:text-white transition-colors">
               View All New Arrivals
             </Link>
         </div>

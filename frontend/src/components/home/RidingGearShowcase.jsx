@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { productsUrl } from '@/utils/urlUtils';
 
 const RidingGearShowcase = () => {
   const gears = [
@@ -50,7 +51,7 @@ const RidingGearShowcase = () => {
                  <div className="absolute bottom-0 left-0 w-full p-6 text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                     <h3 className="text-4xl font-bebas text-gray-900 mb-4">{gear.name}</h3>
                     <Link
-                       to={`/products?category=Riding Gear&subcategory=${gear.name}`}
+                       to={productsUrl({ category: 'Riding Gear', subcategory: gear.name })}
                        className="inline-flex items-center gap-2 bg-[#e63946] text-white px-6 py-2 rounded font-bold uppercase text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-md hover:bg-[#d62839]"
                     >
                        Shop Now <ArrowRight size={16} />

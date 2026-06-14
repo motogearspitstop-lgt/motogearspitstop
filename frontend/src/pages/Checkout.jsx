@@ -395,10 +395,12 @@ import useOrderStore from '@/store/orderStore';
 import { useToast } from '@/components/ui/use-toast';
 import { Label } from '@/components/ui/label';
 import AuthModal from '@/components/AuthModal';
+import { getProductImage, handleProductImageError } from '@/utils/imageUtils';
 
 const getItemId = (item) => item?.product?._id || item?.product?.id || item?._id || item?.id;
 const getItemName = (item) => item?.product?.name || item?.name || 'Product';
-const getItemImage = (item) => item?.product?.images?.[0]?.url || item?.product?.image || item?.image || '';
+const getItemProduct = (item) => item?.product || item;
+const getItemImage = (item) => getProductImage(getItemProduct(item));
 const getItemPrice = (item) => Number(item?.price ?? item?.product?.discountPrice ?? item?.product?.price ?? 0);
 const getItemsTotal = (items) => items.reduce((sum, item) => sum + getItemPrice(item) * item.quantity, 0);
 const COD_ADVANCE_PERCENTAGE = 20;
@@ -809,6 +811,7 @@ const Checkout = () => {
                           <img
                             src={getItemImage(item)}
                             alt={getItemName(item)}
+                            onError={(event) => handleProductImageError(event, getItemProduct(item))}
                             className="h-14 w-14 flex-shrink-0 rounded-lg border border-gray-100 object-cover"
                           />
                         )}
@@ -862,6 +865,7 @@ const Checkout = () => {
                         <img
                           src={getItemImage(item)}
                           alt={getItemName(item)}
+                          onError={(event) => handleProductImageError(event, getItemProduct(item))}
                           className="h-14 w-14 flex-shrink-0 rounded-lg border border-gray-100 object-cover"
                         />
                       )}

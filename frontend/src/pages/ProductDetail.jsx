@@ -10,10 +10,18 @@ import { useToast } from '@/components/ui/use-toast';
 import ProductCard from '@/components/ProductCard';
 import ProductImageGallery from '@/components/ProductImageGallery';
 import ImageLightbox from '@/components/ImageLightbox';
+import { productsUrl } from '@/utils/urlUtils';
+import { getWhatsAppUrl } from '@/config/contact';
+import { getProductGalleryImages, getProductImage, handleProductImageError } from '@/utils/imageUtils';
 
 const ProductDetail = () => {
   const { id } = useParams();
-  const product = products.find(p => p.id === parseInt(id));
+  const decodedId = decodeURIComponent(id || '');
+  const product = products.find(p =>
+    String(p.id) === decodedId ||
+    String(p._id || '') === decodedId ||
+    String(p.slug || '') === decodedId
+  );
   const [quantity, setQuantity] = useState(1);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
@@ -36,6 +44,8 @@ const ProductDetail = () => {
   }
 
   const inWishlist = isInWishlist(product.id);
+  const productImage = getProductImage(product);
+  const galleryImages = getProductGalleryImages(product);
   const relatedProducts = products
     .filter(p => p.category === product.category && p.id !== product.id)
     .slice(0, 4);
@@ -61,8 +71,7 @@ const ProductDetail = () => {
   };
 
   const handleLiveDemo = () => {
-    const message = encodeURIComponent(`Hi, I'd like to see a live demo of ${product.name}`);
-    window.open(`https://wa.me/917795469957?text=${message}`, '_blank');
+    window.open(getWhatsAppUrl(`Hi, I'd like to see a live demo of ${product.name}`), '_blank');
   };
 
   const openLightbox = (index) => {
@@ -75,15 +84,11 @@ const ProductDetail = () => {
   };
 
   const nextLightboxImage = () => {
-    if (product.galleryImages) {
-      setLightboxIndex((prev) => (prev + 1) % product.galleryImages.length);
-    }
+    setLightboxIndex((prev) => (prev + 1) % galleryImages.length);
   };
 
   const prevLightboxImage = () => {
-    if (product.galleryImages) {
-      setLightboxIndex((prev) => (prev - 1 + product.galleryImages.length) % product.galleryImages.length);
-    }
+    setLightboxIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
   };
 
   const renderStars = (rating) => {
@@ -115,11 +120,11 @@ const ProductDetail = () => {
             <span>/</span>
             <Link to="/products" className="hover:text-gray-900 transition-colors">Products</Link>
             <span>/</span>
-            <Link to={`/products?category=${encodeURIComponent(product.category)}`} className="hover:text-gray-900 transition-colors">{product.category}</Link>
+            <Link to={productsUrl({ category: product.category })} className="hover:text-gray-900 transition-colors">{product.category}</Link>
             {product.subcategory && (
               <>
                 <span>/</span>
-                <Link to={`/products?category=${encodeURIComponent(product.category)}&subcategory=${encodeURIComponent(product.subcategory)}`} className="hover:text-gray-900 transition-colors">{product.subcategory}</Link>
+                <Link to={productsUrl({ category: product.category, subcategory: product.subcategory })} className="hover:text-gray-900 transition-colors">{product.subcategory}</Link>
               </>
             )}
             <span>/</span>
@@ -135,16 +140,17 @@ const ProductDetail = () => {
                 className="bg-gray-50 rounded-lg overflow-hidden mb-4 aspect-square border border-gray-200"
               >
                 <img
-                  src={product.image}
+                  src={productImage}
                   alt={product.name}
+                  onError={(event) => handleProductImageError(event, product)}
                   className="w-full h-full object-cover"
                 />
               </motion.div>
 
               {/* Image Gallery */}
-              {product.galleryImages && (
+              {galleryImages.length > 0 && (
                 <ProductImageGallery 
-                  images={product.galleryImages} 
+                  images={galleryImages} 
                   onImageClick={openLightbox} 
                   productName={product.name}
                 />
@@ -301,7 +307,7 @@ const ProductDetail = () => {
       {/* Lightbox Modal */}
       <ImageLightbox
         isOpen={lightboxOpen}
-        images={product.galleryImages}
+        images={galleryImages}
         currentIndex={lightboxIndex}
         onClose={closeLightbox}
         onNext={nextLightboxImage}

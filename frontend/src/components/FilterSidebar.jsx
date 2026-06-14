@@ -6,6 +6,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { useFilterStore } from '@/store/filterStore';
 import { brands, categories, bikes, products } from '@/data/products';
+import { productsUrl } from '@/utils/urlUtils';
 
 const FilterSidebar = ({ onClose, urlCategory, urlSubcategory }) => {
   const navigate = useNavigate();
@@ -38,7 +39,7 @@ const FilterSidebar = ({ onClose, urlCategory, urlSubcategory }) => {
   };
 
   const handleSubcategoryClick = (subcat) => {
-    navigate(`/products?category=${encodeURIComponent(urlCategory)}&subcategory=${encodeURIComponent(subcat)}`);
+    navigate(productsUrl({ category: urlCategory, subcategory: subcat }));
   };
 
   const isBrandChecked = (brand) => {
@@ -163,7 +164,7 @@ const FilterSidebar = ({ onClose, urlCategory, urlSubcategory }) => {
               return (
                 <button
                   key={subcat}
-                  onClick={() => isActive ? navigate(`/products?category=${encodeURIComponent(urlCategory)}`) : handleSubcategoryClick(subcat)}
+                  onClick={() => isActive ? navigate(productsUrl({ category: urlCategory })) : handleSubcategoryClick(subcat)}
                   className={`block w-full text-left px-3 py-2 rounded-md transition-colors text-sm ${
                     isActive 
                       ? 'bg-[#e63946]/10 text-[#e63946] border border-[#e63946]/30 font-medium' 

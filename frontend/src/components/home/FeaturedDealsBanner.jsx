@@ -5,6 +5,8 @@ import { ShoppingCart, Star } from 'lucide-react';
 import { products } from '@/data/products';
 import { useCartStore } from '@/store/cartStore';
 import { useToast } from '@/components/ui/use-toast';
+import { productUrl, productsUrl } from '@/utils/urlUtils';
+import { getProductImage, handleProductImageError } from '@/utils/imageUtils';
 
 const FeaturedDealsBanner = () => {
   const dealProducts = products.filter(p => p.discount > 0).slice(0, 6);
@@ -35,7 +37,7 @@ const FeaturedDealsBanner = () => {
              </motion.h2>
           </div>
           
-          <Link to="/products?filter=deals">
+          <Link to={productsUrl({ filter: 'deals' })}>
              <motion.button
                 whileHover={{ scale: 1.05 }}
                 className="hidden md:block bg-[#f4a261] text-black px-6 md:px-8 py-2 md:py-3 font-bold text-base md:text-lg uppercase tracking-wider rounded-sm hover:bg-[#e63946] hover:text-white transition-colors"
@@ -55,11 +57,12 @@ const FeaturedDealsBanner = () => {
               transition={{ delay: idx * 0.1 }}
               className="group bg-white rounded-lg sm:rounded-xl md:rounded-2xl overflow-hidden shadow-md border border-gray-200 hover:border-[#e63946] hover:shadow-xl transition-all duration-300 flex flex-col h-[140px] sm:h-[250px] md:h-[320px] lg:h-[400px]"
             >
-              <Link to={`/product/${product.id}`} className="flex flex-col h-full">
+              <Link to={productUrl(product)} className="flex flex-col h-full">
                 <div className="relative flex-1 overflow-hidden bg-gray-50">
                   <img
-                    src={product.image}
+                    src={getProductImage(product)}
                     alt={product.name}
+                    onError={(event) => handleProductImageError(event, product)}
                     className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute top-1 sm:top-2 md:top-4 left-1 sm:left-2 md:left-4 bg-[#e63946] text-white px-1 sm:px-2 md:px-3 py-0.5 sm:py-1 font-bold text-[8px] sm:text-xs md:text-sm rounded shadow-lg">
@@ -102,7 +105,7 @@ const FeaturedDealsBanner = () => {
 
         {/* Mobile View All Button */}
         <div className="md:hidden mt-6">
-          <Link to="/products?filter=deals" className="block">
+          <Link to={productsUrl({ filter: 'deals' })} className="block">
             <button className="w-full bg-[#f4a261] text-black py-3 font-bold text-sm uppercase tracking-wider rounded-sm hover:bg-[#e63946] hover:text-white transition-colors">
               View All Deals
             </button>

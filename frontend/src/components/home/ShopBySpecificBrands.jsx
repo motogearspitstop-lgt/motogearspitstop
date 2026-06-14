@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useFilterStore } from '@/store/filterStore';
+import { productsUrl } from '@/utils/urlUtils';
 
 const ShopBySpecificBrands = () => {
   const navigate = useNavigate();
@@ -36,7 +37,7 @@ const ShopBySpecificBrands = () => {
 
   const handleBrandClick = (brandName) => {
     clearFilters();
-    navigate(`/products?brand=${encodeURIComponent(brandName)}`);
+    navigate(productsUrl({ brand: brandName }));
   };
 
   const handleImageError = (e) => {

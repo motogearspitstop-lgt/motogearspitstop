@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import ProductCard from '@/components/ProductCard';
 import { products } from '@/data/products';
+import { productsUrl } from '@/utils/urlUtils';
 
 const BestDeals = () => {
   const dealProducts = products.filter(p => p.discount > 0).slice(0, 8);
@@ -21,7 +22,7 @@ const BestDeals = () => {
             Best <span className="text-[#e63946]">Deals</span>
           </motion.h2>
           <Link
-            to="/products?filter=deals"
+            to={productsUrl({ filter: 'deals' })}
             className="text-[#e63946] hover:text-[#d62839] font-medium flex items-center gap-2 group"
           >
             View All

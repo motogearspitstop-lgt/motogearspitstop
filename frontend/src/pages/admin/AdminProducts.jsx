@@ -3,6 +3,7 @@
 import React, { useMemo, useState } from 'react';
 import { PackageSearch, Search } from 'lucide-react';
 import { products as catalogProducts, categories } from '@/data/products';
+import { getProductImage, handleProductImageError } from '@/utils/imageUtils';
 
 const STOCK_STORAGE_KEY = 'motogear_admin_product_stock';
 const PAGE_SIZE = 15;
@@ -157,8 +158,13 @@ export default function AdminProducts() {
                 <tr key={product.id} className="border-b border-gray-800 transition-colors hover:bg-gray-800/50">
                   <td className="px-4 py-3">
                     <div className="flex items-center gap-3">
-                      {product.image && (
-                        <img src={product.image} alt={product.name} className="h-11 w-11 rounded object-cover" />
+                      {getProductImage(product) && (
+                        <img
+                          src={getProductImage(product)}
+                          alt={product.name}
+                          onError={(event) => handleProductImageError(event, product)}
+                          className="h-11 w-11 rounded object-cover"
+                        />
                       )}
                       <div className="min-w-0">
                         <p className="line-clamp-1 text-sm font-medium text-white">{product.name}</p>

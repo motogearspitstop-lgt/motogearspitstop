@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronRight } from 'lucide-react';
+import { productsUrl } from '@/utils/urlUtils';
 
 const HeroCarousel = () => {
   const images = [
@@ -112,7 +113,7 @@ const HeroCarousel = () => {
               </Link>
               
               <Link
-                to="/products?category=Riding%20Gear"
+                to={productsUrl({ category: 'Riding Gear' })}
                 className="group relative bg-white/10 backdrop-blur-md border-2 border-white/40 text-white hover:bg-white/20 hover:border-white/60 px-4 py-2 sm:px-6 sm:py-2.5 md:px-8 md:py-3 lg:px-10 lg:py-4 font-bold uppercase tracking-wider transition-all shadow-lg hover:shadow-xl text-center text-xs sm:text-sm md:text-base"
               >
                 <span className="flex items-center justify-center gap-1.5 sm:gap-2">
