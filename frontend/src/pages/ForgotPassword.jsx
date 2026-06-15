@@ -47,9 +47,13 @@ export default function ForgotPassword() {
             <p className="text-gray-400 mb-6">
               We sent a password reset link to <span className="text-white font-medium">{email}</span>
             </p>
-            <p className="text-gray-500 text-sm mb-6">
-              Didn't receive it? Check your spam folder or try again.
-            </p>
+          
+<div className="bg-yellow-900/30 border border-yellow-700 rounded px-4 py-3 mb-6">
+  <p className="text-yellow-400 text-sm font-medium">
+    📬 Also check your <strong>spam / junk folder</strong> — reset emails sometimes land there.
+  </p>
+</div>
+
             <button
               onClick={() => setSent(false)}
               className="text-[#e63946] underline text-sm hover:text-red-400 transition"
