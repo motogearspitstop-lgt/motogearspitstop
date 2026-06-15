@@ -30,18 +30,19 @@ const getEmailConfig = () => {
 
 const sendEmail = async ({ to, subject, html }) => {
   const { host, port, timeout } = getEmailConfig();
+
   const transporter = nodemailer.createTransport({
-    host,
-    port,
-    secure: port === 465,
-    connectionTimeout: timeout,
-    greetingTimeout: timeout,
-    socketTimeout: timeout,
-    auth: {
-      user: process.env.EMAIL_USER.trim(),
-      pass: process.env.EMAIL_PASS.replace(/\s+/g, '')
-    }
-  });
+  host,
+  port,
+  secure: false, // force false for 587
+  connectionTimeout: 5000,  // fail in 5s not 30s
+  greetingTimeout: 5000,
+  socketTimeout: 5000,
+  auth: {
+    user: process.env.EMAIL_USER.trim(),
+    pass: process.env.EMAIL_PASS.replace(/\s+/g, '')
+  }
+});
 
   await transporter.sendMail({
     from: `"MotoGear Pitstop" <${process.env.EMAIL_USER}>`,
