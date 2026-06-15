@@ -133,7 +133,7 @@ export const forgotPassword = asyncHandler(async (req, res) => {
   user.resetPasswordToken = crypto.createHash('sha256').update(resetToken).digest('hex');
   user.resetPasswordExpire = Date.now() + 15 * 60 * 1000; // 15 mins
   await user.save();
-const resetUrl = `${process.env.FRONTEND_URL}//reset-password/${resetToken}`;
+const resetUrl = `${process.env.FRONTEND_URL}/reset-password/${resetToken}`;
 
   try {
     await sendEmail({
