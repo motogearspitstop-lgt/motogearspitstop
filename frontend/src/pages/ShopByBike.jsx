@@ -4,14 +4,13 @@ import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 import ProductCard from '@/components/ProductCard';
 import { products } from '@/data/products';
+import { productMatchesBike } from '@/utils/searchUtils';
 
 const ShopByBike = () => {
   const { bike } = useParams();
   const bikeName = bike.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
 
-  const filteredProducts = products.filter(p =>
-    p.bikes.some(b => b.toLowerCase() === bikeName.toLowerCase() || b === 'All')
-  );
+  const filteredProducts = products.filter(p => productMatchesBike(p, bikeName));
 
   return (
     <>

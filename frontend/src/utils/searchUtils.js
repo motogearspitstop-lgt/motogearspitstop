@@ -149,9 +149,19 @@ const getProductBikeTargets = (product) => {
   ].filter(Boolean);
 };
 
+const EXACT_BIKE_FILTERS = new Set(['yezdi adventure 2025']);
+
 export const productMatchesBike = (product, bikeName) => {
   const normalizedBike = normalizeText(bikeName);
   if (!normalizedBike) return true;
+  if (normalizedBike === 'all') return true;
+
+  if (EXACT_BIKE_FILTERS.has(normalizedBike)) {
+    return getProductBikeTargets(product).some(target => {
+      const normalizedTarget = normalizeText(target);
+      return normalizedTarget && normalizedTarget !== 'all' && normalizedTarget === normalizedBike;
+    });
+  }
 
   const productBikeText = normalizeText(getProductBikeText(product));
   return productBikeText.includes(normalizedBike);

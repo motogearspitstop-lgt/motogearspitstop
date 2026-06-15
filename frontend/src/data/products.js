@@ -94,7 +94,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -380,7 +380,7 @@ export const products = [
     rating: 4,
     reviews: 234,
     isNew: false,
-    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025'],
+    bikes: ['Royal Enfield', 'Jawa'],
     description: 'Adjustable back rest for pillion comfort',
     specifications: {
       'Cushioning': 'High density foam',
@@ -7548,7 +7548,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -7574,7 +7574,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -7600,7 +7600,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -7626,7 +7626,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -7652,7 +7652,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -7678,7 +7678,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -7704,7 +7704,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -7730,7 +7730,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -7756,7 +7756,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -7782,7 +7782,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -7808,7 +7808,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -7834,7 +7834,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -10234,7 +10234,7 @@ export const products = [
     rating: 5,
     reviews: 234,
     isNew: true,
-    bikes: ['Jawa', 'Yezdi Adventure 2025'],
+    bikes: ['Jawa'],
     description: 'Performance exhaust by Red Rooster',
     specifications: {
       'Material': 'Stainless steel',
@@ -11534,12 +11534,12 @@ export const products = [
     rating: 5,
     reviews: 234,
     isNew: true,
-    bikes: ['Aprilia'],
+    bikes: ['Aprilia RS 457'],
     description: 'Improve Performance with FuelX Pro+',
     specifications: {
       'Material': 'Hard Plastic',
       'Sound': 'okay',
-      'Compatibility': 'Aprilia',
+      'Compatibility': 'Aprilia RS 457',
       'Warranty': '1 year'
     }
   },
@@ -11820,11 +11820,11 @@ export const products = [
     rating: 5,
     reviews: 189,
     isNew: true,
-    bikes: ['APRILIA'],
+    bikes: ['Aprilia RS 457'],
     description: 'Enhance your riding experience with the MODERN TECH Accessories.',
     specifications: {
       'Material': 'Metal',
-      'Compatibility': 'APRILIA',
+      'Compatibility': 'Aprilia RS 457',
       'Weight': '1 kg',
       'Mounting': 'Bolt-on installation'
     }
@@ -11846,11 +11846,11 @@ export const products = [
     rating: 5,
     reviews: 189,
     isNew: true,
-    bikes: ['APRILIA'],
+    bikes: ['Aprilia RS 457'],
     description: 'Enhance your riding experience with the MODERN TECH Accessories.',
     specifications: {
       'Material': 'Metal',
-      'Compatibility': 'APRILIA',
+      'Compatibility': 'Aprilia RS 457',
       'Weight': '1 kg',
       'Mounting': 'Bolt-on installation'
     }
@@ -11872,11 +11872,11 @@ export const products = [
     rating: 5,
     reviews: 189,
     isNew: true,
-    bikes: ['APRILIA'],
+    bikes: ['Aprilia RS 457'],
     description: 'Enhance your riding experience with the MOTO CARE Accessories.',
     specifications: {
       'Material': 'Metal',
-      'Compatibility': 'APRILIA',
+      'Compatibility': 'Aprilia RS 457',
       'Weight': '1 kg',
       'Mounting': 'Bolt-on installation'
     }
@@ -11898,11 +11898,11 @@ export const products = [
     rating: 5,
     reviews: 189,
     isNew: true,
-    bikes: ['APRILIA'],
+    bikes: ['Aprilia RS 457'],
     description: 'Enhance your riding experience with the MOTO CARE Accessories.',
     specifications: {
       'Material': 'Metal',
-      'Compatibility': 'APRILIA',
+      'Compatibility': 'Aprilia RS 457',
       'Weight': '1 kg',
       'Mounting': 'Bolt-on installation'
     }
@@ -11924,11 +11924,11 @@ export const products = [
     rating: 5,
     reviews: 189,
     isNew: true,
-    bikes: ['APRILIA'],
+    bikes: ['Aprilia RS 457'],
     description: 'Enhance your riding experience with the MOTO CARE Accessories.',
     specifications: {
       'Material': 'Metal',
-      'Compatibility': 'APRILIA',
+      'Compatibility': 'Aprilia RS 457',
       'Weight': '1 kg',
       'Mounting': 'Bolt-on installation'
     }
@@ -11950,11 +11950,11 @@ export const products = [
     rating: 5,
     reviews: 189,
     isNew: true,
-    bikes: ['APRILIA'],
+    bikes: ['Aprilia RS 457'],
     description: 'Enhance your riding experience with the MOTO CARE Accessories.',
     specifications: {
       'Material': 'Metal',
-      'Compatibility': 'APRILIA',
+      'Compatibility': 'Aprilia RS 457',
       'Weight': '1 kg',
       'Mounting': 'Bolt-on installation'
     }
@@ -11976,11 +11976,11 @@ export const products = [
     rating: 5,
     reviews: 189,
     isNew: true,
-    bikes: ['APRILIA'],
+    bikes: ['Aprilia RS 457'],
     description: 'Enhance your riding experience with the MOTO CARE Accessories.',
     specifications: {
       'Material': 'Metal',
-      'Compatibility': 'APRILIA',
+      'Compatibility': 'Aprilia RS 457',
       'Weight': '1 kg',
       'Mounting': 'Bolt-on installation'
     }
@@ -12912,11 +12912,11 @@ export const products = [
     rating: 5,
     reviews: 189,
     isNew: true,
-    bikes: ['YEZDI'],
+    bikes: ['Yezdi Adventure 2025'],
     description: 'Enhance your riding experience with the MOTO CARE Accessories.',
     specifications: {
       'Material': 'Metal',
-      'Compatibility': 'YEZDI',
+      'Compatibility': 'Yezdi Adventure 2025',
       'Weight': '1 kg',
       'Mounting': 'Bolt-on installation'
     }
@@ -12938,11 +12938,11 @@ export const products = [
     rating: 5,
     reviews: 189,
     isNew: true,
-    bikes: ['YEZDI'],
+    bikes: ['Yezdi Adventure 2025'],
     description: 'Enhance your riding experience with the MOTO CARE Accessories.',
     specifications: {
       'Material': 'Metal',
-      'Compatibility': 'YEZDI',
+      'Compatibility': 'Yezdi Adventure 2025',
       'Weight': '1 kg',
       'Mounting': 'Bolt-on installation'
     }
@@ -12964,11 +12964,11 @@ export const products = [
     rating: 5,
     reviews: 189,
     isNew: true,
-    bikes: ['YEZDI'],
+    bikes: ['Yezdi Adventure 2025'],
     description: 'Enhance your riding experience with the MOTO CARE Accessories.',
     specifications: {
       'Material': 'Metal',
-      'Compatibility': 'YEZDI',
+      'Compatibility': 'Yezdi Adventure 2025',
       'Weight': '1 kg',
       'Mounting': 'Bolt-on installation'
     }
@@ -12990,11 +12990,11 @@ export const products = [
     rating: 5,
     reviews: 189,
     isNew: true,
-    bikes: ['YEZDI'],
+    bikes: ['Yezdi Adventure 2025'],
     description: 'Enhance your riding experience with the MOTO CARE Accessories.',
     specifications: {
       'Material': 'Metal',
-      'Compatibility': 'YEZDI',
+      'Compatibility': 'Yezdi Adventure 2025',
       'Weight': '1 kg',
       'Mounting': 'Bolt-on installation'
     }
@@ -13016,11 +13016,11 @@ export const products = [
     rating: 5,
     reviews: 189,
     isNew: true,
-    bikes: ['YEZDI'],
+    bikes: ['Yezdi Adventure 2025'],
     description: 'Enhance your riding experience with the MOTO CARE Accessories.',
     specifications: {
       'Material': 'Metal',
-      'Compatibility': 'YEZDI',
+      'Compatibility': 'Yezdi Adventure 2025',
       'Weight': '1 kg',
       'Mounting': 'Bolt-on installation'
     }
@@ -13042,11 +13042,11 @@ export const products = [
     rating: 5,
     reviews: 189,
     isNew: true,
-    bikes: ['YEZDI'],
+    bikes: ['Yezdi Adventure 2025'],
     description: 'Enhance your riding experience with the MOTO CARE Accessories.',
     specifications: {
       'Material': 'Metal',
-      'Compatibility': 'YEZDI',
+      'Compatibility': 'Yezdi Adventure 2025',
       'Weight': '1 kg',
       'Mounting': 'Bolt-on installation'
     }
@@ -13068,11 +13068,11 @@ export const products = [
     rating: 5,
     reviews: 189,
     isNew: true,
-    bikes: ['YEZDI'],
+    bikes: ['Yezdi Adventure 2025'],
     description: 'Enhance your riding experience with the MOTO CARE Accessories.',
     specifications: {
       'Material': 'Metal',
-      'Compatibility': 'YEZDI',
+      'Compatibility': 'Yezdi Adventure 2025',
       'Weight': '1 kg',
       'Mounting': 'Bolt-on installation'
     }
@@ -13094,11 +13094,11 @@ export const products = [
     rating: 5,
     reviews: 189,
     isNew: true,
-    bikes: ['YEZDI'],
+    bikes: ['Yezdi Adventure 2025'],
     description: 'Enhance your riding experience with the MOTO CARE Accessories.',
     specifications: {
       'Material': 'Metal',
-      'Compatibility': 'YEZDI',
+      'Compatibility': 'Yezdi Adventure 2025',
       'Weight': '1 kg',
       'Mounting': 'Bolt-on installation'
     }
@@ -13120,11 +13120,11 @@ export const products = [
     rating: 5,
     reviews: 189,
     isNew: true,
-    bikes: ['YEZDI'],
+    bikes: ['Yezdi Adventure 2025'],
     description: 'Enhance your riding experience with the MODERN TECH Accessories.',
     specifications: {
       'Material': 'Metal',
-      'Compatibility': 'YEZDI',
+      'Compatibility': 'Yezdi Adventure 2025',
       'Weight': '1 kg',
       'Mounting': 'Bolt-on installation'
     }
@@ -13146,11 +13146,11 @@ export const products = [
     rating: 5,
     reviews: 189,
     isNew: true,
-    bikes: ['YEZDI'],
+    bikes: ['Yezdi Adventure 2025'],
     description: 'Enhance your riding experience with the MODERN TECH Accessories.',
     specifications: {
       'Material': 'Metal',
-      'Compatibility': 'YEZDI',
+      'Compatibility': 'Yezdi Adventure 2025',
       'Weight': '1 kg',
       'Mounting': 'Bolt-on installation'
     }
