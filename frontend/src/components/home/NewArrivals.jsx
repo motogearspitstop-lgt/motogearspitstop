@@ -5,11 +5,62 @@ import { ArrowRight, ShoppingCart, Eye } from 'lucide-react';
 import { products } from '@/data/products';
 import { useCartStore } from '@/store/cartStore';
 import { useToast } from '@/components/ui/use-toast';
-import { productUrl, productsUrl } from '@/utils/urlUtils';
-import { getProductImage, handleProductImageError } from '@/utils/imageUtils';
 
 const NewArrivals = () => {
-  const newProducts = products.filter(p => p.isNew).slice(0, 8);
+  const newArrivalProducts = [
+    {
+      name: 'RYNOX AIR GT 4 JACKET- CE CERTIFIED CLASS A',
+      price: 8499,
+      discount: 15,
+      image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772392340/Air_GT_4_CE_Certified_Apparels_CE_AA_LABEL_TAG-11_1300x_mqacab.webp',
+    },
+    {
+      name: 'Royal Enfield SUM GUARD FOR HIMALAYAN 450',
+    },
+    {
+      name: 'MADDOG Alpha Combo Aux Light 80 Watts',
+    },
+    {
+      name: 'Zana Universal Led Fog Light (ZFL R-25) - ZI-FL-013',
+      price: 7000,
+      discount: 30,
+      image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772425198/zana_light_whzloe.jpg',
+    },
+    {
+      name: 'Raida Explorer Boots | Black',
+      price: 8000,
+      discount: 20,
+      image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772426062/Raida_Boots_q7dpke.webp',
+    },
+    {
+      name: 'Cardo Packtalk Special Edition Intercom (PTN00010)',
+    },
+    {
+      name: 'Zana TOPRACK T-1 WITH ALUMINIUM PLATE COMPATIBLE WITH PILLION BACKREST HIMALAYAN BS6 (2021)',
+      price: 4400,
+      discount: 17,
+      image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772427666/ZANA_TAIL_kdeg09.webp',
+    },
+    {
+      name: 'BMW R1300 GS Top Box & Pannier Set',
+    },
+  ];
+
+  const newProducts = newArrivalProducts.map((displayProduct, index) => {
+    const product = products.find(p => p.name === displayProduct.name);
+
+    return {
+      ...(product || {
+        id: `new-arrival-${index}`,
+        brand: displayProduct.name.split(' ')[0],
+        rating: 5,
+        reviews: 0,
+        isNew: true,
+      }),
+      ...displayProduct,
+      isNew: true,
+    };
+  });
   const addToCart = useCartStore(state => state.addToCart);
   const { toast } = useToast();
 
@@ -27,7 +78,7 @@ const NewArrivals = () => {
             <span className="text-[#e63946] font-mono-bold text-sm tracking-widest uppercase mb-2 block">Just Dropped</span>
             <h2 className="text-5xl md:text-7xl font-bebas text-gray-900">NEW <span className="text-[#e63946]">ARRIVALS</span></h2>
           </div>
-          <Link to={productsUrl({ filter: 'new' })} className="hidden md:flex items-center gap-2 text-gray-900 hover:text-[#e63946] font-bold uppercase tracking-wider transition-colors">
+          <Link to="/products?filter=new" className="hidden md:flex items-center gap-2 text-gray-900 hover:text-[#e63946] font-bold uppercase tracking-wider transition-colors">
             View All <ArrowRight size={18} />
           </Link>
         </div>
@@ -35,7 +86,7 @@ const NewArrivals = () => {
         <div className="mobile-scroll-container md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-x-6 md:gap-y-10">
           {newProducts.map((product, idx) => (
             <motion.div
-              key={`${product.id}-${product.name}-${idx}`}
+              key={product.id}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -44,9 +95,8 @@ const NewArrivals = () => {
             >
               <div className="relative aspect-square overflow-hidden rounded-xl bg-white mb-4 shadow-sm border border-gray-200 hover:shadow-lg transition-shadow">
                  <img
-                    src={getProductImage(product)}
+                    src={product.image}
                     alt={product.name}
-                    onError={(event) => handleProductImageError(event, product)}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                  />
                  <div className="absolute top-3 left-3 flex flex-col gap-2">
@@ -64,7 +114,7 @@ const NewArrivals = () => {
                        <ShoppingCart size={20} />
                     </button>
                     <Link 
-                       to={productUrl(product)}
+                       to={`/product/${product.id}`}
                        className="w-12 h-12 bg-white text-gray-900 rounded-full flex items-center justify-center hover:bg-[#e63946] hover:text-white transition-colors transform translate-y-4 group-hover:translate-y-0 duration-300 delay-75 shadow-lg"
                     >
                        <Eye size={20} />
@@ -73,7 +123,7 @@ const NewArrivals = () => {
               </div>
 
               <div>
-                 <Link to={productUrl(product)}>
+                 <Link to={`/product/${product.id}`}>
                     <h3 className="text-gray-900 font-bold text-lg leading-tight mb-2 group-hover:text-[#e63946] transition-colors line-clamp-2">
                        {product.name}
                     </h3>
@@ -90,7 +140,7 @@ const NewArrivals = () => {
         </div>
         
         <div className="mt-12 text-center md:hidden">
-            <Link to={productsUrl({ filter: 'new' })} className="inline-block border-2 border-gray-900 text-gray-900 px-8 py-3 rounded uppercase font-bold text-sm hover:bg-gray-900 hover:text-white transition-colors">
+            <Link to="/products?filter=new" className="inline-block border-2 border-gray-900 text-gray-900 px-8 py-3 rounded uppercase font-bold text-sm hover:bg-gray-900 hover:text-white transition-colors">
               View All New Arrivals
             </Link>
         </div>

@@ -94,7 +94,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -380,7 +380,7 @@ export const products = [
     rating: 4,
     reviews: 234,
     isNew: false,
-    bikes: ['Royal Enfield', 'Jawa'],
+    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025'],
     description: 'Adjustable back rest for pillion comfort',
     specifications: {
       'Cushioning': 'High density foam',
@@ -7548,7 +7548,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -7574,7 +7574,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -7600,7 +7600,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -7626,7 +7626,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -7652,7 +7652,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -7678,7 +7678,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -7704,7 +7704,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -7730,7 +7730,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -7756,7 +7756,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -7782,7 +7782,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -7808,7 +7808,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -7834,7 +7834,7 @@ export const products = [
     rating: 4,
     reviews: 156,
     isNew: true,
-    bikes: ['Royal Enfield', 'Jawa', 'All'],
+    bikes: ['Royal Enfield', 'Jawa', 'Yezdi Adventure 2025', 'All'],
     description: 'Maddog is the only brand that can provide a complete lighting and visibility package that includes the lights, light mounts, wire harness, and a single intelligent plug-n-play controller to provide effortless installation and integrated control of all your accessorie',
     specifications: {
       'Power': '20W per lamp',
@@ -9167,6 +9167,84 @@ export const products = [
     }
   },
   {
+    id: 546,
+    name: 'Rynox Air GT Gloves',
+    price: 2999,
+    discount: 20,
+    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772709523/RynoxAIRGT2HiVizGreen01.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772709527/RynoxAirGT2GreyHiVizGreen06.webp',
+      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772709518/RynoxAirGT2GreyHiVizGreen02.webp',
+      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772709520/RynoxAirGT2GreyHiVizGreen03.webp'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Gloves',
+    brand: 'Rynox',
+    rating: 5,
+    reviews: 456,
+    isNew: true,
+    bikes: ['All'],
+    description: 'Ventilated summer riding gloves.',
+    specifications: {
+      'Material': 'Mesh + TPU',
+      'Protection': 'Knuckle & palm armor',
+      'Touch Screen': 'Yes',
+      'Sizes': 'S to XXL'
+    }
+  },
+  {
+    id: 547,
+    name: 'Raida Drift Evo Motorcycle Gloves',
+    price: 5999,
+    discount: 20,
+    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772785168/61dTIQkC0yL._SL1024_.jpg',
+    galleryImages: [
+      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772785224/512vlaADXZL._SL1024_.jpg',
+      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772785240/61TysAKE6jL._SL1024_.jpg',
+      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772785230/613jnU8QpXL._SL1024_.jpg'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Gloves',
+    brand: 'Raida',
+    rating: 5,
+    reviews: 345,
+    isNew: true,
+    bikes: ['All'],
+    description: 'Winter riding gloves waterproof.',
+    specifications: {
+      'Material': 'Leather + fleece lining',
+      'Waterproof': 'Yes',
+      'Touch Screen': 'Yes',
+      'Sizes': 'S to XXL'
+    }
+  },
+  {
+    id: 548,
+    name: 'Raida AirWave Motorcycle Gloves | Red',
+    price: 4000,
+    discount: 15,
+    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772424749/1_182997e8-04a5-4a3f-a5b2-a160b44426b0_ufxpbb.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772688687/6A-780x780.webp',
+      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772688686/6-1-1-780x780.webp',
+      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772688685/5-1-1-780x780.webp'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Gloves',
+    brand: 'Raida',
+    rating: 4,
+    reviews: 289,
+    isNew: false,
+    bikes: ['All'],
+    description: 'Full finger riding gloves with knuckle protection.',
+    specifications: {
+      'Material': 'Leather + Mesh',
+      'Protection': 'Hard knuckle armor',
+      'Touch Screen': 'Yes',
+      'Sizes': 'S, M, L, XL, XXL'
+    }
+  },
+  {
     id: 376,
     name: 'LGP GLOVES 030',
     price: 1599,
@@ -10156,7 +10234,7 @@ export const products = [
     rating: 5,
     reviews: 234,
     isNew: true,
-    bikes: ['Jawa'],
+    bikes: ['Jawa', 'Yezdi Adventure 2025'],
     description: 'Performance exhaust by Red Rooster',
     specifications: {
       'Material': 'Stainless steel',
@@ -11779,7 +11857,7 @@ export const products = [
   },
   {
     id: 476,
-    name: 'MOTO CARE TYRE HUGGER FOR APRILLA RS 457',
+    name: 'MOTO CARE TYRE HUGGER FOR Aprilia RS 457',
     price: 1599,
     discount: 10,
     image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781297579/1750576802_6857aea24270d_hhu4vv.png',
@@ -11805,7 +11883,7 @@ export const products = [
   },
   {
     id: 477,
-    name: 'MOTO CARE CNC CARRIER WITH BACKREST FOR APRILLA RS 457',
+    name: 'MOTO CARE CNC CARRIER WITH BACKREST FOR Aprilia  RS 457',
     price: 3600,
     discount: 10,
     image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781297690/1739427795_67ad8fd327dc9_fnufxi.png',
@@ -11831,7 +11909,7 @@ export const products = [
   },
   {
     id: 478,
-    name: 'MOTO CARE SADDLE STAY WITH PLATE FOR APRILLA RS 457',
+    name: 'MOTO CARE SADDLE STAY WITH PLATE FOR Aprilia  RS 457',
     price: 2400,
     discount: 10,
     image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781297811/1739427383_67ad8e3766d3b_nvuiv5.png',
@@ -11857,7 +11935,7 @@ export const products = [
   },
   {
     id: 479,
-    name: 'MOTO CARE FORK SLIDERS FOR APRILLA RS 457',
+    name: 'MOTO CARE FORK SLIDERS FOR Aprilia  RS 457',
     price: 2240,
     discount: 10,
     image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781297901/1739427182_67ad8d6ed51ab_gqne5a.png',
@@ -11883,7 +11961,7 @@ export const products = [
   },
   {
     id: 480,
-    name: 'MOTO CARE FRAME SLIDERS FOR APRILLA RS 457',
+    name: 'MOTO CARE FRAME SLIDERS FOR Aprilia  RS 457',
     price: 1600,
     discount: 10,
     image: 'https://res.cloudinary.com/dauynokmb/image/upload/v1781297980/1739426896_67ad8c50754f0_vberip.png',
@@ -13286,6 +13364,111 @@ export const products = [
     }
   },
   {
+    id: 542,
+    name: 'Raida Tourer Riding Jacket (Grey)',
+    price: 4999,
+    discount: 20,
+    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772780010/Raida-Tourer-Riding-Jacket-Grey-Online-Buy-India_01.jpg',
+    galleryImages: [
+      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772780013/Raida-Tourer-Riding-Jacket-Grey-Online-Buy-India_02.jpg',
+      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772780017/Raida-Tourer-Riding-Jacket-Grey-Online-Buy-India_03.jpg',
+      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772780025/Raida-Tourer-Riding-Jacket-Grey-Online-Buy-India_04.jpg'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Jackets',
+    brand: 'Raida',
+    rating: 5,
+    reviews: 345,
+    isNew: true,
+    bikes: ['All'],
+    description: 'Touring riding jacket with abrasion resistant fabric and CE-approved armor.',
+    specifications: {
+      'Material': 'Mesh + Cordura',
+      'Protection': 'CE Level 1 armor',
+      'Ventilation': 'Full mesh body',
+      'Sizes': 'S to XXL'
+    }
+  },
+  {
+    id: 543,
+    name: 'RYNOX AIR GT 4 JACKET- CE CERTIFIED CLASS A',
+    price: 8499,
+    discount: 15,
+    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772392340/Air_GT_4_CE_Certified_Apparels_CE_AA_LABEL_TAG-11_1300x_mqacab.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772687895/Composition_AirGT4_allcolour__Rynox_Air_GT_4_Jacket_BlackWhite_02_1_1200x.webp',
+      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772687896/Rynox_Air_GT_4_Jacket_BlackWhite_03_1400x.png',
+      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772687895/Air_GT_NEW_Black__05_1200x.webp'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Jackets',
+    brand: 'Rynox',
+    rating: 5,
+    reviews: 234,
+    isNew: true,
+    bikes: ['KTM', 'Royal Enfield', 'Yamaha', 'All'],
+    description: 'CE certified Class A riding jacket with ventilation and riding protection.',
+    specifications: {
+      'Material': 'Cordura 500D',
+      'Protection': 'CE Level 2 armor',
+      'Waterproof': 'Yes',
+      'Ventilation': '4-way air vents'
+    }
+  },
+  {
+    id: 544,
+    name: 'Raida Explorer Boots | Black',
+    price: 8000,
+    discount: 20,
+    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772426062/Raida_Boots_q7dpke.webp',
+    galleryImages: [
+      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772689222/2-66_f82e7313-b0bb-43c2-b02a-ed99ec2ad70e.webp',
+      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772689225/3-62_c6bd424c-4ba2-4f15-9ea3-dff6e03486f4.webp',
+      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772689223/5-41_029a6d32-6b3c-4b0d-a4e1-cfac00bce350.webp'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Boots',
+    brand: 'Raida',
+    rating: 5,
+    reviews: 145,
+    isNew: true,
+    bikes: ['All'],
+    description: 'All-day comfort riding boots with ankle protection.',
+    specifications: {
+      'Material': 'Leather + Mesh',
+      'Protection': 'Ankle guards, toe box',
+      'Waterproof': 'Water resistant',
+      'Warranty': 'Six months warranty against manufacturing defect',
+      'Sole': 'Anti-slip rubber sole'
+    }
+  },
+  {
+    id: 545,
+    name: 'Raida Tourer Motorcycle Boots | Grey',
+    price: 3999,
+    discount: 25,
+    image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772783383/Raida-Tourer-Motorcycle-Boots-Grey-Online-Buy-India_1.jpg',
+    galleryImages: [
+      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772783378/Raida-Tourer-Motorcycle-Boots-Grey-Online-Buy-India_2.jpg',
+      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772783388/Raida-Tourer-Motorcycle-Boots-Grey-Online-Buy-India_3.jpg',
+      'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772783393/Raida-Tourer-Motorcycle-Boots-Grey-Online-Buy-India_4.jpg'
+    ],
+    category: 'Riding Gear',
+    subcategory: 'Boots',
+    brand: 'Raida',
+    rating: 4,
+    reviews: 234,
+    isNew: true,
+    bikes: ['All'],
+    description: 'Casual riding boots with protection.',
+    specifications: {
+      'Material': 'Leather',
+      'Protection': 'Ankle guard, toe box',
+      'Sole': 'Oil resistant',
+      'Sizes': '6-12 UK'
+    }
+  },
+  {
     id: 534,
     name: 'Axor Jacket Cruise 2 Black Neon Yellow',
     price: 5919,
@@ -13493,7 +13676,6 @@ export const products = [
       'Interior': 'Removable washable'
     }
   },
-
 ];
 
 export const brands = [

@@ -11,33 +11,39 @@ const ShopBySpecificBrands = () => {
   const brands = [
     { 
       name: 'Maddog', 
-      image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1778611041/maddog_bqfpeb.png' 
+      image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1778611041/maddog_bqfpeb.png',
+      params: { brand: 'Maddog' }
     },
     { 
       name: 'Red Rooster', 
-      image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1778611082/red-rooster-performance-international-pvt-ltd-cheemasandra-bangalore-sports-bike-exhaust-dealers-e1auwxg45v-250_ntmrv1.avif' 
+      image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1778611082/red-rooster-performance-international-pvt-ltd-cheemasandra-bangalore-sports-bike-exhaust-dealers-e1auwxg45v-250_ntmrv1.avif',
+      params: { search: 'Red Rooster' }
     },
     { 
       name: 'FuelX Pro+', 
-      image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1778611287/fuel_x_c7c6v5.png' 
+      image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1778611287/fuel_x_c7c6v5.png',
+      params: { search: 'FuelX Pro+' }
     },
     { 
       name: 'Vesrah Brake Pads', 
-      image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1778611082/VESRAH-1_qjbosf.jpg' 
+      image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1778611082/VESRAH-1_qjbosf.jpg',
+      params: { search: 'Vesrah Brake pads' }
     },
     { 
       name: 'BlueArmor', 
-      image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1778611041/bluarmor_logo_ka0ykv.webp' 
+      image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1778611041/bluarmor_logo_ka0ykv.webp',
+      params: { brand: 'BlueArmor' }
     },
     { 
       name: 'EJEAS Intercom', 
-      image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1778611041/EJAEA_ktdezx.webp' 
+      image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1778611041/EJAEA_ktdezx.webp',
+      params: { brand: 'EJEAS Intercom' }
     },
   ];
 
-  const handleBrandClick = (brandName) => {
+  const handleBrandClick = (brand) => {
     clearFilters();
-    navigate(productsUrl({ brand: brandName }));
+    navigate(productsUrl(brand.params));
   };
 
   const handleImageError = (e) => {
@@ -62,7 +68,7 @@ const ShopBySpecificBrands = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              onClick={() => handleBrandClick(brand.name)}
+              onClick={() => handleBrandClick(brand)}
               className="group relative h-[140px] sm:h-[200px] md:h-[280px] lg:h-[400px] overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl cursor-pointer shadow-sm hover:shadow-xl transition-all duration-500 bg-white"
             >
               <div className="block w-full h-full">

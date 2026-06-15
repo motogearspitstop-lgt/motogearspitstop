@@ -79,10 +79,15 @@ export const useAuthStore = create(
 
       forgotPassword: async (email) => {
         try {
-          await api.post('/auth/forgot-password', { email });
+          await api.post('/auth/forgot-password', { email: String(email || '').trim() }, { timeout: 20000 });
           return { success: true };
         } catch (err) {
-          return { success: false, message: err.response?.data?.message };
+          return {
+            success: false,
+            message: err.code === 'ECONNABORTED'
+              ? 'The email service took too long to respond. Please try again in a minute.'
+              : err.response?.data?.message
+          };
         }
       },
 

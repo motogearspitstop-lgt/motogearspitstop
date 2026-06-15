@@ -9,7 +9,49 @@ import { productUrl, productsUrl } from '@/utils/urlUtils';
 import { getProductImage, handleProductImageError } from '@/utils/imageUtils';
 
 const FeaturedDealsBanner = () => {
-  const dealProducts = products.filter(p => p.discount > 0).slice(0, 6);
+  const finalBlastProducts = [
+    {
+      name: 'RYNOX AIR GT 4 JACKET- CE CERTIFIED CLASS A',
+      brand: 'Rynox',
+      price: 8499,
+      discount: 15,
+      rating: 5,
+      image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772392340/Air_GT_4_CE_Certified_Apparels_CE_AA_LABEL_TAG-11_1300x_mqacab.webp',
+    },
+    {
+      name: 'STUDDS Thunder Black',
+    },
+    {
+      name: 'Royal Enfield SUM GUARD FOR HIMALAYAN 450',
+    },
+    {
+      name: 'Bark Buster Metal HandGuard(Black) - HAND PROTECTOR for universal motorycles HD33B',
+    },
+    {
+      name: 'MADDOG Alpha Combo Aux Light 80 Watts',
+    },
+    {
+      name: 'Raida AirWave Motorcycle Gloves | Red',
+      brand: 'Raida',
+      price: 4000,
+      discount: 15,
+      rating: 4,
+      image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772424749/1_182997e8-04a5-4a3f-a5b2-a160b44426b0_ufxpbb.webp',
+    },
+  ];
+
+  const dealProducts = finalBlastProducts.map((displayProduct, index) => {
+    const product = products.find(p => p.name === displayProduct.name);
+
+    return {
+      ...(product || {
+        id: `final-blast-${index}`,
+        reviews: 0,
+        isNew: false,
+      }),
+      ...displayProduct,
+    };
+  });
   const addToCart = useCartStore(state => state.addToCart);
   const { toast } = useToast();
 

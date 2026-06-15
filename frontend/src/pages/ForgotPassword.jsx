@@ -14,16 +14,24 @@ export default function ForgotPassword() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!email) return setError('Please enter your email');
+    const trimmedEmail = email.trim();
+
+    if (!trimmedEmail) return setError('Please enter your email');
     setLoading(true);
     setError('');
     try {
-      await api.post('/auth/forgot-password', { email });
+      await api.post('/auth/forgot-password', { email: trimmedEmail }, { timeout: 20000 });
+      setEmail(trimmedEmail);
       setSent(true);
     } catch (err) {
-      setError(err.response?.data?.message || 'Something went wrong');
+      if (err.code === 'ECONNABORTED') {
+        setError('The email service took too long to respond. Please try again in a minute.');
+      } else {
+        setError(err.response?.data?.message || 'Something went wrong');
+      }
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   return (

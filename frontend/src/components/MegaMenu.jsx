@@ -28,7 +28,7 @@ const MegaMenu = ({ onClose }) => {
     {
       name: 'Popular Brands',
       isBrand: true,
-      items: ['Rynox', 'Raida', 'Maddog', 'Zana', 'Barkbusters', 'KTM', 'Royal Enfield']
+      items: ['Maddog', 'Barkbusters', 'KTM', 'Royal Enfield', 'Studds', 'Axor', 'Cardo']
     }
   ];
 

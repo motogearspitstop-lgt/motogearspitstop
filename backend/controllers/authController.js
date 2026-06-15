@@ -116,7 +116,14 @@ export const getMe = asyncHandler(async (req, res) => {
 
 // @POST /api/auth/forgot-password
 export const forgotPassword = asyncHandler(async (req, res) => {
-  const user = await User.findOne({ email: req.body.email });
+  const email = String(req.body.email || '').trim().toLowerCase();
+
+  if (!email) {
+    res.status(400);
+    throw new Error('Please enter your email');
+  }
+
+  const user = await User.findOne({ email });
   if (!user) {
     res.status(404);
     throw new Error('No account with that email');
@@ -129,16 +136,26 @@ export const forgotPassword = asyncHandler(async (req, res) => {
 
   const resetUrl = `${getFrontendUrl(req)}/reset-password/${resetToken}`;
 
-  await sendEmail({
-    to: user.email,
-    subject: 'MotoGear Pitstop — Password Reset',
-    html: `
-      <h2>Password Reset Request</h2>
-      <p>Click the link below to reset your password. Valid for 15 minutes.</p>
-      <a href="${resetUrl}" style="background:#e11d48;color:#fff;padding:10px 20px;border-radius:5px;text-decoration:none;">Reset Password</a>
-      <p>If you didn't request this, ignore this email.</p>
-    `
-  });
+  try {
+    await sendEmail({
+      to: user.email,
+      subject: 'MotoGear Pitstop - Password Reset',
+      html: `
+        <h2>Password Reset Request</h2>
+        <p>Click the link below to reset your password. Valid for 15 minutes.</p>
+        <a href="${resetUrl}" style="background:#e11d48;color:#fff;padding:10px 20px;border-radius:5px;text-decoration:none;">Reset Password</a>
+        <p>If you didn't request this, ignore this email.</p>
+      `
+    });
+  } catch (error) {
+    user.resetPasswordToken = undefined;
+    user.resetPasswordExpire = undefined;
+    await user.save();
+
+    console.error('Forgot password email failed:', error.message);
+    res.status(503);
+    throw new Error('Unable to send reset email right now. Please try again in a few minutes.');
+  }
 
   res.json({ success: true, message: 'Reset email sent' });
 });

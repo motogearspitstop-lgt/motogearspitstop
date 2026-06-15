@@ -9,17 +9,17 @@ const CategoryShowcase = () => {
   const clearFilters = useFilterStore(state => state.clearFilters);
 
   const categories = [
-    { name: 'Helmets', image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1771782727/HELMET_apudzn.jpg' },
-    { name: 'Jackets', image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1771783004/Raida_Jacket_itrknv.jpg' },
-    { name: 'Gloves', image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1771783103/GLOVES_rik2zf.webp' },
-    { name: 'Boots', image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1771783295/Boots_kehggs.webp' },
-    { name: 'Touring', image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1771783436/Screenshot_2026-02-22_at_11.33.45_PM_y7dit1.png' },
-    { name: 'Bike Accessories', image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1771783616/Bike_accessories_quf2sc.jpg' },
+    { name: 'Helmets', image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1771782727/HELMET_apudzn.jpg', params: { subcategory: 'Helmets' } },
+    { name: 'Jackets', image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1771783004/Raida_Jacket_itrknv.jpg', params: { subcategory: 'Jackets' } },
+    { name: 'Gloves', image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1771783103/GLOVES_rik2zf.webp', params: { subcategory: 'Gloves' } },
+    { name: 'Boots', image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1771783295/Boots_kehggs.webp', params: { subcategory: 'Boots' } },
+    { name: 'Touring', image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1771783436/Screenshot_2026-02-22_at_11.33.45_PM_y7dit1.png', params: { category: 'Touring' } },
+    { name: 'Bike Accessories', image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1771783616/Bike_accessories_quf2sc.jpg', params: { category: 'Bike Accessories' } },
   ];
 
-  const handleCategoryClick = (categoryName) => {
+  const handleCategoryClick = (category) => {
     clearFilters();
-    navigate(productsUrl({ subcategory: categoryName }));
+    navigate(productsUrl(category.params));
   };
 
   const handleViewAllClick = () => {
@@ -51,7 +51,7 @@ const CategoryShowcase = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              onClick={() => handleCategoryClick(cat.name)}
+              onClick={() => handleCategoryClick(cat)}
               className="group relative h-[140px] sm:h-[200px] md:h-[280px] lg:h-[400px] overflow-hidden rounded-lg sm:rounded-xl md:rounded-2xl cursor-pointer shadow-sm hover:shadow-xl transition-all duration-500 bg-white"
             >
               <div className="block w-full h-full">
