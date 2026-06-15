@@ -1,3 +1,6 @@
+// utils/sendEmail.js
+
+
 import { Resend } from 'resend';
 
 const sendEmail = async ({ to, subject, html }) => {
