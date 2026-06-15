@@ -7,7 +7,7 @@ const sendEmail = async ({ to, subject, html }) => {
   const resend = new Resend(process.env.RESEND_API_KEY);
   
   const { data, error } = await resend.emails.send({
-    from: 'MotoGear Pitstop <onboarding@resend.dev>',
+from: 'MotoGear Pitstop <noreply@motogearspitstop.com>',
     to,
     subject,
     html
