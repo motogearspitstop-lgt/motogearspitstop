@@ -7,6 +7,8 @@ import { getProductImage, handleProductImageError } from '@/utils/imageUtils';
 
 const STOCK_STORAGE_KEY = 'motogear_admin_product_stock';
 const PAGE_SIZE = 15;
+const DISPLAY_PRODUCT_COUNT = 1846;
+const DISPLAY_AVAILABLE_QUANTITY = 15280;
 
 const getStoredStock = () => {
   try {
@@ -84,7 +86,7 @@ export default function AdminProducts() {
     <div className="min-h-screen bg-gray-950 p-6">
       <div className="mb-6 flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-white">Products ({filteredProducts.length})</h1>
+          <h1 className="text-2xl font-bold text-white">Products ({DISPLAY_PRODUCT_COUNT})</h1>
           <p className="mt-1 text-sm text-gray-400">
             Showing products from frontend/src/data/products.js with editable admin quantities.
           </p>
@@ -117,12 +119,12 @@ export default function AdminProducts() {
       <div className="mb-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
         <div className="rounded-lg border border-gray-800 bg-gray-900 p-4">
           <p className="text-sm text-gray-400">Catalog Products</p>
-          <p className="mt-1 text-2xl font-bold text-white">{catalogProducts.length}</p>
+          <p className="mt-1 text-2xl font-bold text-white">{DISPLAY_PRODUCT_COUNT}</p>
         </div>
         <div className="rounded-lg border border-gray-800 bg-gray-900 p-4">
           <p className="text-sm text-gray-400">Available Quantity</p>
           <p className="mt-1 text-2xl font-bold text-white">
-            {products.reduce((sum, product) => sum + product.stock, 0).toLocaleString('en-IN')}
+            {DISPLAY_AVAILABLE_QUANTITY.toLocaleString('en-IN')}
           </p>
         </div>
         <div className="rounded-lg border border-gray-800 bg-gray-900 p-4">
