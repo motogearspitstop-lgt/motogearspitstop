@@ -8,7 +8,7 @@ import { getProductImage, handleProductImageError } from '@/utils/imageUtils';
 const STOCK_STORAGE_KEY = 'motogear_admin_product_stock';
 const PAGE_SIZE = 15;
 const DISPLAY_PRODUCT_COUNT = 1846;
-const DISPLAY_AVAILABLE_QUANTITY = 15280;
+const DISPLAY_AVAILABLE_QUANTITY = 1580;
 
 const getStoredStock = () => {
   try {
