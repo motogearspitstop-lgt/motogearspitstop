@@ -24,7 +24,7 @@ const HomePage = ({ headerRef }) => {
     <>
       <Helmet>
         <title>MotoGearsPitstop - Premium Bike Accessories & Riding Gear for Indian Riders</title>
-        <meta name="description" content="Shop premium motorcycle accessories, riding gear, helmets, jackets, crash guards, and touring essentials. Free shipping on orders above ₹2000. Trusted by riders across India." />
+        <meta name="description" content="Shop premium motorcycle accessories, riding gear, helmets, jackets, crash guards, and touring essentials. Free shipping on orders above ₹5000. Trusted by riders across India." />
       </Helmet>
       <div className="bg-white min-h-screen">
         <HeroSection headerHeight={headerHeight} />

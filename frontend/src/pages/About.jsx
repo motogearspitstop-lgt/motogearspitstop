@@ -35,7 +35,7 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
             {[
               { icon: Shield, title: "Premium Quality", desc: "100% genuine products from top global brands." },
-              { icon: Truck, title: "Fast Shipping", desc: "Free delivery on all orders above ₹2000." },
+              { icon: Truck, title: "Fast Shipping", desc: "Free delivery on all orders above ₹5000." },
               { icon: Star, title: "Expert Support", desc: "Rider-first customer service and guidance." },
               { icon: Wrench, title: "Wide Selection", desc: "From performance parts to protective riding gear." }
             ].map((feature, idx) => (

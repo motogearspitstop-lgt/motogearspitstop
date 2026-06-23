@@ -7,7 +7,7 @@ const TrustBenefits = () => {
     {
       icon: Truck,
       title: 'PAN INDIA SHIPPING',
-      description: 'Free delivery on orders above ₹2000'
+      description: 'Free delivery on orders above ₹5000'
     },
     {
       icon: CheckCircle,

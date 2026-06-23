@@ -403,6 +403,8 @@ const getItemProduct = (item) => item?.product || item;
 const getItemImage = (item) => getProductImage(getItemProduct(item));
 const getItemPrice = (item) => Number(item?.price ?? item?.product?.discountPrice ?? item?.product?.price ?? 0);
 const getItemsTotal = (items) => items.reduce((sum, item) => sum + getItemPrice(item) * item.quantity, 0);
+const FREE_DELIVERY_MINIMUM = 5000;
+const DELIVERY_CHARGE = 199;
 const COD_ADVANCE_PERCENTAGE = 20;
 const formatINR = (value = 0) => `Rs. ${Number(value || 0).toLocaleString('en-IN')}`;
 const normalizeWhatsAppNumber = (phone) => {
@@ -463,7 +465,9 @@ const Checkout = () => {
     }));
   }, [user]);
 
-  const total = getItemsTotal(items);
+  const itemsTotal = getItemsTotal(items);
+  const deliveryCharge = itemsTotal >= FREE_DELIVERY_MINIMUM ? 0 : DELIVERY_CHARGE;
+  const total = itemsTotal + deliveryCharge;
   const itemCount = items.reduce((sum, item) => sum + item.quantity, 0);
   const codAdvanceAmount = Math.round(total * (COD_ADVANCE_PERCENTAGE / 100));
   const codLeftoverAmount = Math.max(total - codAdvanceAmount, 0);
@@ -881,7 +885,11 @@ const Checkout = () => {
                 </div>
                 <div className="flex justify-between gap-4 text-gray-700">
                   <span>Items ({itemCount})</span>
-                  <span>{formatINR(total)}</span>
+                  <span>{formatINR(itemsTotal)}</span>
+                </div>
+                <div className="flex justify-between gap-4 text-gray-700">
+                  <span>Delivery charge</span>
+                  <span>{deliveryCharge === 0 ? 'FREE' : formatINR(deliveryCharge)}</span>
                 </div>
                 {formData.paymentMethod === 'cod' && (
                   <div className="rounded-lg bg-gray-50 p-3 text-sm">

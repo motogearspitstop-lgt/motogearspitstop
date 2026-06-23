@@ -263,7 +263,7 @@ const ProductDetail = () => {
                   <Truck className="text-[#e63946]" size={24} />
                   <div>
                     <div className="text-gray-900 font-medium text-sm">Free Shipping</div>
-                    <div className="text-gray-600 text-xs">On orders above ₹2000</div>
+                    <div className="text-gray-600 text-xs">On orders above ₹5000</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">

@@ -65,8 +65,14 @@ const wishlistCount = useWishlistStore(state => state.products?.length || 0);
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#0f0f0f] shadow-2xl border-b border-[#222]' : 'bg-[#0f0f0f]/90 backdrop-blur-md'}`}>
-      <div ref={announcementRef} className="bg-[#e63946] text-white text-xs font-bold py-1 text-center tracking-widest uppercase">
-        Free Shipping on Orders Above ₹2000 | Use Code: RIDEFREE
+      <div ref={announcementRef} className="overflow-hidden bg-[#e63946] text-white text-xs font-bold py-1 tracking-widest uppercase">
+        <motion.span
+          className="block whitespace-nowrap"
+          animate={{ x: ['-100%', '100vw'] }}
+          transition={{ duration: 12, repeat: Infinity, ease: 'linear' }}
+        >
+          Free Shipping on Orders Above ₹5000 | Use Code: RIDEFREE
+        </motion.span>
       </div>
 
       <div ref={navbarRef} className="max-w-[1600px] mx-auto px-6 py-4">
@@ -283,8 +289,6 @@ const wishlistCount = useWishlistStore(state => state.products?.length || 0);
 Header.displayName = 'Header';
 
 export default Header;
-
-
 
 
 

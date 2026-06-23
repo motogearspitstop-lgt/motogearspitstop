@@ -15,6 +15,8 @@ const escapeHtml = (value = '') => String(value)
   .replace(/'/g, '&#39;');
 
 const formatCurrency = (value = 0) => `INR ${Number(value || 0).toLocaleString('en-IN')}`;
+const FREE_DELIVERY_MINIMUM = 5000;
+const DELIVERY_CHARGE = 199;
 const COD_ADVANCE_PERCENTAGE = 20;
 
 const calculatePaymentBreakup = (paymentMethod, totalPrice) => {
@@ -170,7 +172,7 @@ export const createOrder = asyncHandler(async (req, res) => {
   }
 
   const itemsPrice = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
-  const shippingPrice = 0;
+  const shippingPrice = itemsPrice >= FREE_DELIVERY_MINIMUM ? 0 : DELIVERY_CHARGE;
   const totalPrice = itemsPrice + shippingPrice;
   const paymentBreakup = calculatePaymentBreakup(paymentMethod, totalPrice);
 

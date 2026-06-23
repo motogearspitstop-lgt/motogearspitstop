@@ -16,7 +16,7 @@ const ShopByBike = () => {
     <>
       <Helmet>
         <title>{`${bikeName} Accessories - MotoGearsPitstop`}</title>
-        <meta name="description" content={`Shop premium accessories and parts for ${bikeName}. Free shipping on orders above ₹2000.`} />
+        <meta name="description" content={`Shop premium accessories and parts for ${bikeName}. Free shipping on orders above ₹5000.`} />
       </Helmet>
 
       <div className="min-h-screen bg-white pt-24 px-4 pb-8">
