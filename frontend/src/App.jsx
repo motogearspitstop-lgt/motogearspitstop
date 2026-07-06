@@ -20,6 +20,7 @@ import ShopByBike from '@/pages/ShopByBike';
 import About from '@/pages/About';
 import Contact from '@/pages/Contact';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import ScrollToTop from '@/components/ScrollToTop';
 import { Toaster } from '@/components/ui/toaster';
 import VideoModal from '@/components/VideoModal';
 import useAuthStore from '@/store/authStore';
@@ -42,6 +43,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Helmet>
         <title>MotoGearsPitstop - Premium Bike Accessories & Riding Gear</title>
         <meta name="description" content="Premium motorcycle accessories and riding gear for Indian riders. Shop helmets, jackets, crash guards, touring gear and more." />

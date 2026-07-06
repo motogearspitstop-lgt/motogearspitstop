@@ -7,6 +7,8 @@ import { Switch } from '@/components/ui/switch';
 import { brands, categories } from '@/data/products';
 import { products } from '@/data/products';
 
+const normalizeFilterValue = (value) => String(value || '').trim().toLowerCase();
+
 const FilterPanel = ({ 
   filters, 
   onChange, 
@@ -14,8 +16,8 @@ const FilterPanel = ({
   onClose,
   className = "" 
 }) => {
-  const getBrandCount = (brand) => products.filter(p => p.brand === brand).length;
-  const getCategoryCount = (cat) => products.filter(p => p.category === cat).length;
+  const getBrandCount = (brand) => products.filter(p => normalizeFilterValue(p.brand) === normalizeFilterValue(brand)).length;
+  const getCategoryCount = (cat) => products.filter(p => normalizeFilterValue(p.category) === normalizeFilterValue(cat)).length;
 
   const handleBrandChange = (brand) => {
     const newBrands = filters.brands.includes(brand)

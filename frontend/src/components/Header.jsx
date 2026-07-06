@@ -2,13 +2,14 @@
 
 import React, { useState, useEffect, useRef, forwardRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ShoppingCart, User, Menu, X, Heart, MessageCircle, Clock } from 'lucide-react';
+import { ShoppingCart, User, Menu, X, Heart, MessageCircle, Clock, ChevronLeft, ChevronRight, Plus, Minus } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useCartStore } from '@/store/cartStore';
 import { useWishlistStore } from '@/store/wishlistStore';
 import useAuthStore from '@/store/authStore';
 import AuthModal from '@/components/AuthModal';
 import MegaMenu from '@/components/MegaMenu';
+import ShopByBikeMenu, { bikeGroups } from '@/components/ShopByBikeMenu';
 import SearchBar from '@/components/SearchBar';
 import { productsUrl } from '@/utils/urlUtils';
 import { getWhatsAppUrl } from '@/config/contact';
@@ -17,8 +18,11 @@ const Header = forwardRef((props, ref) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showMegaMenu, setShowMegaMenu] = useState(false);
+  const [showBikeMenu, setShowBikeMenu] = useState(false);
   const [showAuth, setShowAuth] = useState(false);
   const [showAccountMenu, setShowAccountMenu] = useState(false);
+  const [mobilePanel, setMobilePanel] = useState('main');
+  const [expandedBikeBrand, setExpandedBikeBrand] = useState(bikeGroups[0]?.brand || '');
 
 
   const cartCount = useCartStore(state => state.items.reduce((acc, i) => acc + i.quantity, 0));
@@ -50,7 +54,10 @@ const wishlistCount = useWishlistStore(state => state.products?.length || 0);
     }
   };
 
-  const closeMobileMenu = () => setIsMobileMenuOpen(false);
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+    setMobilePanel('main');
+  };
   const handleLogout = async () => {
     await logout();
     setShowAccountMenu(false);
@@ -66,13 +73,17 @@ const wishlistCount = useWishlistStore(state => state.products?.length || 0);
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#0f0f0f] shadow-2xl border-b border-[#222]' : 'bg-[#0f0f0f]/90 backdrop-blur-md'}`}>
       <div ref={announcementRef} className="overflow-hidden bg-[#e63946] text-white text-xs font-bold py-1 tracking-widest uppercase">
-        <motion.span
-          className="block whitespace-nowrap"
-          animate={{ x: ['-100%', '100vw'] }}
-          transition={{ duration: 12, repeat: Infinity, ease: 'linear' }}
+        <motion.div
+          className="flex w-max whitespace-nowrap"
+          animate={{ x: ['-50%', '0%'] }}
+          transition={{ duration: 16, repeat: Infinity, ease: 'linear' }}
         >
-          Free Shipping on Orders Above ₹5000 | Use Code: RIDEFREE
-        </motion.span>
+          {Array.from({ length: 8 }).map((_, idx) => (
+            <span key={idx} className="px-8">
+              Free Shipping on Orders Above ₹5000 | Use Code: RIDEFREE
+            </span>
+          ))}
+        </motion.div>
       </div>
 
       <div ref={navbarRef} className="max-w-[1600px] mx-auto px-6 py-4">
@@ -88,12 +99,16 @@ const wishlistCount = useWishlistStore(state => state.products?.length || 0);
 
           <nav className="hidden xl:flex items-center gap-6 relative">
              <div className="relative group">
-                <button onMouseEnter={() => setShowMegaMenu(true)} className="flex items-center gap-1 text-white hover:text-[#e63946] transition-colors font-bold text-sm tracking-wide uppercase py-4">
+                <button onMouseEnter={() => { setShowMegaMenu(true); setShowBikeMenu(false); }} className="flex items-center gap-1 text-white hover:text-[#e63946] transition-colors font-bold text-sm tracking-wide uppercase py-4">
                   Shop Categories
                 </button>
              </div>
              <Link to="/products" className="text-white hover:text-[#e63946] transition-colors font-bold text-sm tracking-wide uppercase whitespace-nowrap">All Products</Link>
-             <Link to="/shop-by-bike/all" className="text-white hover:text-[#e63946] transition-colors font-bold text-sm tracking-wide uppercase whitespace-nowrap">Shop By Bike</Link>
+             <div className="relative group">
+                <button onMouseEnter={() => { setShowBikeMenu(true); setShowMegaMenu(false); }} className="flex items-center gap-1 text-white hover:text-[#e63946] transition-colors font-bold text-sm tracking-wide uppercase py-4 whitespace-nowrap">
+                  Shop By Bike
+                </button>
+             </div>
              <Link to="/about" className="text-white hover:text-[#e63946] transition-colors font-bold text-sm tracking-wide uppercase whitespace-nowrap">About</Link>
              <Link to="/contact" className="text-white hover:text-[#e63946] transition-colors font-bold text-sm tracking-wide uppercase whitespace-nowrap">Contact</Link>
           </nav>
@@ -102,6 +117,14 @@ const wishlistCount = useWishlistStore(state => state.products?.length || 0);
             {showMegaMenu && (
               <div onMouseLeave={() => setShowMegaMenu(false)} className="absolute top-full left-0 w-full pt-2">
                 <MegaMenu onClose={() => setShowMegaMenu(false)} />
+              </div>
+            )}
+          </AnimatePresence>
+
+          <AnimatePresence>
+            {showBikeMenu && (
+              <div onMouseLeave={() => setShowBikeMenu(false)} className="absolute top-full left-0 w-full pt-2">
+                <ShopByBikeMenu onClose={() => setShowBikeMenu(false)} />
               </div>
             )}
           </AnimatePresence>
@@ -212,68 +235,127 @@ const wishlistCount = useWishlistStore(state => state.products?.length || 0);
             exit={{ height: 0, opacity: 0 }} 
             className="xl:hidden fixed inset-0 top-[115px] md:top-[85px] bg-[#0a0a0a] z-40 overflow-y-auto border-t border-[#222]"
           >
-            <nav className="flex flex-col p-6 gap-6 text-center pb-32">
-              <Link to="/" onClick={closeMobileMenu} className="text-xl font-bebas text-white hover:text-[#e63946]">Home</Link>
-              <Link to="/products" onClick={closeMobileMenu} className="text-xl font-bebas text-white hover:text-[#e63946]">All Products</Link>
-              <Link to={productsUrl({ filter: 'deals' })} onClick={closeMobileMenu} className="text-xl font-bebas text-[#f4a261]">Best Deals</Link>
-              <Link to="/shop-by-bike/all" onClick={closeMobileMenu} className="text-xl font-bebas text-white hover:text-[#e63946]">Shop By Bike</Link>
-              <Link to="/#shop-by-brand" onClick={(e) => { handleBrandScroll(e); closeMobileMenu(); }} className="text-xl font-bebas text-white hover:text-[#e63946]">Shop By Brand</Link>
-              <Link to="/about" onClick={closeMobileMenu} className="text-xl font-bebas text-white hover:text-[#e63946]">About Us</Link>
-              <Link to="/contact" onClick={closeMobileMenu} className="text-xl font-bebas text-white hover:text-[#e63946]">Contact Us</Link>
-              {user?.role === 'admin' && (
-                <Link to="/admin" onClick={closeMobileMenu} className="text-xl font-bebas text-[#e63946] hover:text-white">Admin Panel</Link>
-              )}
-              <Link to="/wishlist" onClick={closeMobileMenu} className="text-xl font-bebas text-white hover:text-[#e63946]">My Wishlist</Link>
-              <button
-                onClick={() => {
-                  if (isAuthenticated) {
-                    setShowAccountMenu((current) => !current);
-                    return;
-                  }
-                  closeMobileMenu();
-                  setShowAuth(true);
-                }}
-                className="text-xl font-bebas text-white hover:text-[#e63946]"
-              >
-                {isAuthenticated ? user?.name || 'Account' : 'Login / Sign Up'}
-              </button>
-              {isAuthenticated && showAccountMenu && (
-                <>
-                  {user?.role === 'admin' && (
+            {mobilePanel === 'main' ? (
+              <nav className="min-h-full bg-white pb-32 text-left text-gray-950">
+                <button
+                  onClick={() => setMobilePanel('bike')}
+                  className="flex w-full items-center justify-between border-b border-gray-100 px-5 py-4 font-bebas text-lg tracking-wide hover:text-[#e63946]"
+                >
+                  <span>Shop By Bike</span>
+                  <ChevronRight size={20} />
+                </button>
+                <Link to="/products" onClick={closeMobileMenu} className="block border-b border-gray-100 px-5 py-4 font-bebas text-lg tracking-wide hover:text-[#e63946]">All Products</Link>
+                <Link to={productsUrl({ filter: 'deals' })} onClick={closeMobileMenu} className="block border-b border-gray-100 px-5 py-4 font-bebas text-lg tracking-wide text-[#e63946]">Best Deals</Link>
+                <Link to="/#shop-by-brand" onClick={(e) => { handleBrandScroll(e); closeMobileMenu(); }} className="block border-b border-gray-100 px-5 py-4 font-bebas text-lg tracking-wide hover:text-[#e63946]">Shop By Brand</Link>
+                <Link to="/about" onClick={closeMobileMenu} className="block border-b border-gray-100 px-5 py-4 font-bebas text-lg tracking-wide hover:text-[#e63946]">About Us</Link>
+                <Link to="/contact" onClick={closeMobileMenu} className="block border-b border-gray-100 px-5 py-4 font-bebas text-lg tracking-wide hover:text-[#e63946]">Contact Us</Link>
+                {user?.role === 'admin' && (
+                  <Link to="/admin" onClick={closeMobileMenu} className="block border-b border-gray-100 px-5 py-4 font-bebas text-lg tracking-wide text-[#e63946]">Admin Panel</Link>
+                )}
+                <Link to="/wishlist" onClick={closeMobileMenu} className="block border-b border-gray-100 px-5 py-4 font-bebas text-lg tracking-wide hover:text-[#e63946]">My Wishlist</Link>
+                <button
+                  onClick={() => {
+                    if (isAuthenticated) {
+                      setShowAccountMenu((current) => !current);
+                      return;
+                    }
+                    closeMobileMenu();
+                    setShowAuth(true);
+                  }}
+                  className="block w-full border-b border-gray-100 px-5 py-4 text-left font-bebas text-lg tracking-wide hover:text-[#e63946]"
+                >
+                  {isAuthenticated ? user?.name || 'Account' : 'Login / Sign Up'}
+                </button>
+                {isAuthenticated && showAccountMenu && (
+                  <div className="border-b border-gray-100 bg-gray-50 px-5 py-3">
+                    {user?.role === 'admin' && (
+                      <Link
+                        to="/admin"
+                        onClick={() => {
+                          setShowAccountMenu(false);
+                          closeMobileMenu();
+                        }}
+                        className="block py-2 font-bebas text-base tracking-wide text-gray-900"
+                      >
+                        Admin Panel
+                      </Link>
+                    )}
                     <Link
-                      to="/admin"
+                      to="/orders"
                       onClick={() => {
                         setShowAccountMenu(false);
                         closeMobileMenu();
                       }}
-                      className="mx-auto w-full max-w-xs rounded-md border border-white px-4 py-3 text-xl font-bebas text-white hover:bg-white hover:text-gray-900"
+                      className="flex items-center gap-2 py-2 font-bebas text-base tracking-wide text-gray-900"
                     >
-                      Admin Panel
+                      <Clock size={18} />
+                      Order History
                     </Link>
-                  )}
-                  <Link
-                    to="/orders"
-                    onClick={() => {
-                      setShowAccountMenu(false);
-                      closeMobileMenu();
-                    }}
-                    className="mx-auto flex w-full max-w-xs items-center justify-center gap-2 rounded-md border border-white px-4 py-3 text-xl font-bebas text-white hover:bg-white hover:text-gray-900"
-                  >
-                    <Clock size={20} />
-                    Order History
-                  </Link>
+                    <button
+                      onClick={handleLogout}
+                      className="block py-2 font-bebas text-base tracking-wide text-[#e63946]"
+                    >
+                      Logout
+                    </button>
+                  </div>
+                )}
+                <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 border-b border-gray-100 px-5 py-4 font-bebas text-lg tracking-wide text-[#128c7e]">
+                  <MessageCircle size={20} /> WhatsApp Support
+                </a>
+              </nav>
+            ) : (
+              <div className="min-h-full bg-white pb-32 text-gray-950">
+                <div className="sticky top-0 z-10 flex items-center border-b border-gray-100 bg-white px-4 py-3">
                   <button
-                    onClick={handleLogout}
-                    className="mx-auto w-full max-w-xs rounded-md border border-[#e63946] px-4 py-3 text-xl font-bebas text-[#e63946] hover:bg-[#e63946] hover:text-white"
+                    onClick={() => setMobilePanel('main')}
+                    className="mr-2 text-gray-600 hover:text-gray-950"
+                    aria-label="Back to menu"
                   >
-                    Logout
+                    <ChevronLeft size={22} />
                   </button>
-                </>
-              )}
-              <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="text-xl font-bebas text-[#25D366] hover:text-white flex items-center justify-center gap-2">
-                <MessageCircle size={20} /> WhatsApp Support
-              </a>
-            </nav>
+                  <span className="font-bebas text-lg tracking-wide text-gray-700">Shop By Bike</span>
+                </div>
+                <div className="divide-y divide-gray-100">
+                  {bikeGroups.map((group) => {
+                    const isExpanded = expandedBikeBrand === group.brand;
+                    return (
+                      <div key={group.brand}>
+                        <button
+                          onClick={() => setExpandedBikeBrand(isExpanded ? '' : group.brand)}
+                          className="flex w-full items-center justify-between px-4 py-4 text-left font-bebas text-lg tracking-wide"
+                        >
+                          <span>{group.brand}</span>
+                          {isExpanded ? <Minus size={20} /> : <Plus size={20} />}
+                        </button>
+                        <AnimatePresence initial={false}>
+                          {isExpanded && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: 'auto', opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              className="overflow-hidden"
+                            >
+                              <div className="space-y-3 px-4 pb-5">
+                                {group.items.map((item) => (
+                                  <Link
+                                    key={item.target}
+                                    to={productsUrl({ brand: group.brand, bike: item.target })}
+                                    onClick={closeMobileMenu}
+                                    className="block text-base text-gray-600 hover:text-[#e63946]"
+                                  >
+                                    {item.label}
+                                  </Link>
+                                ))}
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
           </motion.div>
         )}
       </AnimatePresence>
@@ -289,7 +371,3 @@ const wishlistCount = useWishlistStore(state => state.products?.length || 0);
 Header.displayName = 'Header';
 
 export default Header;
-
-
-
-

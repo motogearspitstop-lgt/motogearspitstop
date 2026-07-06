@@ -99,13 +99,6 @@ const NewArrivals = () => {
                     alt={product.name}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                  />
-                 <div className="absolute top-3 left-3 flex flex-col gap-2">
-                    <span className="bg-[#f4a261] text-black text-xs font-bold px-3 py-1 rounded shadow-md uppercase">New</span>
-                    {product.discount > 0 && (
-                       <span className="bg-[#e63946] text-white text-xs font-bold px-3 py-1 rounded shadow-md uppercase">-{product.discount}%</span>
-                    )}
-                 </div>
-                 
                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
                     <button 
                        onClick={(e) => handleAddToCart(e, product)}

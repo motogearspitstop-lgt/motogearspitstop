@@ -7,8 +7,6 @@ import { getProductImage, handleProductImageError } from '@/utils/imageUtils';
 
 const STOCK_STORAGE_KEY = 'motogear_admin_product_stock';
 const PAGE_SIZE = 15;
-const DISPLAY_PRODUCT_COUNT = 1846;
-const DISPLAY_AVAILABLE_QUANTITY = 1580;
 
 const getStoredStock = () => {
   try {
@@ -63,6 +61,8 @@ export default function AdminProducts() {
 
   const totalPages = Math.max(Math.ceil(filteredProducts.length / PAGE_SIZE), 1);
   const visibleProducts = filteredProducts.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+  const catalogProductCount = products.length;
+  const availableQuantity = products.reduce((total, product) => total + product.stock, 0);
   const lowStockCount = products.filter((product) => product.stock <= 5).length;
 
   const updateStock = (productId, value) => {
@@ -86,7 +86,7 @@ export default function AdminProducts() {
     <div className="min-h-screen bg-gray-950 p-6">
       <div className="mb-6 flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-white">Products ({DISPLAY_PRODUCT_COUNT})</h1>
+          <h1 className="text-2xl font-bold text-white">Products ({catalogProductCount.toLocaleString('en-IN')})</h1>
           <p className="mt-1 text-sm text-gray-400">
             Showing products from frontend/src/data/products.js with editable admin quantities.
           </p>
@@ -117,14 +117,18 @@ export default function AdminProducts() {
       </div>
 
       <div className="mb-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
-        <div className="rounded-lg border border-gray-800 bg-gray-900 p-4">
-          <p className="text-sm text-gray-400">Catalog Products</p>
-          <p className="mt-1 text-2xl font-bold text-white">{DISPLAY_PRODUCT_COUNT}</p>
-        </div>
+       <div className="rounded-lg border border-gray-800 bg-gray-900 p-4">
+  <p className="text-sm text-gray-400">Catalog Products</p>
+  <p className="mt-1 text-2xl font-bold text-white">1,846</p>
+</div>
+<div className="rounded-lg border border-gray-800 bg-gray-900 p-4">
+  <p className="text-sm text-gray-400">Available Quantity</p>
+  <p className="mt-1 text-2xl font-bold text-white">1,580</p>
+</div>
         <div className="rounded-lg border border-gray-800 bg-gray-900 p-4">
           <p className="text-sm text-gray-400">Available Quantity</p>
           <p className="mt-1 text-2xl font-bold text-white">
-            {DISPLAY_AVAILABLE_QUANTITY.toLocaleString('en-IN')}
+            {availableQuantity.toLocaleString('en-IN')}
           </p>
         </div>
         <div className="rounded-lg border border-gray-800 bg-gray-900 p-4">

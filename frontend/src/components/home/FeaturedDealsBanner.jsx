@@ -107,9 +107,6 @@ const FeaturedDealsBanner = () => {
                     onError={(event) => handleProductImageError(event, product)}
                     className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute top-1 sm:top-2 md:top-4 left-1 sm:left-2 md:left-4 bg-[#e63946] text-white px-1 sm:px-2 md:px-3 py-0.5 sm:py-1 font-bold text-[8px] sm:text-xs md:text-sm rounded shadow-lg">
-                    SAVE {product.discount}%
-                  </div>
                 </div>
                 
                 <div className="p-1 sm:p-2 md:p-3 lg:p-5 flex flex-col bg-white">

@@ -17,6 +17,8 @@ const productSchema = new mongoose.Schema({
   images: [{ public_id: String, url: String }],
   category: { type: String, required: true },
   brand: { type: String, default: '' },
+  model: { type: String, default: '' },
+  models: [{ type: String }],
   compatibleBikes: [{ type: String }],
   stock: { type: Number, required: true, default: 0 },
   sold: { type: Number, default: 0 },

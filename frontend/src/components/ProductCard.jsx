@@ -69,16 +69,6 @@ const ProductCard = ({ product }) => {
             onError={(event) => handleProductImageError(event, product)}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
-          {product.discount > 0 && (
-            <div className="absolute top-1 right-1 md:top-2 md:right-2 bg-[#e63946] text-white px-1.5 py-0.5 md:px-2 md:py-1 rounded text-[10px] md:text-xs font-bold">
-              {product.discount}% OFF
-            </div>
-          )}
-          {product.isNew && (
-            <div className="absolute top-1 left-1 md:top-2 md:left-2 bg-[#e63946] text-white px-1.5 py-0.5 md:px-2 md:py-1 rounded text-[10px] md:text-xs font-bold">
-              NEW
-            </div>
-          )}
         </div>
 
         {/* Content */}

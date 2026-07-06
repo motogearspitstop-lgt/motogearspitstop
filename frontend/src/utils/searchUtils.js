@@ -8,6 +8,14 @@ const normalizeText = (value) =>
 
 const getSearchTokens = (value) => normalizeText(value).split(/\s+/).filter(Boolean);
 
+const isBikeTokenMatch = (productBikeText, bikeName) => {
+  const bikeTokens = getSearchTokens(bikeName);
+  if (bikeTokens.length < 2) return false;
+
+  const productTokens = new Set(getSearchTokens(productBikeText));
+  return bikeTokens.every(token => productTokens.has(token));
+};
+
 const stringifySearchValue = (value) => {
   if (value === null || value === undefined) return '';
   if (Array.isArray(value)) return value.map(stringifySearchValue).join(' ');
@@ -164,7 +172,7 @@ export const productMatchesBike = (product, bikeName) => {
   }
 
   const productBikeText = normalizeText(getProductBikeText(product));
-  return productBikeText.includes(normalizedBike);
+  return productBikeText.includes(normalizedBike) || isBikeTokenMatch(productBikeText, normalizedBike);
 };
 
 export const getBikeSearchTarget = (query) => {

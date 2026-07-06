@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useCallback } from 'react';
+import React, { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -13,6 +13,8 @@ const ProductListing = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [showMobileFilters, setShowMobileFilters] = useState(false);
   const [sortBy, setSortBy] = useState('popular');
+  const isSyncingFromUrl = useRef(false);
+  const isWritingToUrl = useRef(false);
   
   // Read initial filters from URL
   const initialFilters = useMemo(() => ({
@@ -30,9 +32,50 @@ const ProductListing = () => {
 
   const [filters, setFilters] = useState(initialFilters);
 
+  useEffect(() => {
+    if (isWritingToUrl.current) {
+      isWritingToUrl.current = false;
+      return;
+    }
+
+    setFilters(prev => {
+      const next = {
+        ...prev,
+        searchQuery: searchParams.get('search') || '',
+        categories: searchParams.get('category') ? [searchParams.get('category')] : [],
+        brands: searchParams.get('brand') ? [searchParams.get('brand')] : [],
+        bikes: searchParams.get('bike') ? [searchParams.get('bike')] : [],
+        minRating: Number(searchParams.get('minRating')) || 0,
+        hasDiscount: searchParams.get('hasDiscount') === 'true'
+      };
+
+      const minPrice = Number(searchParams.get('minPrice')) || 100;
+      const maxPrice = Number(searchParams.get('maxPrice')) || 150000;
+      next.priceRange = [minPrice, maxPrice];
+
+      if (JSON.stringify(prev) === JSON.stringify(next)) return prev;
+      isSyncingFromUrl.current = true;
+      return next;
+    });
+  }, [searchParams]);
+
   // Sync state changes back to URL - FIXED TO PREVENT INFINITE LOOP (504 Error)
   useEffect(() => {
     const params = new URLSearchParams(searchParams);
+    const urlBackedFiltersChanged =
+      (searchParams.get('search') || '') !== filters.searchQuery ||
+      (searchParams.get('category') || '') !== (filters.categories[0] || '') ||
+      (searchParams.get('brand') || '') !== (filters.brands[0] || '') ||
+      (searchParams.get('bike') || '') !== (filters.bikes[0] || '') ||
+      (Number(searchParams.get('minRating')) || 0) !== filters.minRating ||
+      (searchParams.get('hasDiscount') === 'true') !== filters.hasDiscount ||
+      (Number(searchParams.get('minPrice')) || 100) !== filters.priceRange[0] ||
+      (Number(searchParams.get('maxPrice')) || 150000) !== filters.priceRange[1];
+
+    if (urlBackedFiltersChanged && isSyncingFromUrl.current) {
+      isSyncingFromUrl.current = false;
+      return;
+    }
     
     // Set explicit filter params
     if (filters.searchQuery) params.set('search', filters.searchQuery);
@@ -62,6 +105,7 @@ const ProductListing = () => {
     // CRITICAL: Only update search params if they have actually changed.
     // This prevents the infinite rendering loop that causes 504 Gateway Timeouts.
     if (params.toString() !== searchParams.toString()) {
+      isWritingToUrl.current = true;
       setSearchParams(params, { replace: true });
     }
   }, [filters, searchParams, setSearchParams]);
