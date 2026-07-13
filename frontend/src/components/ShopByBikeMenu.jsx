@@ -1,155 +1,82 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { products } from '@/data/products';
 import { productsUrl } from '@/utils/urlUtils';
-import { productMatchesBike } from '@/utils/searchUtils';
 
-const MODEL_CATALOG = {
-  'Royal Enfield': [
-    ['Classic 650', /classic\s*650/i],
-    ['Bear 650', /bear\s*650/i],
-    ['Guerrilla 450', /guerrilla\s*450/i],
-    ['Himalayan 450', /himalayan\s*450/i],
-    ['Super Meteor 650', /super\s*meteor\s*650/i],
-    ['Hunter 350', /hunter\s*350/i],
-    ['Himalayan', /himalayan(?!\s*450)/i],
-    ['Classic 350 Reborn', /(?:reborn\s*classic\s*350|classic\s*350\s*reborn|classic\/meteor\s*350)/i],
-    ['Classic 350', /classic\s*350/i],
-    ['Meteor 350', /meteor\s*350/i],
-    ['Interceptor 650', /interceptor\s*650|interceptor/i],
-    ['Continental GT 650', /continental\s*gt\s*650/i],
-    ['Shotgun 650', /shotgun\s*650/i],
-    ['Scram 440', /scram\s*440/i],
-    ['Himalayan 411', /himalayan\s*411/i],
-    ['Goan Classic 350', /goan\s*classic\s*350/i],
-  ],
-  Yamaha: [
-    ['Aerox 155', /aerox\s*155/i],
-    ['MT 15', /mt[-\s]*15/i],
-    ['R15 V4', /r15\s*v4/i],
-    ['XSR 155', /xsr\s*155/i],
-    ['MT07', /mt\s*07|mt07/i],
-  ],
-  KTM: [
-    ['390 Enduro R', /390\s*enduro\s*r/i],
-    ['Adventure 390 2025', /2025\s*ktm\s*adventure\s*250\/390|adventure\s*390.*2025/i],
-    ['Adventure 390', /adventure\s*390|390\s*adventure/i],
-    ['Adventure 250', /adventure\s*250/i],
-    ['Duke 125', /duke\s*125/i],
-    ['Duke 200', /duke\s*200|duke200/i],
-    ['Duke 250', /duke\s*250/i],
-    ['Duke 390', /duke\s*390/i],
-    ['RC 390', /rc\s*390/i],
-    ['RC 200', /rc\s*200|rc200/i],
-  ],
-  Bajaj: [
-    ['Pulsar 220', /pulsar\s*220/i],
-  ],
-  Honda: [
-    ['CB 200X', /cb\s*200\s*x/i],
-    ['Hness CB 350', /hness\s*cb\s*350|highness\s*cb\s*350/i],
-    ['CB 350RS', /cb\s*350\s*rs|cb\s*350rs/i],
-    ['CB 350', /cb\s*350/i],
-    ['CB 300F', /cb\s*300f/i],
-  ],
-  Hero: [
-    ['Xpulse', /xpulse/i],
-  ],
-  BMW: [
-    ['G 310 GS', /g\s*310\s*gs|gs\s*310/i],
-    ['G 310 R', /g\s*310\s*r|g310r/i],
-    ['R1300 GS', /r\s*1300\s*gs|r1300\s*gs/i],
-    ['F850 GS', /f\s*850\s*gs/i],
-  ],
-  TVS: [
-    ['Apache RTX 300', /apache\s*rtx\s*300/i],
-  ],
-  KAWASAKI: [
-    ['Versys 650', /versys\s*650/i],
-  ],
-  Aprilia: [
-    ['RS 457', /rs\s*457/i],
-  ],
-  Yezdi: [
-    ['Adventure 2025', /yezdi\s*adventure\s*2025|yezdi\s*adventure/i],
-  ],
-  Jawa: [
-    ['Jawa', /jawa/i],
-  ],
-  'Harley-Davidson': [
-    ['X440', /x\s*440|x440/i],
-  ],
-};
-
-const normalize = (value) => String(value || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
-
-const brandMatchesProduct = (product, brand) => {
-  const normalizedBrand = normalize(brand);
-  const productBrand = normalize(product.brand);
-  const bikeValues = Array.isArray(product.bikes) ? product.bikes : [];
-  const normalizedBikes = bikeValues.map(normalize);
-
-  return (
-    productBrand === normalizedBrand ||
-    normalizedBikes.some((bike) => bike === normalizedBrand || bike.startsWith(`${normalizedBrand} `))
-  );
-};
-
-const getProductBikeValues = (product) => [
-  ...(Array.isArray(product.bikes) ? product.bikes : []),
-  ...(Array.isArray(product.compatibleBikes) ? product.compatibleBikes : []),
-  ...(Array.isArray(product.compatibility) ? product.compatibility : []),
-  product.bike || '',
-  product.model || '',
-  product.models || '',
-  product.fitment || '',
-  product.vehicle || '',
-  product.vehicles || ''
-].flatMap((value) => Array.isArray(value) ? value : [value]).filter(Boolean);
-
-const addUnique = (items, item) => {
-  const label = typeof item === 'string' ? item : item.label;
-  const normalizedItem = normalize(label);
-  if (!normalizedItem || items.some((current) => normalize(current) === normalizedItem)) return;
-  items.push(item);
-};
-
-const hasProductsForModel = (productsForBrand, model) =>
-  productsForBrand.some((product) => productMatchesBike(product, model));
-
-const buildBikeGroups = () =>
-  Object.entries(MODEL_CATALOG)
-    .map(([brand, models]) => {
-      const brandProducts = products.filter((product) => brandMatchesProduct(product, brand));
-      const items = [];
-
-      models.forEach(([name]) => {
-        if (hasProductsForModel(brandProducts, name)) {
-          addUnique(items, { label: name, target: name });
-        }
-      });
-
-      brandProducts.forEach((product) => {
-        getProductBikeValues(product).forEach((value) => {
-          const normalizedValue = normalize(value);
-          const normalizedBrand = normalize(brand);
-
-          if (!normalizedValue || normalizedValue === 'all' || normalizedValue === normalizedBrand) return;
-          if (!normalizedValue.startsWith(`${normalizedBrand} `)) return;
-
-          const label = String(value).replace(new RegExp(`^${brand}\\s+`, 'i'), '').trim();
-          if (hasProductsForModel(brandProducts, value)) {
-            addUnique(items, { label, target: String(value).trim() });
-          }
-        });
-      });
-
-      return { brand, items };
-    })
-    .filter((group) => group.items.length > 0);
-
-export const bikeGroups = buildBikeGroups();
+export const bikeGroups = [
+  {
+    brand: 'Royal Enfield',
+    items: [
+      'Himalayan 450',
+      'Himalayan',
+      'Scram 440',
+      'Scram 411',
+      'Bear 650',
+      'Shotgun 650',
+      'GT650',
+      'Interceptor 650',
+      'Super Meteor 650',
+      'Meteor 350',
+      'Hunter 350',
+      'Goan Classic 350',
+      'Classic 350',
+      'Classic 350 Reborn',
+    ],
+  },
+  {
+    brand: 'Bajaj',
+    items: [
+      'Pulsar NS 400Z',
+      'Dominar 400',
+      'Dominar 250',
+      'Pulsar NS 200',
+      'Pulsar 220F',
+      'Pulsar RS 200',
+      'Pulsar N160',
+      'Pulsar N250',
+      'Pulsar NS125',
+      'Pulsar NS160',
+    ],
+  },
+  { brand: 'Aprilia', items: ['RS 457', 'Tuono 457'] },
+  { brand: 'Benelli', items: ['TRK 502', 'TRK 502 X', 'TRK 251', 'Leoncino 500'] },
+  { brand: 'Harley-Davidson', items: ['X440', 'X440 T', 'Street 750'] },
+  { brand: 'Hero', items: ['XPulse 210', 'XPulse 200', 'Mavrick 440'] },
+  { brand: 'Husqvarna', items: ['Svartpilen', 'Vitpilen'] },
+  { brand: 'Jawa', items: ['Jawa 42 FJ', 'Jawa 42', 'Jawa Perak', '42 Bobber'] },
+  { brand: 'Yezdi', items: ['Yezdi Adventure', 'Yezdi Roadster'] },
+  {
+    brand: 'KTM',
+    items: ['Adventure 390 (2025)', 'Adventure 390', 'Adventure 250', 'Duke 390 Gen 3', 'Duke 390', 'Duke 250'],
+  },
+  {
+    brand: 'Kawasaki',
+    items: ['Ninja 300', 'Versys 650', 'Versys 1100', 'Ninja 1100SX', 'Z650', 'Z900', 'ZX-4R', 'ZX-6R', 'ZX-10R'],
+  },
+  {
+    brand: 'Suzuki',
+    items: ['V-Strom 800DE', 'GSX-8R', 'V-Strom SX 250', 'Gixxer 250', 'Gixxer SF 250', 'Burgman 125'],
+  },
+  {
+    brand: 'Triumph',
+    items: ['Speed 400', 'Speed T4', 'Scrambler 400 X', 'Tiger Sport 660', 'Trident 660', 'Daytona 660', 'Street Triple 765'],
+  },
+  {
+    brand: 'TVS',
+    items: ['Apache RTX 300', 'Ronin', 'Apache RTR 310', 'Apache RR 310', 'Apache RTR 200 4V', 'Apache RTR 160 4V'],
+  },
+  {
+    brand: 'Yamaha',
+    items: ['XSR155', 'Aerox 155', 'MT-15', 'FZ-X', 'FZS-25', 'FZ V3 / V4', 'R15 V4', 'R15 V3'],
+  },
+  {
+    brand: 'Honda',
+    items: ['NX500', 'XL750 Transalp', 'CBR650R', 'X-ADV 750', 'CB350', "CB350 H'ness", 'CB350RS', 'CB300R', 'CB300F', 'CB200X', 'CB250R'],
+  },
+].map((group) => ({
+  ...group,
+  items: group.items.map((model) => ({ label: model, target: model })),
+}));
 
 const ShopByBikeMenu = ({ onClose }) => (
   <motion.div
@@ -166,7 +93,7 @@ const ShopByBikeMenu = ({ onClose }) => (
           <Link
             to={productsUrl({ bike: group.brand })}
             onClick={onClose}
-            className="mb-4 block text-sm font-medium uppercase tracking-wide text-emerald-600 hover:text-gray-900"
+            className="mb-4 block text-sm font-medium uppercase tracking-wide text-[#e63946] hover:text-gray-900"
           >
             {group.brand}
           </Link>
@@ -174,7 +101,7 @@ const ShopByBikeMenu = ({ onClose }) => (
             {group.items.map((item) => (
               <li key={item.target}>
                 <Link
-                  to={productsUrl({ brand: group.brand, bike: item.target })}
+                  to={productsUrl({ bike: item.target })}
                   onClick={onClose}
                   className="block text-base text-gray-600 transition-colors hover:text-gray-900"
                 >

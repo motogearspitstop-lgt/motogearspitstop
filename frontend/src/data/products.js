@@ -13718,7 +13718,7 @@
 
 
 
-export const products = [
+const catalogProducts = [
   {
     id: 1,
     name: 'RYNOX AIR GT 4 JACKET- CE CERTIFIED CLASS A',
@@ -29451,14 +29451,29 @@ export const products = [
 
 ];
 
+const removedBrands = new Set(['rynox', 'raida', 'zana', 'liqui moly', 'reise', 'acerbis']);
+const inferredBrands = [
+  ['Vesrah', /\bvesrah\b/i],
+  ['Red Rooster', /\bred\s+rooster\b/i],
+  ['FuelX', /\bfuelx\b/i],
+  ['Modern Tech', /\bmodern\s+tech\b/i],
+];
+
+// Keep discontinued brands out of all customer-facing catalog, search, and filter views.
+export const products = catalogProducts
+  .map((product) => {
+    const inferredBrand = inferredBrands.find(([, pattern]) => pattern.test(product.name))?.[0];
+    return inferredBrand ? { ...product, brand: inferredBrand } : product;
+  })
+  .filter((product) => !removedBrands.has(String(product.brand || '').trim().toLowerCase()));
+
 export const brands = [
-  'Rynox', 'Raida', 'Maddog', 'Zana', 'Barkbusters', 
-  'Liqui Moly', 'Rolon', 'Studds', 'KTM', 'Royal Enfield',
+  'Maddog', 'Barkbusters', 'Rolon', 'Studds', 'KTM', 'Royal Enfield',
   'BMW', 'Yamaha', 'Cardo', 'Metzeler', 'Axor', 'Bajaj',
-  'BMC', 'BOBO', 'BlueArmor', 'Ducati', 'EJEAS Intercom',
+  'BMC', 'BOBO', 'BlueArmor', 'Ducati', 'EJEAS Intercom', 'FuelX',
   'Hero', 'Honda', 'Jawa', 'Harley-Davidson', 'Kawasaki', 'LGP',
-  'Moto Torque', 'Ngage', 'Powerage', 'Sena', 'Steelbird', 'TVS',
-  'Triumph', 'Yezdi', 'Aprilia'
+  'Moto Torque', 'Ngage', 'Powerage', 'Red Rooster', 'Sena', 'Steelbird', 'TVS',
+  'Triumph', 'Vesrah', 'Yezdi', 'Aprilia', 'Modern Tech'
 ];
 
 export const categories = [
@@ -29472,7 +29487,7 @@ export const categories = [
 ];
 
 export const bikes = [
-  'KTM', 'Royal Enfield', 'Yamaha', 'Honda', 'Suzuki', 'Hero',
-  'Bajaj', 'TVS', 'BMW', 'Jawa', 'Benelli', 'Harley-Davidson',
-  'Aprilia', 'Kawasaki', 'Ducati', 'Triumph', 'Yezdi', 'Mahindra'
+  'Royal Enfield', 'Bajaj', 'Aprilia', 'Benelli', 'Harley-Davidson',
+  'Hero', 'Husqvarna', 'Jawa', 'Yezdi', 'KTM', 'Kawasaki', 'Suzuki',
+  'Triumph', 'TVS', 'Yamaha', 'Honda'
 ];

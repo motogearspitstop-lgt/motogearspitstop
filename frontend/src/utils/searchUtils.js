@@ -6,6 +6,8 @@ const normalizeText = (value) =>
     .replace(/[^a-z0-9]+/g, ' ')
     .trim();
 
+const compactText = (value) => normalizeText(value).replace(/\s+/g, '');
+
 const getSearchTokens = (value) => normalizeText(value).split(/\s+/).filter(Boolean);
 
 const isBikeTokenMatch = (productBikeText, bikeName) => {
@@ -172,7 +174,14 @@ export const productMatchesBike = (product, bikeName) => {
   }
 
   const productBikeText = normalizeText(getProductBikeText(product));
-  return productBikeText.includes(normalizedBike) || isBikeTokenMatch(productBikeText, normalizedBike);
+  const compactBike = compactText(normalizedBike);
+  const compactProductBikeText = compactText(productBikeText);
+
+  return (
+    productBikeText.includes(normalizedBike) ||
+    (compactBike.length >= 4 && compactProductBikeText.includes(compactBike)) ||
+    isBikeTokenMatch(productBikeText, normalizedBike)
+  );
 };
 
 export const getBikeSearchTarget = (query) => {
@@ -211,6 +220,7 @@ export const debounceSearch = (func, delay) => {
 export const searchProducts = (query) => {
   if (!query || query.trim().length === 0) return products;
   
+  const compactQuery = compactText(query);
   const searchTerms = getSearchTokens(query);
   
   return products
@@ -228,6 +238,13 @@ export const searchProducts = (query) => {
       ];
 
       let score = 0;
+      const compactPhraseMatch = compactQuery.length >= 4 && weightedFields.some(({ value, weight }) => {
+        const compactField = compactText(value);
+        if (!compactField.includes(compactQuery)) return false;
+        score += weight * (compactField === compactQuery ? 3 : 2);
+        return true;
+      });
+
       const matchesEveryTerm = searchTerms.every(term => {
         const expandedTerms = expandSearchTerm(term);
 
@@ -254,7 +271,8 @@ export const searchProducts = (query) => {
         });
       });
 
-      if (!matchesEveryTerm || score <= 0) return null;
+      if (!compactPhraseMatch && !matchesEveryTerm) return null;
+      if (score <= 0) return null;
       return { ...product, __searchScore: score };
     })
     .filter(Boolean)

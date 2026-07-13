@@ -1,13 +1,17 @@
 // frontend/src/components/AuthModal.jsx
 import { useState } from 'react';
 import { createPortal } from 'react-dom';
+import { useNavigate } from 'react-router-dom';
+import { Eye, EyeOff } from 'lucide-react';
 import useAuthStore from '../store/authStore';
 
 export default function AuthModal({ isOpen, onClose, onSuccess }) {
   const [mode, setMode] = useState('login');
+  const [showPassword, setShowPassword] = useState(false);
   const [form, setForm] = useState({ name: '', phone: '', email: '', password: '' });
   const [error, setError] = useState('');
   const { login, register, loading } = useAuthStore();
+  const navigate = useNavigate();
 
   if (!isOpen) return null;
 
@@ -116,14 +120,28 @@ export default function AuthModal({ isOpen, onClose, onSuccess }) {
 
         <div className="mb-6">
           <label className="mb-1 block text-sm text-white">Password *</label>
-          <input
-            type="password"
-            autoComplete="new-password"
-            className="w-full rounded border border-zinc-700 bg-zinc-900 px-4 py-3 text-white focus:border-red-500 focus:outline-none"
-            value={form.password}
-            onChange={(e) => setForm({ ...form, password: e.target.value })}
-            placeholder="Password"
-          />
+          <div className="relative">
+            <input
+              type={mode === 'login' && showPassword ? 'text' : 'password'}
+              autoComplete={mode === 'login' ? 'current-password' : 'new-password'}
+              className={`w-full rounded border border-zinc-700 bg-zinc-900 px-4 py-3 text-white focus:border-red-500 focus:outline-none ${
+                mode === 'login' ? 'pr-12' : ''
+              }`}
+              value={form.password}
+              onChange={(e) => setForm({ ...form, password: e.target.value })}
+              placeholder="Password"
+            />
+            {mode === 'login' && (
+              <button
+                type="button"
+                onClick={() => setShowPassword((value) => !value)}
+                className="absolute inset-y-0 right-3 flex items-center text-zinc-400 transition hover:text-white"
+                aria-label={showPassword ? 'Hide password' : 'Show password'}
+              >
+                {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+              </button>
+            )}
+          </div>
           {mode === 'register' && (
             <p className="mt-2 text-xs text-zinc-400">
               Minimum 6 characters and at least one lowercase letter.
@@ -142,7 +160,10 @@ export default function AuthModal({ isOpen, onClose, onSuccess }) {
       {mode === 'login' && (
   <button
     type="button"
-    onClick={() => { onClose(); window.location.href = '/forgot-password'; }}
+    onClick={() => {
+      onClose();
+      navigate('/forgot-password');
+    }}
     className="mb-4 w-full text-center text-sm text-white underline hover:text-[#e63946] transition"
   >
     Forgot your password?

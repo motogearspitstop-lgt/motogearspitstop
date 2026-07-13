@@ -9,57 +9,22 @@ import { useToast } from '@/components/ui/use-toast';
 const NewArrivals = () => {
   const newArrivalProducts = [
     {
-      name: 'RYNOX AIR GT 4 JACKET- CE CERTIFIED CLASS A',
-      price: 8499,
-      discount: 15,
-      image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772392340/Air_GT_4_CE_Certified_Apparels_CE_AA_LABEL_TAG-11_1300x_mqacab.webp',
-    },
-    {
       name: 'Royal Enfield SUM GUARD FOR HIMALAYAN 450',
     },
     {
       name: 'MADDOG Alpha Combo Aux Light 80 Watts',
     },
     {
-      name: 'Zana Universal Led Fog Light (ZFL R-25) - ZI-FL-013',
-      price: 7000,
-      discount: 30,
-      image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772425198/zana_light_whzloe.jpg',
-    },
-    {
-      name: 'Raida Explorer Boots | Black',
-      price: 8000,
-      discount: 20,
-      image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772426062/Raida_Boots_q7dpke.webp',
-    },
-    {
       name: 'Cardo Packtalk Special Edition Intercom (PTN00010)',
-    },
-    {
-      name: 'Zana TOPRACK T-1 WITH ALUMINIUM PLATE COMPATIBLE WITH PILLION BACKREST HIMALAYAN BS6 (2021)',
-      price: 4400,
-      discount: 17,
-      image: 'https://res.cloudinary.com/dbplgk8d8/image/upload/v1772427666/ZANA_TAIL_kdeg09.webp',
     },
     {
       name: 'BMW R1300 GS Top Box & Pannier Set',
     },
   ];
 
-  const newProducts = newArrivalProducts.map((displayProduct, index) => {
+  const newProducts = newArrivalProducts.flatMap((displayProduct) => {
     const product = products.find(p => p.name === displayProduct.name);
-
-    return {
-      ...(product || {
-        id: `new-arrival-${index}`,
-        brand: displayProduct.name.split(' ')[0],
-        rating: 5,
-        reviews: 0,
-        isNew: true,
-      }),
-      ...displayProduct,
-      isNew: true,
-    };
+    return product ? [{ ...product, ...displayProduct, isNew: true }] : [];
   });
   const addToCart = useCartStore(state => state.addToCart);
   const { toast } = useToast();

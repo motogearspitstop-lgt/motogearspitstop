@@ -339,7 +339,7 @@ const wishlistCount = useWishlistStore(state => state.products?.length || 0);
                                 {group.items.map((item) => (
                                   <Link
                                     key={item.target}
-                                    to={productsUrl({ brand: group.brand, bike: item.target })}
+                                    to={productsUrl({ bike: item.target })}
                                     onClick={closeMobileMenu}
                                     className="block text-base text-gray-600 hover:text-[#e63946]"
                                   >

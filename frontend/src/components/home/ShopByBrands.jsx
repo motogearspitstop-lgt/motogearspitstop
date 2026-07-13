@@ -45,16 +45,12 @@ const ShopByBrands = () => {
     'OLA': 'Ola',
     'APRILIA': 'Aprilia',
     'HARLEY DAVIDSON': 'Harley-Davidson',
-    'RYNOX': 'Rynox',
-    'RAIDA': 'Raida',
     'MOTUL': 'Motul',
     'AXOR': 'Axor',
     'SMK': 'SMK',
     'MT HELMETS': 'MT Helmets',
-    'LIQUI MOLY': 'Liqui Moly',
     'MADDOG': 'Maddog',
     'BARKBUSTERS': 'Barkbusters',
-    'ZANA': 'Zana',
     'JAWA': 'Jawa',
     'STUDDS': 'Studds',
     'CARDO': 'Cardo',
@@ -62,8 +58,17 @@ const ShopByBrands = () => {
     'MOTO CARE': 'Moto Care',
     'LGP': 'LGP',
     'PRO TAPER': 'Pro Taper',
-    'REISE': 'Reise',
-    'ACERBIS': 'Acerbis'
+    'NGAGE': 'Ngage',
+    'BMC': 'BMC',
+    'ROLON': 'Rolon',
+    'VESRAH': 'Vesrah',
+    'BLUEARMOR': 'BlueArmor',
+    'EJEAS INTERCOM': 'EJEAS Intercom',
+    'RED ROOSTER': 'Red Rooster',
+    'POWERAGE': 'Powerage',
+    'MODERN TECH': 'Modern Tech',
+    'FUELX': 'FuelX',
+    'BOBO': 'BOBO'
   };
 
   const handleBrandClick = (brandName) => {
@@ -83,7 +88,9 @@ const ShopByBrands = () => {
 
   const textBrands = [
     'Studds', 'Axor', 'Barkbusters', 'Cardo', 'Maddog',
-    'Moto Torque', 'Moto Care', 'LGP', 'Pro Taper', 'Jawa', 'Suzuki'
+    'Moto Torque', 'Moto Care', 'LGP', 'Pro Taper', 'Jawa', 'Suzuki',
+    'Ngage', 'BMC', 'Rolon', 'Vesrah', 'BlueArmor', 'EJEAS Intercom',
+    'Red Rooster', 'Powerage', 'Modern Tech', 'FuelX', 'BOBO'
   ];
 
   return (
